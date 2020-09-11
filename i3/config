@@ -1,0 +1,296 @@
+#==============================
+# i3 CONFIG 
+#==============================
+
+#------------------------------
+# Configurazione di base
+#------------------------------
+
+
+# modifier key
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+set $term kitty
+bindsym $mod+Return exec $term
+
+#------------------------------
+# Window management
+#------------------------------
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# resize window
+bindsym $mod+Left  resize shrink width  10 px or 10 ppt
+bindsym $mod+Right resize grow   width  10 px or 10 ppt
+bindsym $mod+Down  resize grow   height 10 px or 10 ppt
+bindsym $mod+Up    resize shrink height 10 px or 10 ppt
+
+# split in horizontal orientation
+bindsym $mod+o split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+F11 fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+Return floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+Shift+a focus child
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# Window rules
+for_window [window_role="pop-up"]      floating enable # floating dialogs
+for_window [window_role="task_dialog"] floating enable
+for_window [class="GNU Octave"]        floating enable
+for_window [class="gnuplot_qt"]        floating enable
+for_window [class="Pavucontrol"]       floating enable
+for_window [class="Blueman-manager"]   floating enable
+for_window [class="MEGAsync"]	       floating enable
+
+# always center rofi (in normal-window) in the center
+for_window [class="Rofi"] floating enable
+for_window [class="Rofi"] move position center
+
+# inhibit idle for firefox in fullscreen
+#for_window [class=".*"] inhibit_idle fullscreen
+
+
+
+#------------------------------
+# Workspace management
+#------------------------------
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to named workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# switch to prev/next workspace
+bindsym $mod+U workspace prev
+bindsym $mod+I workspace next
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Workspace back-and-forth
+workspace_auto_back_and_forth yes
+
+# move focused workspace between monitors
+bindsym $mod+Shift+I move workspace to output right
+bindsym $mod+Shift+U move workspace to output left
+
+
+#------------------------------
+# Keyboard shortcuts
+#------------------------------
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# start a program launcher
+bindsym $mod+d exec "rofi -modi drun,run -show drun"
+#bindsym $mod+d exec wofi --show drun
+
+# applications shortcuts
+bindsym $mod+Shift+w exec firefox
+bindsym $mod+Shift+f exec $term -e ranger
+bindsym $mod+Shift+m exec $term -e ncmpcpp
+bindsym $mod+Shift+s exec spotify
+bindsym $mod+Shift+x exec pcmanfm
+bindsym $mod+Shift+e exec thunderbird
+bindsym $mod+Shift+v exec pavucontrol
+bindsym $mod+Shift+b exec blueman-manager
+bindsym $mod+Shift+t exec telegram-desktop
+bindsym $mod+f	     exec rofi-files
+
+# Window switcher
+#bindsym $mod+Tab exec rofi -show window
+# non funziona bene con wayland, grabba solo le finestre che usano Xwayland
+
+# Volume
+bindsym XF86AudioRaiseVolume exec set-volume up
+bindsym XF86AudioLowerVolume exec set-volume down
+bindsym XF86AudioMute	     exec set-volume toggle
+
+# Brightness
+bindsym XF86MonBrightnessDown exec brightnessctl -q set 5%-
+bindsym XF86MonBrightnessUp   exec brightnessctl -q set 5%+
+
+# Switch screens
+#bindsym XF86Display exec ~/.local/bin/switch-screen.sh
+# non funziona con Wayland, dando che usa xrandr
+# da riscrivere usando swaymsg 
+
+# Screenshot
+#bindsym Print		exec --no-startup-id sway-screenshot
+# the AKKO keyboard does not have Print key but have a calculator key
+#bindsym XF86Calculator  exec --no-startup-id sway-screenshot 
+
+# Shutdown dialog 
+bindsym $mod+Shift+BackSpace exec shutdown-menu
+
+# Caps Lock
+#bindsym --release Caps_Lock exec pkill -SIGRTMIN+10 i3blocks
+# caps lock disattivato (finalmente)
+
+#------------------------------
+# A E S T H E T I C S
+#------------------------------
+
+# Font
+font pango:Roboto Regular 8
+
+# Window borders settings
+default_border pixel 3
+
+# Gaps
+gaps inner 4
+smart_gaps on
+smart_borders on
+hide_edge_borders smart_no_gaps
+
+# No focus following mouse
+focus_follows_mouse no
+
+
+#
+# NORD THEME
+#
+
+# Polar night
+set $nord0  #2e3440
+set $nord1  #3b4252 
+set $nord2  #434c5e
+set $nord3  #4c566a
+# Snow Storm
+set $nord4  #d8dee9
+set $nord5  #e5e9f0
+set $nord6  #eceff4
+# Frost
+set $nord7  #8fbcbb
+set $nord8  #88c0d0
+set $nord9  #81a1c1
+set $nord10 #88c0d0
+# Aurora
+set $nord11 #bf616a
+set $nord12 #d08770
+set $nord13 #ebcb8b
+set $nord14 #a3be8c
+set $nord15 #b48ead
+
+
+# Use waybar instead of swaybar
+bar {
+    position top
+    status_command i3blocks
+    separator_symbol " "
+    colors {
+        # bar background color
+        background $nord1
+        # text color used for blocks that do not have a color specified.
+        statusline $nord7
+        # workspaces section            
+        #                    border  backgr. text
+        focused_workspace  $nord7 $nord7 $nord1
+        inactive_workspace $nord1  $nord1  $nord4
+        active_workspace   $nord1  $nord1  $nord13
+        urgent_workspace   $nord11 $nord11 $nord1
+    }
+}
+
+# Decorators color
+#class                  border  backgr  text    indicator child_border
+client.focused          $nord7  $nord7  $nord0  $nord1 $nord7
+client.focused_inactive $nord1  $nord1  $nord6  $nord1 $nord1
+client.unfocused        $nord1  $nord1  $nord7  $nord1 $nord1
+client.urgent           $nord11 $nord11 $nord0  $nord1 $nord11
+
+
+# Wallpaper
+#output "*" bg $nord3 solid_color
+#output "*" bg ~/Immagini/wallpapers/soviet-space.jpg fit #ffffff
+
+
+
+#------------------------------
+# Startup applications
+#------------------------------
+
+# Load Xresources
+#exec_always xrdb -merge /home/sunny/.Xresources
+
+# Display auto suspend
+#exec swayidle -w \
+#    timeout 600 'swaymsg "output * dpms off"' \
+#    resume 'swaymsg "output * dpms on"' \
+
+# network manager
+#exec nm-applet --indicator
+# cloud services
+#exec megasync
+#exec dropbox
+# night filter
+#exec redshift
+# notification daemon
+#exec mako
+# bluetooth
+#exec blueman-applet

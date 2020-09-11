@@ -1,0 +1,3870 @@
+{
+  "coc-python|/home/sunny/.local/share/Dropbox/LatticeQED/code": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:40313b6246cb90a9b6be53929d5123d3": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:40313b6246cb90a9b6be53929d5123d3": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.local/share/Dropbox/LatticeQED/code": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|global": {
+    "INTERPRETERS_CACHE_v3_VirtualEnvService": [],
+    "/sbin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/sbin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026444
+    },
+    "/sbin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/sbin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026448
+    },
+    "/sbin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/sbin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026452
+    },
+    "/usr/sbin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/sbin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a"
+      },
+      "expiry": 1599842026454
+    },
+    "/usr/sbin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/sbin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026457
+    },
+    "/usr/sbin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/sbin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026459
+    },
+    "/usr/sbin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/sbin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026462
+    },
+    "/usr/sbin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/sbin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026464
+    },
+    "/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a"
+      },
+      "expiry": 1599842026466
+    },
+    "/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026468
+    },
+    "/bin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026470
+    },
+    "/bin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026472
+    },
+    "/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026474
+    },
+    "/usr/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a"
+      },
+      "expiry": 1599842026486
+    },
+    "/usr/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026489
+    },
+    "/usr/bin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026493
+    },
+    "/usr/bin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d"
+      },
+      "expiry": 1599842026495
+    },
+    "/usr/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026497
+    },
+    "INTERPRETERS_CACHE_v3_CurrentPathService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "type": "Unknown"
+      }
+    ],
+    "/sbin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/sbin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372"
+      },
+      "expiry": 1599842026555
+    },
+    "/sbin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/sbin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a"
+      },
+      "expiry": 1599842026552
+    },
+    "INTERPRETERS_CACHE_v3_KnownPathsService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/sbin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/sbin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/sbin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/sbin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/sbin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/sbin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/sbin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/sbin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/sbin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/sbin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "4a403c5a7d689263ea555556ed47ee96a0155e4018476045e86143b129d66283702904b62587100a97aa54d5287a9b916c158e327166dcd33b432da84554043a",
+        "type": "Unknown"
+      }
+    ],
+    "preferredGlobalPyInterpreter": {
+      "architecture": 3,
+      "path": "/sbin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "/usr/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+          "type": "Unknown",
+          "displayName": "Python 3.8.5 64-bit"
+        }
+      },
+      "expiry": 1599842026991
+    },
+    "/usr/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit",
+        "hash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372-071b4c3bf60afd529ad9ee5d0323bd03"
+      },
+      "expiry": 1599842026853
+    },
+    "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3",
+        "fileHash": "2ffc2a7bd62312f831916ccda1b480720b2411d91cf2ac105d7aebdab37ebd8052aae06e4750761b9bbe00ea2d74e65d8d35fb74f68d5c0b4277616f36aaf3ef"
+      },
+      "expiry": 1596811327346
+    },
+    "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.6-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 6,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.6-final"
+        },
+        "sysPrefix": "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda",
+        "fileHash": "5300cb7e705e5492e961088278fa1e7d62b5926e3c115fd3cf5ba255f73a5329ae8ee8d47e47a55ef7580bb44820c58d79c3b570219a3a88653b23beb7968268"
+      },
+      "expiry": 1596811327342
+    },
+    "/opt/anaconda/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/anaconda/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.6-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 6,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.6-final"
+        },
+        "sysPrefix": "/opt/anaconda",
+        "fileHash": "39c88693ca83f8e3f885534722d5780513f0921aeab7f17a6ce7baa13225c308532079db2d1135afbf2ab671f997e1f87dc4f1ad91765b878161082a4dcc3562"
+      },
+      "expiry": 1593613262847
+    },
+    "CONDA_ENVIRONMENTS": {
+      "data": [
+        {
+          "name": "quspin",
+          "path": "/home/sunny/.conda/envs/quspin"
+        },
+        {
+          "name": "base",
+          "path": "/opt/miniconda3"
+        }
+      ]
+    },
+    "INTERPRETERS_CACHE_v3_CondaEnvFileService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/sunny/.conda/envs/quspin",
+        "envName": "quspin"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_CondaEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/sunny/.conda/envs/quspin",
+        "envName": "quspin"
+      },
+      {
+        "architecture": 3,
+        "path": "/opt/miniconda3/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/opt/miniconda3",
+        "fileHash": "261335cbbc8b2ae1a6e1eb174d78ac0df8f140340a2dfdd1a32748a52fdd348d0a4d3631f45081c24d9439900f1f748a26ab28a395fb1b9ee0ac9ceeb5a9169a",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/opt/miniconda3",
+        "envName": "base"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/sunny/.conda/envs/quspin",
+        "envName": "quspin"
+      }
+    ],
+    "PipEnvInformation": [],
+    "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.3 64-bit ('miniconda3': conda)",
+        "hash": "2ffc2a7bd62312f831916ccda1b480720b2411d91cf2ac105d7aebdab37ebd8052aae06e4750761b9bbe00ea2d74e65d8d35fb74f68d5c0b4277616f36aaf3ef-1d282354f348b53560d23abdfa0ad770"
+      },
+      "expiry": 1594830105822
+    },
+    "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.6 64-bit ('anaconda': conda)",
+        "hash": "5300cb7e705e5492e961088278fa1e7d62b5926e3c115fd3cf5ba255f73a5329ae8ee8d47e47a55ef7580bb44820c58d79c3b570219a3a88653b23beb7968268-6fb69b9106d4c76352fed6e29c152bde"
+      },
+      "expiry": 1594830105819
+    },
+    "/opt/anaconda/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.6 64-bit ('base': conda)",
+        "hash": "39c88693ca83f8e3f885534722d5780513f0921aeab7f17a6ce7baa13225c308532079db2d1135afbf2ab671f997e1f87dc4f1ad91765b878161082a4dcc3562-9c5aab63da5644fcfe1bafcf2287d581"
+      },
+      "expiry": 1593439717147
+    },
+    "/usr/bin/python2.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.18 64-bit",
+        "hash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d-59a73307647974a611982520bd8f8a73"
+      },
+      "expiry": 1599842026860
+    },
+    "/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit",
+        "hash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372-08aca38a8256530165b7fbe3374ecf22"
+      },
+      "expiry": 1599842026866
+    },
+    "/bin/python2.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.18 64-bit",
+        "hash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d-11c68556ee50f4ec0e503bc4a97b457f"
+      },
+      "expiry": 1599842026872
+    },
+    "/usr/sbin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit",
+        "hash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372-b3422c40868ba60bc3bef3a3255705c1"
+      },
+      "expiry": 1599842026878
+    },
+    "/usr/sbin/python2.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.18 64-bit",
+        "hash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d-036251af8794991f6867e0b4d7e1fa8c"
+      },
+      "expiry": 1599842026884
+    },
+    "/sbin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit",
+        "hash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372-c9df054544a83c6b3160a429ff80c98b"
+      },
+      "expiry": 1599842026890
+    },
+    "/sbin/python2.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.18 64-bit",
+        "hash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d-228780882c7770dee4879762a281ecb3"
+      },
+      "expiry": 1599842026897
+    },
+    "InterpreterAutoSeletionRule-system": {
+      "architecture": 3,
+      "path": "/sbin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "2ffc2a7bd62312f831916ccda1b480720b2411d91cf2ac105d7aebdab37ebd8052aae06e4750761b9bbe00ea2d74e65d8d35fb74f68d5c0b4277616f36aaf3ef",
+        "info": {
+          "architecture": 3,
+          "path": "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.3-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.3-final"
+          },
+          "sysPrefix": "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3",
+          "fileHash": "2ffc2a7bd62312f831916ccda1b480720b2411d91cf2ac105d7aebdab37ebd8052aae06e4750761b9bbe00ea2d74e65d8d35fb74f68d5c0b4277616f36aaf3ef",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/home/sunny/.cache/pacaur/miniconda3/pkg/miniconda3/opt/miniconda3",
+          "envName": "miniconda3",
+          "displayName": "Python 3.8.3 64-bit ('miniconda3': conda)"
+        }
+      },
+      "expiry": 1594830105843
+    },
+    "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "5300cb7e705e5492e961088278fa1e7d62b5926e3c115fd3cf5ba255f73a5329ae8ee8d47e47a55ef7580bb44820c58d79c3b570219a3a88653b23beb7968268",
+        "info": {
+          "architecture": 3,
+          "path": "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.7.6-final",
+            "major": 3,
+            "minor": 7,
+            "patch": 6,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.7.6-final"
+          },
+          "sysPrefix": "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda",
+          "fileHash": "5300cb7e705e5492e961088278fa1e7d62b5926e3c115fd3cf5ba255f73a5329ae8ee8d47e47a55ef7580bb44820c58d79c3b570219a3a88653b23beb7968268",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/home/sunny/.cache/pacaur/anaconda/pkg/anaconda/opt/anaconda",
+          "envName": "anaconda",
+          "displayName": "Python 3.7.6 64-bit ('anaconda': conda)"
+        }
+      },
+      "expiry": 1594830105837
+    },
+    "/opt/anaconda/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "39c88693ca83f8e3f885534722d5780513f0921aeab7f17a6ce7baa13225c308532079db2d1135afbf2ab671f997e1f87dc4f1ad91765b878161082a4dcc3562",
+        "info": {
+          "architecture": 3,
+          "path": "/opt/anaconda/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.7.6-final",
+            "major": 3,
+            "minor": 7,
+            "patch": 6,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.7.6-final"
+          },
+          "sysPrefix": "/opt/anaconda",
+          "fileHash": "39c88693ca83f8e3f885534722d5780513f0921aeab7f17a6ce7baa13225c308532079db2d1135afbf2ab671f997e1f87dc4f1ad91765b878161082a4dcc3562",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/opt/anaconda",
+          "envName": "base",
+          "displayName": "Python 3.7.6 64-bit ('base': conda)"
+        }
+      },
+      "expiry": 1593439717238
+    },
+    "/usr/bin/python2.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python2",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.18-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 18,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.18-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+          "type": "Unknown",
+          "displayName": "Python 2.7.18 64-bit"
+        }
+      },
+      "expiry": 1599842027007
+    },
+    "/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "info": {
+          "architecture": 3,
+          "path": "/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+          "type": "Unknown",
+          "displayName": "Python 3.8.5 64-bit"
+        }
+      },
+      "expiry": 1599842027020
+    },
+    "/bin/python2.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "info": {
+          "architecture": 3,
+          "path": "/bin/python2",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.18-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 18,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.18-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+          "type": "Unknown",
+          "displayName": "Python 2.7.18 64-bit"
+        }
+      },
+      "expiry": 1599842027042
+    },
+    "/usr/sbin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/sbin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+          "type": "Unknown",
+          "displayName": "Python 3.8.5 64-bit"
+        }
+      },
+      "expiry": 1599842027080
+    },
+    "/usr/sbin/python2.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/sbin/python2",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.18-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 18,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.18-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+          "type": "Unknown",
+          "displayName": "Python 2.7.18 64-bit"
+        }
+      },
+      "expiry": 1599842027093
+    },
+    "/sbin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+        "info": {
+          "architecture": 3,
+          "path": "/sbin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+          "type": "Unknown",
+          "displayName": "Python 3.8.5 64-bit"
+        }
+      },
+      "expiry": 1599842027106
+    },
+    "/sbin/python2.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+        "info": {
+          "architecture": 3,
+          "path": "/sbin/python2",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.18-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 18,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.18-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "2a5d956b99c22178bc5a3d0734def2bd0052744ed42173c50c50602f72363da35252140abe2e14980f62e23b46994c519cef967160b2af296dc17461d38dd26d",
+          "type": "Unknown",
+          "displayName": "Python 2.7.18 64-bit"
+        }
+      },
+      "expiry": 1599842027120
+    },
+    "InterpreterAutoSeletionRule-cachedInterpreters": {
+      "architecture": 3,
+      "path": "/sbin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "ProposeLSBanner": false,
+    "/opt/anaconda/bin/python3.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/anaconda/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.6-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 6,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.6-final"
+        },
+        "sysPrefix": "/opt/anaconda",
+        "fileHash": "16565c4a460b5016376154eb0bbaa8f193462791fdd4cf76c5417802182e5ce5886f588d11dcc61d3c73e6c5b97a1de0c5ba21bba349e590257136b2916bee76"
+      },
+      "expiry": 1593613555202
+    },
+    "/opt/anaconda/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/anaconda/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.6-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 6,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.6-final"
+        },
+        "sysPrefix": "/opt/anaconda",
+        "fileHash": "39c88693ca83f8e3f885534722d5780513f0921aeab7f17a6ce7baa13225c308532079db2d1135afbf2ab671f997e1f87dc4f1ad91765b878161082a4dcc3562"
+      },
+      "expiry": 1593613555204
+    },
+    "/home/sunny/.conda/envs/quspin/bin/python3.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc"
+      },
+      "expiry": 1599842026545
+    },
+    "/home/sunny/.conda/envs/quspin/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666"
+      },
+      "expiry": 1599842026547
+    },
+    "/home/sunny/.conda/envs/quspin/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666"
+      },
+      "expiry": 1599842026550
+    },
+    "/opt/miniconda3/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/miniconda3/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/opt/miniconda3",
+        "fileHash": "261335cbbc8b2ae1a6e1eb174d78ac0df8f140340a2dfdd1a32748a52fdd348d0a4d3631f45081c24d9439900f1f748a26ab28a395fb1b9ee0ac9ceeb5a9169a"
+      },
+      "expiry": 1593685208522
+    },
+    "/opt/miniconda3/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/miniconda3/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/opt/miniconda3",
+        "fileHash": "261335cbbc8b2ae1a6e1eb174d78ac0df8f140340a2dfdd1a32748a52fdd348d0a4d3631f45081c24d9439900f1f748a26ab28a395fb1b9ee0ac9ceeb5a9169a"
+      },
+      "expiry": 1599842028811
+    },
+    "/opt/miniconda3/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/opt/miniconda3/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.3-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 3,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.3-final"
+        },
+        "sysPrefix": "/opt/miniconda3",
+        "fileHash": "0c731c4cf19bd9811d95bf8a486763b392e3fe0a3c2807371596ad987c3eb459246301080f0e01d4ccc6a125753f0064f74766de054238db005fc6cc39918801"
+      },
+      "expiry": 1593685208587
+    },
+    "/opt/miniconda3/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.3 64-bit ('base': conda)",
+        "hash": "261335cbbc8b2ae1a6e1eb174d78ac0df8f140340a2dfdd1a32748a52fdd348d0a4d3631f45081c24d9439900f1f748a26ab28a395fb1b9ee0ac9ceeb5a9169a-253073da11506a9fcc8ce706e3791164"
+      },
+      "expiry": 1599755420866
+    },
+    "/home/sunny/.conda/envs/quspin/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.7 64-bit",
+        "hash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666-bf2156a388440c1c53c35110494c951f"
+      },
+      "expiry": 1599842027246
+    },
+    "/opt/miniconda3/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "261335cbbc8b2ae1a6e1eb174d78ac0df8f140340a2dfdd1a32748a52fdd348d0a4d3631f45081c24d9439900f1f748a26ab28a395fb1b9ee0ac9ceeb5a9169a",
+        "info": {
+          "architecture": 3,
+          "path": "/opt/miniconda3/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.3-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 3,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.3-final"
+          },
+          "sysPrefix": "/opt/miniconda3",
+          "fileHash": "261335cbbc8b2ae1a6e1eb174d78ac0df8f140340a2dfdd1a32748a52fdd348d0a4d3631f45081c24d9439900f1f748a26ab28a395fb1b9ee0ac9ceeb5a9169a",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/opt/miniconda3",
+          "envName": "base",
+          "displayName": "Python 3.8.3 64-bit ('base': conda)"
+        }
+      },
+      "expiry": 1599755420885
+    },
+    "/home/sunny/.conda/envs/quspin/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "info": {
+          "architecture": 3,
+          "path": "/home/sunny/.conda/envs/quspin/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.7.7-final",
+            "major": 3,
+            "minor": 7,
+            "patch": 7,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.7.7-final"
+          },
+          "sysPrefix": "/home/sunny/.conda/envs/quspin",
+          "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/home/sunny/.conda/envs/quspin",
+          "envName": "quspin",
+          "cachedEntry": true,
+          "displayName": "Python 3.7.7 64-bit ('quspin': conda)",
+          "__store": true
+        }
+      },
+      "expiry": 1599842027190
+    },
+    "InterpreterAutoSeletionRule-currentPath": {
+      "architecture": 3,
+      "path": "/home/sunny/.conda/envs/quspin/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.7.7-final",
+        "major": 3,
+        "minor": 7,
+        "patch": 7,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.7.7-final"
+      },
+      "sysPrefix": "/home/sunny/.conda/envs/quspin",
+      "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+      "type": "Unknown"
+    }
+  },
+  "coc-python|/home/sunny/Scaricati": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:61a336566ad900ff6030dd9d567b77df": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:61a336566ad900ff6030dd9d567b77df": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/Scaricati": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/sunny/Università/Repo": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:bc183ea90dbc3edbf426612b0252d86b": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:bc183ea90dbc3edbf426612b0252d86b": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/Università/Repo": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "SelectedPythonPath": "/home/sunny/.conda/envs/quspin/bin/python"
+  },
+  "coc-python|/opt/anaconda/pkgs/quspin-0.3.4-omp_py37h8bc04fc_0/lib/python3.7/site-packages/quspin": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:7e46906e5b5ac8c840cb30fb2c782e94": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:7e46906e5b5ac8c840cb30fb2c782e94": [],
+    "autoSelectedWorkspacePythonInterpreter-/opt/anaconda/pkgs/quspin-0.3.4-omp_py37h8bc04fc_0/lib/python3.7/site-packages/quspin": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/sunny/.local/share/TelegramDesktop": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": []
+  },
+  "coc-python|/home/sunny/Scaricati/Telegram Desktop": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:51ad9b79c9d5f860007a4eaab57aeed3": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:51ad9b79c9d5f860007a4eaab57aeed3": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/Scaricati/Telegram Desktop": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/quspin/tools": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:0ac59d33efaaef6cf7caa480a6a13916": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:0ac59d33efaaef6cf7caa480a6a13916": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/quspin/tools": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/quspin": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:1e5bff3555f7115ebfe598fb147d7f29": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:1e5bff3555f7115ebfe598fb147d7f29": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/quspin": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/quspin/basis": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:eaa7912283ae7236dd97819d6466662d": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:eaa7912283ae7236dd97819d6466662d": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/quspin/basis": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ]
+  },
+  "coc-python|/home/sunny/Scrivania/python-hard-way": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:7261534ad4a056877d4923fb790879d6": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:7261534ad4a056877d4923fb790879d6": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/Scrivania/python-hard-way": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/sunny/Università/Repo/quspin-latticeqed": {
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:bc183ea90dbc3edbf426612b0252d86b": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:bc183ea90dbc3edbf426612b0252d86b": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/Università/Repo": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    }
+  },
+  "coc-python|/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/numpy": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:b4b6b9ee3b9f7f55deed3a0de6c2df8c": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:b4b6b9ee3b9f7f55deed3a0de6c2df8c": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/numpy": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ]
+  },
+  "coc-python|/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/numpy/core": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:ac9418e40ff958ab7f9aa8b83643aa0f": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:ac9418e40ff958ab7f9aa8b83643aa0f": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/numpy/core": {
+      "architecture": 3,
+      "path": "/usr/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.3-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "def367690c7aaad15f44a12f7e2b4a786fedb940dba2712324d4131a7d5b5701ff658e7df716ad277ea37ade8bcb28aa90c5c16c94fb2f4dd2fc8d1f31622bbf",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ]
+  },
+  "coc-python|/home/sunny/.config/ranger/plugins/ranger_devicons": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:aa31b8e3dc0b6c34ce86b74e7a0d9d06": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:aa31b8e3dc0b6c34ce86b74e7a0d9d06": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.config/ranger/plugins/ranger_devicons": {
+      "architecture": 3,
+      "path": "/sbin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ]
+  },
+  "coc-python|/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/numba": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:5b8c69186efc6c86b473fdf12199d668": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:5b8c69186efc6c86b473fdf12199d668": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/.conda/envs/quspin/lib/python3.7/site-packages/numba": {
+      "architecture": 3,
+      "path": "/sbin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ]
+  },
+  "coc-python|/home/sunny/Università/Repo/quspin-lgt": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:5f02db2c17691487b330da1e89515f26": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:5f02db2c17691487b330da1e89515f26": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/home/sunny/Università/Repo/quspin-lgt": {
+      "architecture": 3,
+      "path": "/sbin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "ac6bd5d1a4a88654902f8eda13d1d83c600f8b719618db815672b7c3ffa322f4ee5361e5c10a46baa3494538e60ab30ea65a69029850b5fb1a5b694a4f090372",
+      "type": "Unknown",
+      "displayName": "Python 3.8.5 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "54deea7efe3cec90172214ad72651b7e371622e8027fb9d0473ec956721e22d42380c3ca6cbb9968df82ea2beca6df243877f596c4e4fbd6c1c09ec425801666",
+        "envName": "quspin",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/sunny/.conda/envs/quspin/bin/python3.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.7-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 7,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.7-final"
+        },
+        "sysPrefix": "/home/sunny/.conda/envs/quspin",
+        "fileHash": "a7605f4e061544a1b875085993fe1836bf14110272c169b7079d6784f450dbeff698e435a7c40da630d69fba3a1ea6bb609330be7675e51c8b496e201c9c7fcc",
+        "envName": "quspin",
+        "type": "Unknown"
+      }
+    ],
+    "SelectedPythonPath": "/home/sunny/.conda/envs/quspin/bin/python"
+  }
+}
