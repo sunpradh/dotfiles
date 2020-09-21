@@ -27,7 +27,6 @@ Plug 'junegunn/goyo.vim'	  " distraction free writing
 Plug 'junegunn/limelight.vim'	  " distraction free writing
 
 
-
 call plug#end()
 """------------------------------------------------------------
 

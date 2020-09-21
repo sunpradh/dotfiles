@@ -35,7 +35,7 @@ FILE_EXTENSION_LOWER=$(echo ${FILE_EXTENSION} | tr '[:upper:]' '[:lower:]')
 
 # Settings
 HIGHLIGHT_SIZE_MAX=262143  # 256KiB
-HIGHLIGHT_TABWIDTH=8
+HIGHLIGHT_TABWIDTH=4
 HIGHLIGHT_STYLE='pablo'
 PYGMENTIZE_STYLE='autumn'
 
@@ -86,6 +86,10 @@ handle_extension() {
             lynx -dump -- "${FILE_PATH}" && exit 5
             elinks -dump "${FILE_PATH}" && exit 5
             ;; # Continue with next handler on failure
+	json)
+	    jq --color-output . "${FILE_PATH}" && exit 5
+	    python -m json.tool -- "${FILE_PATH}" && exit 5
+	    ;;
     esac
 }
 
@@ -93,11 +97,18 @@ handle_image() {
     local mimetype="${1}"
     case "${mimetype}" in
         # SVG
-        # image/svg+xml)
-        #     convert "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
-        #     exit 1;;
+         image/svg+xml)
+             convert "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
+             exit 1;;
 
         # Image
+	image/vnd.djvu)
+	    # Preview as text conversion
+	    #djvutxt --pages=1-10 "${FILE_PATH}" && exit 5
+	    #exit 1;;
+	    ddjvu -format=tiff -quality=90 -page=1 "${FILE_PATH}" "${IMAGE_CACHE_PATH}" \
+		      && exit 6 || exit 1;;
+
         image/*)
             local orientation
             orientation="$( identify -format '%[EXIF:Orientation]\n' -- "${FILE_PATH}" )"
@@ -119,13 +130,13 @@ handle_image() {
              exit 1;;
         # PDF
          application/pdf)
-        #     pdftoppm -f 1 -l 1 \
-        #              -scale-to-x 1920 \
-        #              -scale-to-y -1 \
-        #              -singlefile \
-        #              -jpeg -tiffcompression jpeg \
-        #              -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
-        #         && exit 6 || exit 1;;
+             pdftoppm -f 1 -l 1 \
+                      -scale-to-x 1920 \
+                      -scale-to-y -1 \
+                      -singlefile \
+                      -jpeg -tiffcompression jpeg \
+                      -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
+                 && exit 6 || exit 1;;
     esac
 }
 
@@ -145,6 +156,9 @@ handle_mime() {
                 local pygmentize_format='terminal'
                 local highlight_format='ansi'
             fi
+	    # Use `bat`
+	    env COLORTERM=8bit bat --color=always --style numbers,grid -- "${FILE_PATH}" && exit 5
+	    # Use `highlight`
             highlight --replace-tabs="${HIGHLIGHT_TABWIDTH}" --out-format="${highlight_format}" \
                 --style="${HIGHLIGHT_STYLE}" --force -- "${FILE_PATH}" && exit 5
             # pygmentize -f "${pygmentize_format}" -O "style=${PYGMENTIZE_STYLE}" -- "${FILE_PATH}" && exit 5

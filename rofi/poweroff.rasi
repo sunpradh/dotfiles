@@ -9,7 +9,7 @@
     selectioncolor: #d08770;
 
 
-    font: "Roboto Regular 11";
+    font: "Hack Nerd Font 48";
     border-color: @separatorcolor;
     background-color: @backgroundcolor;
     text-color: @foregroundcolor;

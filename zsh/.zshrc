@@ -118,8 +118,8 @@ alias icat="kitty +kitten icat"
 alias fan="watch -n 1 cat /proc/acpi/ibm/fan"
 
 # todo file list
-todofile="~/.local/share/todolist"
-alias todo="nvim $todofile"
+#todofile="~/.local/share/todolist"
+#alias todo="nvim $todofile"
 
 # set keymap on sway
 alias sway-layout="swaymsg input type:keyboard xkb_layout"
