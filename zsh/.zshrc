@@ -1,18 +1,18 @@
 stty -ixon # Disable ctrl-s and ctrl-q
 
-#
+
 ## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
 setopt rcexpandparam                                            # Array expension with parameters
-#setopt nocheckjobs                                              # Don't warn about running processes when exiting
 setopt numericglobsort                                          # Sort filenames numerically when it makes sense
 setopt nobeep                                                   # No beep
 setopt appendhistory                                            # Immediately append history instead of overwriting
 setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
 setopt autocd                                                   # if only directory path is entered, cd there.
 
+## Auto completion settings
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' rehash true                              # automatically find new executables in path 
@@ -20,22 +20,23 @@ zstyle ':completion:*' rehash true                              # automatically 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
+
+## History settings
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=5000
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 DIRSTACKSIZE=10
 
-
 ## Keybindings section
 bindkey -e
 bindkey '^[[7~' beginning-of-line                               # Home key
-bindkey '^[[H' beginning-of-line                                # Home key
+bindkey '^[[H'  beginning-of-line                               # Home key
 if [[ "${terminfo[khome]}" != "" ]]; then
   bindkey "${terminfo[khome]}" beginning-of-line                # [Home] - Go to beginning of line
 fi
 bindkey '^[[8~' end-of-line                                     # End key
-bindkey '^[[F' end-of-line                                     # End key
+bindkey '^[[F'  end-of-line                                     # End key
 if [[ "${terminfo[kend]}" != "" ]]; then
   bindkey "${terminfo[kend]}" end-of-line                       # [End] - Go to end of line
 fi
@@ -54,13 +55,12 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-
 # Theming section  
 autoload -U compinit colors zcalc
 compinit -d
 colors
 # Load dir-colors
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+#test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 ## Plugins section: Enable fish style features
 # Use syntax highlighting
@@ -73,6 +73,9 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up			
 bindkey '^[[B' history-substring-search-down
+# Bind also Ctrl-J and Ctrl-K for the same functions
+bindkey '^J' history-substring-search-up			
+bindkey '^K' history-substring-search-down
 
 # enable substitution for prompt
 setopt prompt_subst
@@ -82,9 +85,9 @@ setopt prompt_subst
 # Maia prompt
 PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
 # Print a greeting message when shell is started
-echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
+#echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 # Right prompt with exit status of previous command if not successful
-RPROMPT="%{$fg[red]%} %(?..[%?])" 
+RPROMPT="%{$fg[red]%} %(?..[%?])%{$reset_color%}" 
 # Right prompt with exit status of previous command marked with ✓ or ✗
  #RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
 
@@ -103,11 +106,12 @@ export LESS=-r
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"    
+
+# human readable
 alias df='df -h'     # Human-readable sizes
 alias free='free -m' # Show sizes in MB
 alias grep="grep --color" 
 
-alias pa=pacaur
 alias pm=pacman
 alias ls="exa"
 alias ll="exa -l"
@@ -116,18 +120,12 @@ alias vim="nvim"
 alias mpv-sel='mpv "`xsel -b`"'
 alias icat="kitty +kitten icat"
 alias fan="watch -n 1 cat /proc/acpi/ibm/fan"
-
-# todo file list
-#todofile="~/.local/share/todolist"
-#alias todo="nvim $todofile"
-
-# set keymap on sway
-alias sway-layout="swaymsg input type:keyboard xkb_layout"
+alias ssh="TERM=xterm ssh"
 
 # Radio merda malata
 alias radiomerdamalata='mpv http://s.streampunk.cc/merdamalata.ogg'
 
-# edit configuration files in .config
+# edit configuration files in .config and custom scripts
 cfg() { 
     cd ~/.config
     f="$(fd -H -tf | fzf --preview='highlight --force -O ansi -- {}')"
@@ -143,6 +141,7 @@ bin() {
 f() { f="$(fd -tf $1 | fzf)" && [ ! -z $f ] && echo $f && rifle $f }
 
 # set fzf completion and key bindings
+export FZF_DEFAULT_COMMAND="fd -t f"
 FZF_CTRL_T_COMMAND="command fd -L -tf -td -tl -c never"
 FZF_ALT_C_COMMAND="command fd -L -td -c never"
 FZF_ALT_C_OPTS='--height=80% --preview="tree -C -L 1 {} --dirsfirst"'
@@ -154,3 +153,8 @@ source "/usr/share/fzf/key-bindings.zsh"
 alias coa='conda activate'
 alias cod='conda deactivate'
 
+# Remote file systems
+alias mount-lnxbo="sshfs lnxbo: ~/Remoto/lnxbo/"
+alias mount-theophys="sshfs theophys: ~/Remoto/theophys/"
+alias unmount-lnxbo="fusermount -u ~/Remoto/lnxbo/"
+alias unmount-theophys="fusermount -u ~/Remoto/theophys/"

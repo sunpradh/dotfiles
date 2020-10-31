@@ -10,6 +10,7 @@ Plug 'lervag/vimtex'              " latex plugin
 Plug 'sirver/ultisnips'           " snippets plugin
 Plug 'junegunn/fzf.vim'           " fzf plugin for vim
 Plug 'vim-airline/vim-airline'    " statusbar
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'         " surround
 Plug 'honza/vim-snippets'         " set of snippets
 Plug 'jiangmiao/auto-pairs'	  " auto pairs parenthesism ecc...
@@ -25,7 +26,7 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': ['tex', 'markdown', 'vimwiki']} " 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " Markdown preview
 Plug 'junegunn/goyo.vim'	  " distraction free writing
 Plug 'junegunn/limelight.vim'	  " distraction free writing
-
+Plug 'chriskempson/base16-vim'	  " base16 color schemes
 
 call plug#end()
 """------------------------------------------------------------
@@ -82,13 +83,18 @@ noremap <silent> <M-Tab> :tabn<CR>
 " disable annoying keymaps
 noremap q: <Nop>
 noremap q? <Nop>
+" exit terminal mode
+tnoremap <A-q> <C-\><C-n>
+
 
 """ Colorscheme
 set background=dark
 " Use Nord as a colorscheme
-colorscheme nord
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
+"colorscheme nord
+"let g:nord_italic = 1
+"let g:nord_italic_comments = 1
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-default-dark
 
 """ Misc
 " Fast redraw
@@ -213,6 +219,7 @@ let g:limelight_conceal_ctermfg = 240
 """ Airline
 let g:airline_detect_whitespace = 0
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline_theme='base16_default'
 
 
 """ Conquer of Completion
