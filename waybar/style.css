@@ -2,16 +2,16 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, "Font Awesome 5 Free", sans-serif;
+    font-family: Iosevka, "Font Awesome 5 Free", sans-serif;
     font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: #181818;
+    background-color: #141414;
     opacity: 1;
-    border-top: 0px #4c566a solid;
-    color: #d8d8d8;
+    border-top: 1px #1a1a1a solid;
+    color: #888888;
     transition-property: background-color;
     transition-duration: .5s;
     padding-bottom: 2px;
@@ -22,13 +22,17 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
+#workspace {
+    font-family: "Roboto";
+}
+
 #workspaces button {
     padding: 0 0px;
     margin: 4px 4px;
     border-radius: 12px;
     border: 1px rgba(100, 100, 100, 0.5) solid;
     background-color: transparent;
-    min-width: 24px
+    min-width: 24px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -60,17 +64,19 @@ window#waybar.hidden {
 #memory,
 #cpu,
 #custom-todo,
+#custom-cpu,
+#custom-memory,
 #custom-kblayout {
     padding:   0 4px;
     margin:    0 4px;
     min-width: 40px;
-    color:     #b8b8b8;
+    color:     #888888;
 }
 
 #clock {
     padding: 0 4px;
     margin: 0 4px;
-    color: #eceff4;
+    color: #989898;
 }
 
 #custom-powermenu {

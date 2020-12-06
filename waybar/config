@@ -11,6 +11,8 @@
 	"pulseaudio",
 	"memory",
 	"cpu", 
+	//"custom/memory",
+	//"custom/cpu",
 	"custom/kblayout" ],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -21,55 +23,45 @@
     },
     "clock": {
 	"interval":	  10,
-	"format":         "{:<b>%H:%M</b>      %a %d %b  }",
+	"format":         "{: <b>%H:%M</b>     %a %d %b }",
         "tooltip-format": "<big><b>{:%Y %B}</b></big>\n<span font_desc='Hack 10'>{calendar}</span>",
         "format-alt":     "{:%Y-%m-%d}"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC} {icon}",
+        "format": "{icon} {temperatureC}",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat0": {
 	"bat": "BAT0",
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity} {icon}",
         "format-charging": "{capacity} \uf0e7",
-        //"format-plugged":  "{capacity} ",
         "format-plugged":  "",
         "format-alt":      "{time} {icon}",
-        //"format-good": "", // An empty format will hide the module
-        //"format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat1": {
         "bat": "BAT1",
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity} {icon}",
         "format-charging": "{capacity} \uf0e7",
-        //"format-plugged": "{capacity} ",
         "format-plugged": "",
         "format-alt": "{time} {icon}",
-        //"format-good": "", // An empty format will hide the module
         "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume} {icon}",
-        "format-bluetooth": "{volume} {icon}",
-        "format-bluetooth-muted": " {icon}",
+        "format": "{icon} {volume}",
+        "format-bluetooth": "{icon} {volume} ",
+        "format-bluetooth-muted": "{icon}  ",
         "format-muted": "",
         "format-source": "",
         "format-source-muted": "",
@@ -84,31 +76,38 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/todo": {
-	"format": "{} ",
-	"interval": 60,
-	"exec": "grep -e \"^\\w*\\*\" ~/.local/share/todolist | wc -l",
-	"on-click": "kitty -e nvim ~/.local/share/todolist",
-	"tooltip": false
-    },
-    "custom/kblayout": {
-	"format": "<b>{}</b>  ",
-	"exec": "sway-kbd-indicator",
-	"tooltip": false
-    },
     "cpu": {
-        "format": "{usage} ",
+        "format": " {usage}",
         "tooltip": true,
 	"interval": 2,
 	"on-click": "kitty -e htop"
     },
     "memory": {
-        "format": "{} ",
+        "format": " {}",
 	"interval": 2,
 	"on-click": "kitty -e htop"
     },
+    "custom/kblayout": {
+	"format": " <b>{}</b>",
+	"exec": "sway-kbd-indicator",
+	"tooltip": false
+    },
     "custom/powermenu": {
 	"format": "<big></big>",
-	"on-click": "shutdown-menu"
+	"on-click": "shutdown-menu",
+	"tooltip": false
+    },
+    "custom/cpu": {
+	"format": " <span background='#303030'>{}</span>",
+	"return-type": "json",
+	"exec":	  "sleep 1 && cpu_bar",
+	"tooltip": false,
+	"on-click": "kitty --class=htop -e htop"
+    },
+    "custom/memory": {
+	"format": " <span background='#303030'>{}</span>",
+	"exec": "mem_bar",
+	"tooltip": false
     }
+
 }

@@ -1,4 +1,4 @@
-#files: 929	version: 5.8
+#files: 934	version: 5.8
 
 _comps=(
 '-' '_precommand'
@@ -84,6 +84,7 @@ _comps=(
 'base64' '_base64'
 'basename' '_basename'
 'bash' '_bash'
+'bat' '_bat'
 'batch' '_at'
 'baz' '_baz'
 'beep' '_beep'
@@ -455,6 +456,8 @@ _comps=(
 'ggetopt' '_getopt'
 'ggrep' '_grep'
 'ggv' '_gnome-gv'
+'_gh' '_gh'
+'gh' '_gh'
 'ghc' '_ghc'
 'ghci' '_ghc'
 'ghc-pkg' '_ghc'
@@ -690,6 +693,7 @@ _comps=(
 'journalctl' '_journalctl'
 'jq' '_jq'
 'jrnl' '_jrnl'
+'jupyter' '_jupyter'
 'kak' '_kak'
 'kdeconnect-cli' '_kdeconnect'
 'kernel-install' '_kernel-install'
@@ -906,12 +910,14 @@ _comps=(
 'nginx' '_nginx'
 'ngrep' '_ngrep'
 'nice' '_nice'
+'ninja' '_ninja'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
 'nmap' '_nmap'
 'nmblookup' '_samba'
 'nmcli' '_networkmanager'
+'nnn' '_nnn'
 'nocorrect' '_precommand'
 'node' '_node'
 'noglob' '_precommand'
@@ -1074,7 +1080,6 @@ _comps=(
 'pstotgif' '_pspdf'
 'pswrap' '_postscript'
 'pulseaudio' '_pulseaudio'
-'pulseaudio-ctl' '_pulseaudio-ctl'
 'pump' '_pump'
 'pushd' '_cd'
 'pv' '_pv'
@@ -1130,6 +1135,7 @@ _comps=(
 'restart' '_initctl'
 'retawq' '_webbrowser'
 'rfkill' '_rfkill'
+'rg' '_rg'
 'rgview' '_vim'
 'rgvim' '_vim'
 'ri' '_ri'
@@ -1779,30 +1785,31 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _afew _android _archlinux-java _artisan _atach \
-            _bitcoin-cli _bluetoothctl _bootctl _bower _bundle \
-            _busctl _caffeinate _cap _cask _ccache \
-            _cf _cheat _choc _chromium _cmake \
-            _coffee _composer _conan _concourse _console \
-            _coredumpctl _cppcheck _curl _dad _debuild \
-            _dget _dhcpcd _diana _docpad _drush \
-            _ecdsautil _emulator _envdir _exa _exportfs \
-            _fab _fail2ban-client _fd _ffind _flameshot \
-            _fleetctl _flutter _force _fwupdmgr _gas \
-            _ghc _gist _git-flow _git-journal _git-pulls \
-            _git-revise _git-wtf _glances _golang _google \
-            _gtk-launch _hledger _homestead _hostnamectl _httpie \
-            _ibus _include-what-you-use _inxi _jmeter _jmeter-plugins \
-            _jonas _journalctl _jrnl _kak _kernel-install \
-            _kitchen _kitty _knife _language_codes _libinput \
-            _localectl _loginctl _lunchy _machinectl _mako \
-            _makoctl _mc _middleman _mina _mix \
-            _mkinitcpio _mpv _mussh _mvn _nano \
-            _networkctl _nftables _node _nvm _openssl \
+            _bat _bitcoin-cli _bluetoothctl _bootctl _bower \
+            _bundle _busctl _caffeinate _cap _cask \
+            _ccache _cf _cheat _choc _chromium \
+            _cmake _coffee _composer _conan _concourse \
+            _console _coredumpctl _cppcheck _curl _dad \
+            _debuild _dget _dhcpcd _diana _docpad \
+            _drush _ecdsautil _emulator _envdir _exa \
+            _exportfs _fab _fail2ban-client _fd _ffind \
+            _flameshot _fleetctl _flutter _force _fwupdmgr \
+            _gas _gh _ghc _gist _git-flow \
+            _git-journal _git-pulls _git-revise _git-wtf _glances \
+            _golang _google _gtk-launch _hledger _homestead \
+            _hostnamectl _httpie _ibus _include-what-you-use _inxi \
+            _jmeter _jmeter-plugins _jonas _journalctl _jrnl \
+            _jupyter _kak _kernel-install _kitchen _kitty \
+            _knife _language_codes _libinput _localectl _loginctl \
+            _lunchy _machinectl _mako _makoctl _mc \
+            _middleman _mina _mix _mkinitcpio _mpv \
+            _mussh _mvn _nano _networkctl _nftables \
+            _ninja _nnn _node _nvm _openssl \
             _optirun _pacman _patool _perf _periscope \
             _pgsql_utils _phing _pixz _pkcon _pkgfile \
             _play _pm2 _port _protoc _pulseaudio \
-            _pulseaudio-ctl _pygmentize _qpdf _rails _ralio \
-            _redis-cli _resolvectl _rfkill _rkt _rslsync \
+            _pygmentize _qpdf _rails _ralio _redis-cli \
+            _resolvectl _rfkill _rg _rkt _rslsync \
             _rspec _rsvm _rubocop _sbt _scala \
             _scrub _sdd _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
             _sd_unit_files _setcap _setup.py _sfdx _showoff \

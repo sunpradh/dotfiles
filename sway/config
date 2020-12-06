@@ -8,14 +8,19 @@
 
 # Tastiera italiana
 input type:keyboard {
-    xkb_layout it,us
+    xkb_layout us,it
     xkb_options caps:ctrl_modifier,grp:win_space_toggle
 }
 
 # Monitor configurations
+set $laptop eDP-1
 output eDP-1 position 0 0 resolution 1600x900@60Hz
 #output DP-2 resolution 1920x1080@60Hz
 #output DP-4 position 1600 0 resolution 1920x1080@60Hz
+
+# Disable laptop screen when the lid is closed
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
 
 # modifier key
 set $mod Mod4
@@ -38,16 +43,16 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left  40px
+bindsym $mod+Shift+j move down  40px
+bindsym $mod+Shift+k move up    40px
+bindsym $mod+Shift+l move right 40px
 
 # resize window
-bindsym $mod+Left  resize shrink width  10 px or 10 ppt
-bindsym $mod+Right resize grow   width  10 px or 10 ppt
-bindsym $mod+Down  resize grow   height 10 px or 10 ppt
-bindsym $mod+Up    resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+h resize shrink width  40 px
+bindsym $mod+Ctrl+l resize grow   width  40 px
+bindsym $mod+Ctrl+j resize grow   height 40 px
+bindsym $mod+Ctrl+k resize shrink height 40 px
 
 # split in horizontal orientation
 bindsym $mod+o split h
@@ -66,8 +71,8 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+t floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# toggle between floating and floating when cycling between windows
+bindsym $mod+y focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -82,10 +87,11 @@ bindsym $mod+Shift+q kill
 for_window [window_role="pop-up"]      floating enable # floating dialogs
 for_window [window_role="task_dialog"] floating enable
 for_window [class="GNU Octave"]        floating enable
-for_window [class="matplotlib"]        floating enable
+for_window [class="Matplotlib"]        floating enable
 for_window [class="gnuplot_qt"]        floating enable
-for_window [class="pavucontrol"]       floating enable
-for_window [class="blueman-manager"]   floating enable
+for_window [app_id="pavucontrol"]      floating enable
+for_window [app_id="blueman-manager"]  floating enable
+for_window [app_id="htop"]	       floating enable
 for_window [class="MEGAsync"]	       floating enable
 for_window [title="Microsoft Teams Notification"] floating enable
 for_window [window_role="PictureInPicture"]  border pixel 1
@@ -128,8 +134,8 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # switch to prev/next workspace
-bindsym $mod+U workspace prev
-bindsym $mod+I workspace next
+bindsym $mod+u workspace prev
+bindsym $mod+i workspace next
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -147,8 +153,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 workspace_auto_back_and_forth yes
 
 # move focused workspace between monitors
-bindsym $mod+Shift+I move workspace to output right
-bindsym $mod+Shift+U move workspace to output left
+bindsym $mod+Shift+u move workspace to output left
+bindsym $mod+Shift+i move workspace to output right
 
 
 #------------------------------
@@ -171,7 +177,7 @@ bindsym $mod+Shift+m exec deadbeef
 bindsym $mod+Shift+v exec pavucontrol
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+x exec pcmanfm
-bindsym $mod+Shift+e exec thunderbird
+bindsym $mod+Shift+e exec claws-mail
 bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+p exec whatsapp-nativefier-dark
@@ -190,7 +196,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl -q set 5%-
 bindsym XF86MonBrightnessUp   exec brightnessctl -q set 5%+
 
 # Toggle primary screen
-bindsym XF86Display exec --no-startup-id toggle-primary-screen.sh
+#bindsym XF86Display exec --no-startup-id toggle-primary-screen
 
 # Screenshot
 bindsym Print		exec --no-startup-id sway-screenshot
@@ -200,12 +206,15 @@ bindsym XF86Calculator  exec --no-startup-id sway-screenshot
 # Shutdown dialog 
 bindsym $mod+Shift+Backspace exec shutdown-menu
 
+# Toggle waybar
+bindsym $mod+b exec killall -SIGUSR1 waybar
+
 #------------------------------
 # A E S T H E T I C S
 #------------------------------
 
 # Font
-font pango:Roboto Regular 10
+font pango:Fira Sans Bold 9
 
 # Window borders settings
 default_border pixel 5
@@ -219,6 +228,7 @@ hide_edge_borders smart_no_gaps
 # No focus following mouse
 focus_follows_mouse no
 
+# Base 16 default dark
 set $base00 #181818
 set $base01 #282828
 set $base02 #383838
@@ -240,20 +250,20 @@ set $base0F #a16946
 #class                  border   backgr   text     indicator child_border
 client.focused          $base02  $base02  $base07  $base01 $base07
 client.focused_inactive $base01  $base01  $base05  $base01 $base00
-client.unfocused        $base00  $base00  $base04  $base01 $base00
+client.unfocused        $base00  $base00  $base04  $base01 $base01
 client.urgent           $base0A  $base0A  $base00  $base01 $base0A
 
 # GTK Section
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme    'Materia-dark-compact'
-    gsettings set $gnome-schema icon-theme   'Tela-manjaro-dark'
+    gsettings set $gnome-schema gtk-theme    'oomox-default-dark'
+    gsettings set $gnome-schema icon-theme   'oomox-default-dark'
     gsettings set $gnome-schema cursor-theme 'Simple-and-Soft'
-    gsettings set $gnome-schema font-name    'Roboto Regular 10'
+    gsettings set $gnome-schema font-name    'Fira Sans 9'
 }
 
 # Wallpaper
-output "*" bg ~/Immagini/wallpapers/sphere-eversion-big-neg.png fill #ffffff
+output "*" bg ~/Immagini/wallpapers/tribar.jpg fill #ffffff
 
 # Use waybar instead of swaybar
 bar {

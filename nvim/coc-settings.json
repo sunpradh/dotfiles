@@ -1,7 +1,9 @@
 {
-    "python.venvPath": "/home/sunny/.conda/envs",
-    "python.linting.enabled": true,
+    "python.venvPath":              "/home/sunny/.conda/envs",
+    "python.linting.enabled":       true,
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintPath": "pylint",
-    "latex.lint.onSave": false
+    "python.linting.pylintPath":    "pylint",
+    "python.autoComplete.addBrackets": true,
+    "latex.lint.onSave": false,
+    //"clangd.fallbackFlags": ["-std=c++17"]
 }

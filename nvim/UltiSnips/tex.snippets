@@ -1,5 +1,31 @@
 priority -50
 
+#### Parenthesis
+snippet "\(" "() parens" ri
+($1)$0
+endsnippet
+
+snippet "\[" "[] parens" ri
+[$1]$0
+endsnippet
+
+snippet "\{" "{} parens" ri
+{$1}$0
+endsnippet
+
+# Sized parenthisis
+snippet q} "sized { parenthesis" wA
+\qty{ $1 }$0
+endsnippet
+
+snippet q] "sized [ parenthesis" wA
+\qty[ $1 ]$0
+endsnippet
+
+snippet q) "sized ( parenthesis" wA
+\qty( $1 )$0
+endsnippet
+
 #### Superscript and subscript
 snippet ^^ "superscript" iA
 ^{$1}$0
@@ -98,13 +124,6 @@ snippet w "omega" w
 endsnippet
 
 # Uppercase
-snippet A "alpha uppercase" w
-\Alpha
-endsnippet
-
-snippet B "beta uppercase" w
-\Beta
-endsnippet
 
 snippet G "gamma uppercase" w
 \Gamma
@@ -114,16 +133,8 @@ snippet D "delta uppercase" w
 \Delta
 endsnippet
 
-snippet E "epsilon uppercase" w
-\Epsilon
-endsnippet
-
 snippet Z "zeta uppercase" w
 \Zeta
-endsnippet
-
-snippet H "eta uppercase" w
-\Eta
 endsnippet
 
 snippet O "theta uppercase" w
@@ -134,14 +145,6 @@ snippet L "lambda uppercase" w
 \Lambda
 endsnippet
 
-snippet M "mu uppercase" w
-\Mu
-endsnippet
-
-snippet N "nu uppercase" w
-\Nu
-endsnippet
-
 snippet J "xi uppercase" w
 \Xi
 endsnippet
@@ -150,20 +153,8 @@ snippet F "phi uppercase" w
 \Phi
 endsnippet
 
-snippet R "rho uppercase" w
-\Rho
-endsnippet
-
 snippet S "sigma uppercase" w
 \Sigma
-endsnippet
-
-snippet T "tau uppercase" w
-\Tau
-endsnippet
-
-snippet X "chi uppercase" w
-\Chi
 endsnippet
 
 snippet P "pi uppercase" w
@@ -273,6 +264,11 @@ snippet to "To" w
 \to
 endsnippet
 
+# fraction
+snippet // "fraction" wA
+\frac{$1}{$2} $0
+endsnippet
+
 # Special symbols
 snippet 8 "Infinity" w
 \infty
@@ -282,8 +278,24 @@ snippet da "dagger" w
 \dagger
 endsnippet
 
+snippet xx "times" w
+\times
+endsnippet
+
 snippet ox "otimes" w
 \otimes 
+endsnippet
+
+snippet ... "dots" wA
+\dots
+endsnippet
+
+snippet c... "cdots" wA
+\cdots
+endsnippet
+
+snippet cd "cdot" w
+\cdot
 endsnippet
 
 snippet geq "less or equal" wA
@@ -312,7 +324,7 @@ snippet sqa "Root" w
 \sqrt[$1]{$2}$0
 endsnippet
 
-# Dirac notation
+### Dirac notation
 snippet ket "Ket" w
 \ket{$1}$0
 endsnippet
@@ -321,7 +333,7 @@ snippet bra "Bra" w
 \bra{$1} $0
 endsnippet
 
-snippet ev "Avarage" w
+snippet ev "Average" w
 \ev*{$1}$0
 endsnippet
 
@@ -431,20 +443,7 @@ snippet tikz "Tikz env" b
 \end{tikzpicture}
 endsnippet
 
-# Sized parenthisis
-snippet q} "sized { parenthesis" wA
-\qty{ $1 }$0
-endsnippet
-
-snippet q] "sized [ parenthesis" wA
-\qty[ $1 ]$0
-endsnippet
-
-snippet q) "sized ( parenthesis" wA
-\qty( $1 )$0
-endsnippet
-
-# Matrix
+### Matrix
 snippet mq "matrix quantity"
 \mqty{ $1 }$0
 endsnippet
@@ -453,11 +452,11 @@ snippet m} "matrix quantity in { parens" wA
 \qty{\mqty{$1}}$0
 endsnippet
 
-snippet m] "matrix quantity in { parens" wA
+snippet m] "matrix quantity in [ parens" wA
 \mqty[ $1 ] $0
 endsnippet
 
-snippet m) "matrix quantity in { parens" wA
+snippet m) "matrix quantity in ( parens" wA
 \mqty( $1 ) $0
 endsnippet
 
@@ -466,23 +465,23 @@ snippet eqr "refer equation" w
 \eqref{eq:$1} $0
 endsnippet
 
-snippet figref "refer figure" w
+snippet figr "refer figure" w
 Fig.~\ref{fig:$1} $0
 endsnippet
 
-snippet tabref "refer table" w
+snippet tabr "refer table" w
 Tab.~\ref{tab:$1} $0
 endsnippet
 
-snippet chapref "refer chapter" w
+snippet chapr "refer chapter" w
 Cap.~\ref{cha:$1} $0
 endsnippet
 
-snippet secref "refer section" w
+snippet secr "refer section" w
 Sec.~\ref{sec:$1} $0
 endsnippet
 
-snippet subref "refer subsection" w
+snippet subr "refer subsection" w
 Sec.~\ref{sub:$1} $0
 endsnippet
 
@@ -493,11 +492,20 @@ endsnippet
 
 # Cite
 snippet cite "cite" w
-\cite{$1}$0
+\cite{$1} $0
 endsnippet
 
-# fraction
-snippet // "fraction" wA
-\frac{$1}{$2} $0
+snippet citea "cite author" w
+\citeauthor{$1} $0
+endsnippet
+
+# Footnote
+snippet foot "footnote" w
+\footnote{$1} $0
+endsnippet
+
+# Underbrace
+snippet under "underbrace" w
+\underbrace{$1}_{$2} $0
 endsnippet
 
