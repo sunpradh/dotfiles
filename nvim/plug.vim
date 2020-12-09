@@ -4,9 +4,10 @@
 
 call plug#begin(stdpath('data') . '/plugged')
 
-" Intellisense for nvim
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-" Fuzzy finding
+" Language server protocol
+"Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim' " Fuzzy finding
 Plug 'junegunn/fzf.vim'
 " Snippets
 Plug 'sirver/ultisnips'           " snippets plugin
@@ -33,13 +34,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kevinoid/vim-jsonc'
 "Plug 'jvirtanen/vim-octave'
 " Distraction-free writing
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+"Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/limelight.vim'
 " Colorscheme
 Plug 'chriskempson/base16-vim'	  " base16 color schemes
 Plug 'tpope/vim-commentary'	  " easy comments
 " Vim in firefox
 "Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
 
 call plug#end()
 
@@ -67,6 +69,7 @@ augroup latexgroup
     autocmd BufRead *.tex,*.md set wrap
     "autocmd BufRead *.tex,*.md set conceallevel=2
     autocmd BufRead *.tex,*.md hi Conceal guibg=NONE ctermbg=NONE
+    autocmd BufRead *.tex,*.md lua require'completion'.on_attach()
     autocmd BufRead *.bib set nospell
     autocmd VimLeave *.tex VimtexClean " auto clean-up
 augroup end
@@ -77,13 +80,16 @@ let g:vimtex_compiler_progname = 'nvr'
 " vimtex and zathura
 let g:vimtex_view_method = 'zathura'
 " Disable overfull/underfull \hbox and all package warnings
-let g:vimtex_quickfix_latexlog = {
-            \ 'overfull'  : 0,
-            \ 'underfull' : 0,
-            \ 'packages'  : {'default' : 0,},
-            \}
+let g:vimtex_quickfix_ignore_filters = ['overfull', 'underfull', 'packages']
 let g:vimtex_imaps_enabled = 0
 let g:tex_comment_nospell = 1
+" vimtex
+lua require'completion'.addCompletionSource('vimtex', require'vimtex'.complete_item)
+let g:completion_chain_complete_list = {
+            \ 'tex' : [
+            \     {'complete_items': ['vimtex']}, 
+            \   ],
+            \ }
 
 """ vimwiki
 let g:vimwiki_table_mappings = 0
