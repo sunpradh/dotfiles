@@ -23,11 +23,7 @@ local custom_attach = function()
     mapper('n', 'gR', 'vim.lsp.buf.rename()')
 end
 
-pyls_settings = {
-    settings = { pyls = { plugins = { pycodestyle = { enabled = false }}}}
-}
-
-lsp.pyls.setup{on_attach = custom_attach, settings = pyls_settings}   -- Python
---lsp.texlab.setup{on_attach = custom_attach} -- LaTeX
+lsp.pyls.setup{on_attach = custom_attach}   -- Python
+--lsp.texlab.setup{on_attach = custom_attach} -- LaTeX -- Vimtex is enough
 lsp.clangd.setup{on_attach = custom_attach} -- C/C++
 

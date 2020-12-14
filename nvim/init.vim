@@ -50,6 +50,9 @@ hi SpellBad   ctermbg=NONE cterm=undercurl
 
 """ LSP and autocompletion
 luafile $HOME/.config/nvim/lsp.lua
+" open diagnostic menu
+command Diagnostic lua vim.lsp.diagnostic.set_loclist()
+" set the completion menu
 set completeopt=menuone,noinsert,noselect
 set signcolumn=yes
 let g:completion_enable_snippet = 'UltiSnips'
