@@ -14,14 +14,13 @@ alias free='free -m' # Show sizes in MB
 alias grep="grep --color" 
 
 # short hands
-alias pm=pacman
-alias ls="exa"
-alias ll="exa -l"
-alias la="exa -la"
+alias ls="exa --group-directories-first"
+alias ll="exa --group-directories-first -l"
+alias la="exa --group-directories-first -la"
 alias vim="nvim"
 alias mpv-sel='mpv "`xsel -b`"'
 alias icat="kitty +kitten icat"
-alias fan="watch -n 1 cat /proc/acpi/ibm/fan"
+alias watch-fan="watch -n 1 cat /proc/acpi/ibm/fan"
 alias ssh="TERM=xterm ssh"
 
 # Radio merda malata

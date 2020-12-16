@@ -29,7 +29,8 @@ WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider
 DIRSTACKSIZE=10
 
 ## Keybindings section
-bindkey -e
+# Vi editing mode
+bindkey -v
 bindkey '^[[7~' beginning-of-line                               # Home key
 bindkey '^[[H'  beginning-of-line                               # Home key
 if [[ "${terminfo[khome]}" != "" ]]; then
@@ -82,9 +83,26 @@ setopt prompt_subst
 
 # Prompt
 # Left prompt
-PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " 
-# Right prompt with exit status of previous command if not successful
-RPROMPT="%{$fg[red]%} %(?..[%?])%{$reset_color%}" 
+# PROMPT="%{$fg[black]$bg[blue]%} %(4~|%-1~/.../%2~|%~)%u %B%(?.%{$bg[blue]%}.%{$bg[red]%}) $ %{$reset_color%}%b " 
+PROMPT="%F{0}%(?.%K{10}.%K{1}) %(4~|%-1~/.../%2~|%~) %(?.. [%?])░▒▓%u%k%f " 
+# Right prompt with vi mode info
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/$normprompt}/(main|viins)/$insprompt}"
+    case $KEYMAP in
+        vicmd) 
+            printf "\033[2 q" # block cursor
+            RPS1="%{$fg[green]%}NOR%{$reset_color%}"
+            ;;
+        viins|main)
+            printf "\033[6 q" # line cursor
+            RPS1="%{$fg[green]%}INS%{$reset_color%}"
+    esac
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select 
+
 
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m' # start bold text
