@@ -156,7 +156,7 @@ bindsym $mod+Shift+f exec $term -e ranger
 bindsym $mod+Shift+m exec $term -e ncmpcpp
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+x exec pcmanfm
-bindsym $mod+Shift+e exec thunderbird
+bindsym $mod+Shift+e exec sylpheed
 bindsym $mod+Shift+v exec pavucontrol
 bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+t exec telegram-desktop
@@ -212,85 +212,47 @@ hide_edge_borders smart_no_gaps
 focus_follows_mouse no
 
 
-#
-# NORD THEME
-#
+# Base 16 default dark
+set $base00 #181818
+set $base01 #282828
+set $base02 #383838
+set $base03 #585858
+set $base04 #b8b8b8
+set $base05 #d8d8d8
+set $base06 #e8e8e8
+set $base07 #f8f8f8
+set $base08 #ab4642
+set $base09 #dc9656
+set $base0A #f7ca88
+set $base0B #a1b56c
+set $base0C #86c1b9
+set $base0D #7cafc2
+set $base0E #ba8baf
+set $base0F #a16946
 
-# Polar night
-set $nord0  #2e3440
-set $nord1  #3b4252 
-set $nord2  #434c5e
-set $nord3  #4c566a
-# Snow Storm
-set $nord4  #d8dee9
-set $nord5  #e5e9f0
-set $nord6  #eceff4
-# Frost
-set $nord7  #8fbcbb
-set $nord8  #88c0d0
-set $nord9  #81a1c1
-set $nord10 #88c0d0
-# Aurora
-set $nord11 #bf616a
-set $nord12 #d08770
-set $nord13 #ebcb8b
-set $nord14 #a3be8c
-set $nord15 #b48ead
+# Decorators color
+#class                  border   backgr   text     indicator child_border
+client.focused          $base02  $base02  $base07  $base01 $base07
+client.focused_inactive $base01  $base01  $base05  $base01 $base00
+client.unfocused        $base00  $base00  $base04  $base01 $base00
+client.urgent           $base0A  $base0A  $base00  $base01 $base0A
 
 
 # Use waybar instead of swaybar
 bar {
-    position top
-    status_command i3blocks
+    position	    bottom
+    status_command  i3blocks
     separator_symbol " "
     colors {
         # bar background color
-        background $nord1
+        background $base00
         # text color used for blocks that do not have a color specified.
-        statusline $nord7
+        statusline $base04
         # workspaces section            
         #                    border  backgr. text
-        focused_workspace  $nord7 $nord7 $nord1
-        inactive_workspace $nord1  $nord1  $nord4
-        active_workspace   $nord1  $nord1  $nord13
-        urgent_workspace   $nord11 $nord11 $nord1
+        focused_workspace  $base02 $base02 $base07
+        inactive_workspace $base01 $base01 $base05
+        active_workspace   $base01 $base01 $nord13
+        urgent_workspace   $base0A $base0A $base01
     }
 }
-
-# Decorators color
-#class                  border  backgr  text    indicator child_border
-client.focused          $nord7  $nord7  $nord0  $nord1 $nord7
-client.focused_inactive $nord1  $nord1  $nord6  $nord1 $nord1
-client.unfocused        $nord1  $nord1  $nord7  $nord1 $nord1
-client.urgent           $nord11 $nord11 $nord0  $nord1 $nord11
-
-
-# Wallpaper
-#output "*" bg $nord3 solid_color
-#output "*" bg ~/Immagini/wallpapers/soviet-space.jpg fit #ffffff
-
-
-
-#------------------------------
-# Startup applications
-#------------------------------
-
-# Load Xresources
-#exec_always xrdb -merge /home/sunny/.Xresources
-
-# Display auto suspend
-#exec swayidle -w \
-#    timeout 600 'swaymsg "output * dpms off"' \
-#    resume 'swaymsg "output * dpms on"' \
-
-# network manager
-#exec nm-applet --indicator
-# cloud services
-#exec megasync
-#exec dropbox
-# night filter
-#exec redshift
-# notification daemon
-#exec mako
-# bluetooth
-#exec blueman-applet

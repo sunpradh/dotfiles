@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/home/sunny/.local/share/nvim/plugged/vim-snippets/UltiSnips'
-let g:netrw_dirhist_1='/home/sunny/.local/share/nvim/plugged/vim-snippets'
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/sunny/Università/Repo'
+let g:netrw_dirhist_2='/home/sunny/Università/Repo/quspin-lgt'
+let g:netrw_dirhist_1='/home/sunny/Università/Repo/quspin-lgt/tests'
+let g:netrw_dirhist_0='/home/sunny/Università/Repo/quspin-lgt'
+let g:netrw_dirhist_9='/home/sunny/Università/Repo/quspin-lgt/qulgt'
+let g:netrw_dirhist_8='/home/sunny/Università/Repo/note fisher long-range'
+let g:netrw_dirhist_7='/home/sunny/Università/Repo'
+let g:netrw_dirhist_6='/home/sunny/Università/Repo/note fisher long-range'
+let g:netrw_dirhist_5='/home/sunny/Università/Repo'
+let g:netrw_dirhist_4='/home/sunny/Università/Repo/tesina DM'

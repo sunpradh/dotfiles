@@ -24,6 +24,5 @@ local custom_attach = function()
 end
 
 lsp.pyls.setup{on_attach = custom_attach}   -- Python
---lsp.texlab.setup{on_attach = custom_attach} -- LaTeX -- Vimtex is enough
 lsp.clangd.setup{on_attach = custom_attach} -- C/C++
 

@@ -11,16 +11,20 @@ alias cp="cp -i"
 # human readable
 alias df='df -h'     # Human-readable sizes
 alias free='free -m' # Show sizes in MB
-alias grep="grep --color" 
 
-# short hands
+# colors
+alias diff="diff --color=auto"
+alias grep="grep --color=auto" 
 alias ls="exa --group-directories-first"
 alias ll="exa --group-directories-first -l"
 alias la="exa --group-directories-first -la"
-alias vim="nvim"
-alias mpv-sel='mpv "`xsel -b`"'
+
+# short hands
+alias v="nvim"
+alias o="xdg-open"
+alias mpvsel='mpv "`xsel -b`"'
 alias icat="kitty +kitten icat"
-alias watch-fan="watch -n 1 cat /proc/acpi/ibm/fan"
+alias watchfan="watch -n 1 cat /proc/acpi/ibm/fan"
 alias ssh="TERM=xterm ssh"
 
 # Radio merda malata
@@ -32,6 +36,8 @@ alias cod='conda deactivate'
 
 # Remote file systems
 alias mount-lnxbo="sshfs lnxbo: ~/Remoto/lnxbo/"
-alias mount-theophys="sshfs theophys: ~/Remoto/theophys/"
+alias mount-theophys01="sshfs theophys01: ~/Remoto/theophys01/"
+alias mount-theophys02="sshfs theophys02: ~/Remoto/theophys02/"
 alias unmount-lnxbo="fusermount -u ~/Remoto/lnxbo/"
-alias unmount-theophys="fusermount -u ~/Remoto/theophys/"
+alias unmount-theophys01="fusermount -u ~/Remoto/theophys01/"
+alias unmount-theophys02="fusermount -u ~/Remoto/theophys02/"

@@ -1,6 +1,6 @@
-""" ============================================================
+"""
 """ MAPPINGS
-""" ============================================================
+"""
 
 " Leader key
 let mapleader=' '
@@ -17,51 +17,23 @@ noremap <silent> <A-Down>  :resize -3<CR>
 noremap <silent> <A-Left>  :vertical resize +3<CR>
 noremap <silent> <A-Right> :vertical resize -3<CR>
 " create new windows and tabs
-noremap <silent> <M-n>   :new<CR>
-noremap <silent> <M-v>   :vnew<CR>
-noremap <silent> <M-t>   :tabe<CR>
-noremap <silent> <M-Tab> :tabn<CR>
+noremap <silent> <A-x>   :new<CR>
+noremap <silent> <A-v>   :vnew<CR>
+noremap <silent> <A-t>   :tabe<CR>
+noremap <silent> <A-Tab> :tabn<CR>
 " disable annoying keymaps
 noremap q: <Nop>
 noremap q? <Nop>
 " exit terminal mode
 tnoremap <A-q> <C-\><C-n>
 
-""" FZF key bindings
-" Custom mappings
-nmap <A-f> :Files<CR>
-nmap <A-b> :Buffers<CR>
-nmap <A-:> :History:<CR>
-nmap <A-/> :BLines<CR>
-" search the word under the cursor with ag
-nmap <leader>/ :Ag <c-r><c-w><CR>
-
-" """ Coc.nvim key bindings
-" " GoTo code navigation.
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
-" " Use `[g` and `]g` to navigate diagnostics
-" " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-" nmap <silent> [g <Plug>(coc-diagnostic-prev)
-" nmap <silent> ]g <Plug>(coc-diagnostic-next)
-" " Formatting selected code.
-" xmap <leader>f  <Plug>(coc-format-selected)
-" nmap <leader>f  <Plug>(coc-format-selected)
-" " Rename tool
-" nmap <silent> <leader>R <Plug>(coc-rename)
-" " Use K to show documentation in preview window.
-" function! s:show_documentation()
-"   if (index(['vim','help'], &filetype) >= 0)
-"     execute 'h '.expand('<cword>')
-"   else
-"     call CocAction('doHover')
-"   endif
-" endfunction
-" nnoremap <silent> K :call <SID>show_documentation()<CR>
-" " Apply AutoFix to problem on the current line.
-" nmap <leader>qf  <Plug>(coc-fix-current)
+""" TELESCOPE
+nnoremap <A-f>      <cmd>Telescope find_files<cr>
+nnoremap <A-b>      <cmd>Telescope buffers<cr>
+nnoremap <leader>gw <cmd>Telescope live_grep<cr>
+nnoremap <leader>gs <cmd>Telescope grep_string<cr>
+nnoremap <leader>ch <cmd>Telescope command_history<cr>
+nnoremap <leader>fb <cmd>Telescope file_browser<cr>
 
 """ Misc
 " cancel search results
@@ -75,5 +47,4 @@ vnoremap <C-y> "+y
 vnoremap < <gv
 vnoremap > >gv
 " replace a word globally on the line
-noremap gr :%s/\<<C-r><C-w>\>//g<Left><Left>
-
+noremap <leader>rw :%s/\<<C-r><C-w>\>//g<Left><Left>

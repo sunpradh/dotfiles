@@ -21,34 +21,34 @@ set synctex-editor-command  "nvr --remote-silent %f -c %l"
 set font "Fira Sans 10"
 
 # colors inspired by the gruvbox theme
-set default-bg                  "#181818"
+set default-bg                  "#101010"
 set default-fg                  "#d8d8d8"
 
-set statusbar-bg                "#181818"
+set statusbar-bg                "#101010"
 set statusbar-fg                "#d8d8d8"
 
-set inputbar-bg                 "#181818"
+set inputbar-bg                 "#101010"
 set inputbar-fg                 "#eceff4"
 #
 set notification-bg             "#d8d8d8"
-set notification-fg             "#181818"
+set notification-fg             "#101010"
 
 set notification-error-bg       "#bf616a"
-set notification-error-fg       "#181818"
+set notification-error-fg       "#101010"
 
 set notification-warning-bg     "#ebcb8b"
-set notification-warning-fg     "#181818"
+set notification-warning-fg     "#101010"
 
 set highlight-color             "#b48ead"
 set highlight-active-color      "#ebcb8b"
 
-set completion-bg               "#181818"
+set completion-bg               "#101010"
 set completion-fg               "#d8d8d8"
 
-set completion-highlight-fg     "#181818"
+set completion-highlight-fg     "#101010"
 set completion-highlight-bg     "#ebcb8b"
 
-set recolor-lightcolor          "#181818"
+set recolor-lightcolor          "#101010"
 set recolor-darkcolor           "#eceff4"
 
 set recolor                     "false"

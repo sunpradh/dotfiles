@@ -1,6 +1,5 @@
 stty -ixon # Disable ctrl-s and ctrl-q
 
-
 ## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
@@ -30,7 +29,7 @@ DIRSTACKSIZE=10
 
 ## Keybindings section
 # Vi editing mode
-bindkey -v
+bindkey -e
 bindkey '^[[7~' beginning-of-line                               # Home key
 bindkey '^[[H'  beginning-of-line                               # Home key
 if [[ "${terminfo[khome]}" != "" ]]; then
@@ -82,27 +81,7 @@ bindkey '^N' history-substring-search-down
 setopt prompt_subst
 
 # Prompt
-# Left prompt
-# PROMPT="%{$fg[black]$bg[blue]%} %(4~|%-1~/.../%2~|%~)%u %B%(?.%{$bg[blue]%}.%{$bg[red]%}) $ %{$reset_color%}%b " 
-PROMPT="%F{0}%(?.%K{10}.%K{1}) %(4~|%-1~/.../%2~|%~) %(?.. [%?])░▒▓%u%k%f " 
-# Right prompt with vi mode info
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/$normprompt}/(main|viins)/$insprompt}"
-    case $KEYMAP in
-        vicmd) 
-            printf "\033[2 q" # block cursor
-            RPS1="%{$fg[green]%}NOR%{$reset_color%}"
-            ;;
-        viins|main)
-            printf "\033[6 q" # line cursor
-            RPS1="%{$fg[green]%}INS%{$reset_color%}"
-    esac
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select 
-
+PROMPT="%{$fg[black]$bg[blue]%} %(4~|%-1~/.../%2~|%~)%u %B%(?.%{$bg[blue]%}.%{$bg[red]%}) $ %{$reset_color%}%b " 
 
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m' # start bold text
@@ -115,14 +94,14 @@ export LESS_TERMCAP_us=$'\E[01;36m' # stop underlined text
 export LESS=-r
 
 # edit configuration files in .config and custom scripts
-cfg() { 
+c() { 
     cd ~/.config
     f="$(fd -H -tf | fzf --preview='highlight --force -O ansi -- {}')"
     [ ! -z $f ] && nvim $f
     cd - }
 bin() { 
     cd ~/.local/bin
-    f="$(fd -H -tf | fzf --preview='highlight --force -O ansi -- {}')"
+    f="$(fd -tf | fzf --preview='highlight --force -O ansi -- {}')"
     [ ! -z $f ] && nvim $f
     cd - }
 
