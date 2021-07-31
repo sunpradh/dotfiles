@@ -1,0 +1,70 @@
+#------------------------------
+# Window management
+#------------------------------
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left  40px
+bindsym $mod+Shift+j move down  40px
+bindsym $mod+Shift+k move up    40px
+bindsym $mod+Shift+l move right 40px
+
+# resize window
+bindsym $mod+Ctrl+h resize shrink width  40 px
+bindsym $mod+Ctrl+l resize grow   width  40 px
+bindsym $mod+Ctrl+j resize grow   height 40 px
+bindsym $mod+Ctrl+k resize shrink height 40 px
+
+# split in horizontal orientation
+bindsym $mod+o split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+Ctrl+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+t floating toggle
+
+# toggle between floating and floating when cycling between windows
+bindsym $mod+y focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+Shift+a focus child
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# Window rules
+for_window [window_role="pop-up"]                 floating enable # floating dialogs
+for_window [window_role="task_dialog"]            floating enable
+for_window [app_id="GNU Octave"]                   floating enable
+for_window [app_id="Matplotlib"]                  floating enable
+for_window [app_id="pavucontrol"]                 floating enable
+for_window [app_id="blueman-manager"]             floating enable
+for_window [app_id="floaterm"]                    floating enable
+for_window [app_id="None"]                        floating enable
+for_window [title="Microsoft Teams Notification"] floating enable
+for_window [title="Firefox – Indicatore condivisione"] floating enable
+for_window [title="Picture-in-Picture"]           floating enable
+for_window [title="Picture-in-Picture"]           border pixel 1
+
+# always center rofi (in normal-window) in the center
+for_window [class="Rofi"] floating enable
+for_window [class="Rofi"] move position center
+
+# inhibit idle for firefox in fullscreen
+for_window [class=".*"] inhibit_idle fullscreen

@@ -1,0 +1,51 @@
+#------------------------------
+# Keyboard shortcuts
+#------------------------------
+
+# start a terminal
+set $term footclient
+bindsym $mod+Return exec $term
+
+# reload the configuration file
+bindsym $mod+Shift+r reload
+
+# start a program launcher
+bindsym $mod+d exec "rofi -modi drun,run -show drun -normal-window -show-icons"
+# search for files
+bindsym $mod+f exec rofi-files
+
+# applications shortcuts
+bindsym $mod+Shift+w exec firefox
+bindsym $mod+Shift+f exec $term ranger
+bindsym $mod+Shift+v exec pavucontrol
+bindsym $mod+Shift+s exec spotify
+bindsym $mod+Shift+x exec pcmanfm
+bindsym $mod+Shift+e exec thunderbird
+bindsym $mod+Shift+b exec blueman-manager
+bindsym $mod+Shift+t exec telegram-desktop
+bindsym $mod+Shift+p exec whatsapp-nativefier-dark
+bindsym $mod+Shift+m exec deadbeef
+
+# Volume
+bindsym XF86AudioRaiseVolume exec set-volume up
+bindsym XF86AudioLowerVolume exec set-volume down
+bindsym XF86AudioMute	     exec set-volume toggle
+
+# Brightness
+bindsym XF86MonBrightnessDown exec brightnessctl -q set 5%-
+bindsym XF86MonBrightnessUp   exec brightnessctl -q set 5%+
+
+# Screenshot
+bindsym Print exec --no-startup-id sway-screenshot
+# the AKKO keyboard does not have Print key but have a calculator key for some reason
+bindsym XF86Calculator exec --no-startup-id sway-screenshot
+
+# Shutdown dialog
+bindsym $mod+Shift+Backspace exec shutdown-menu
+
+# Toggle waybar
+bindsym $mod+b exec killall -SIGUSR1 waybar
+
+# Update the kbd indicator
+bindsym $mod+space exec pkill --signal SIGRTMIN+1 waybar
+

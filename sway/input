@@ -1,0 +1,23 @@
+#------------------------------
+# Input
+#------------------------------
+
+# American + italian layout
+input type:keyboard {
+    xkb_layout us,it
+    xkb_options caps:ctrl_modifier,grp:win_space_toggle
+}
+
+# Monitor configurations
+set $laptop eDP-1
+output $laptop position 0 0 resolution 1600x900@60Hz
+
+# Disable laptop screen when the lid is closed
+bindswitch --reload --locked lid:on  output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+# modifier key
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod

@@ -1,0 +1,54 @@
+#------------------------------
+# A E S T H E T I C S
+#------------------------------
+
+# Font
+font pango:Fira Sans Bold 9
+
+# Window borders settings
+default_border pixel 4
+
+# Gaps
+gaps              inner 8
+smart_gaps        on
+smart_borders     on
+hide_edge_borders smart
+
+# No focus following mouse
+focus_follows_mouse no
+
+# Gruvbox
+set $bg       #181818
+set $white    #ebdbb2
+set $red      #cc241d
+set $green    #b8bb26
+set $yellow   #d79921
+set $blue     #458588
+set $purple   #b16286
+set $aqua     #689d68
+set $gray     #a89984
+set $darkgray #1d2021
+
+#class                  border    backgr    text      indicator child_border
+client.focused          $white    $white    $darkgray $purple   $white
+client.focused_inactive $darkgray $darkgray $white    $purple   $darkgray
+client.unfocused        $darkgray $darkgray $white    $purple   $darkgray
+client.urgent           $red      $red      $white    $red      $red
+
+# GTK Section
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme    'Gruvbox-Material-Dark'
+    gsettings set $gnome-schema icon-theme   'Zafiro'
+    gsettings set $gnome-schema cursor-theme 'Simple-and-Soft'
+    gsettings set $gnome-schema font-name    'Fira Sans 9'
+}
+
+# Wallpaper
+output "*" bg ~/Immagini/wallpapers/leaves.jpg fill #000000
+
+# Use waybar instead of swaybar
+bar {
+    swaybar_command waybar
+}
+

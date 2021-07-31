@@ -9,7 +9,7 @@ set hidden                     " switch buffers even if are unsaved
 set relativenumber             " Show relative line numbers
 set number                     " Show line numbers
 set showmatch                  " Highlight matching brace
-set nohlsearch                   " Highlight all search results
+set nohlsearch                 " Highlight all search results
 set smartcase                  " Enable smart-case search
 set incsearch                  " Searches for strings incrementally
 set expandtab                  " Expand tabs
@@ -28,9 +28,8 @@ set splitright                 " new vsplit right
 set nowrap                     " no wrapping lines
 set lazyredraw                 " Fast redraw
 set fillchars=vert:│           " solid lines with split windows
-set title
-set scrolloff=8
-set cmdheight=2
+set title                      " set the title of the window
+set scrolloff=8                " min num of lines above/below the cursorline
 " history
 set noswapfile
 set nobackup
@@ -39,4 +38,5 @@ set undofile
 " set the completion menu
 set completeopt=menuone,noinsert,noselect
 set signcolumn=yes
+set shortmess+=c
 

@@ -3,7 +3,7 @@ local completion = require('completion')
 --require'lspconfig'.pyls.setup{}
 
 local mapper = function(mode, key, result)
-    vim.api.nvim_buf_set_keymap(0, mode, key, 
+    vim.api.nvim_buf_set_keymap(0, mode, key,
         "<cmd>lua "..result.."<cr>",
         {noremap = true, silent = true})
 end
@@ -23,6 +23,6 @@ local custom_attach = function()
     mapper('n', 'gR', 'vim.lsp.buf.rename()')
 end
 
-lsp.pyls.setup{on_attach = custom_attach}   -- Python
+lsp.pylsp.setup{on_attach = custom_attach}   -- Python
 lsp.clangd.setup{on_attach = custom_attach} -- C/C++
-
+lsp.texlab.setup{on_attach = custom_attach} -- LaTeX

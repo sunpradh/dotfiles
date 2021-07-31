@@ -278,12 +278,12 @@ snippet da "dagger" w
 \dagger
 endsnippet
 
-snippet xx "times" w
+snippet xx "times" wA
 \times
 endsnippet
 
 snippet ox "otimes" w
-\otimes 
+\otimes
 endsnippet
 
 snippet ... "dots" wA
@@ -304,6 +304,10 @@ endsnippet
 
 snippet leq "less or equal" wA
 \leq
+endsnippet
+
+snippet equ "equivalent" w
+\equiv
 endsnippet
 
 # Special brackets
@@ -380,7 +384,7 @@ endsnippet
 
 # Spacing
 snippet qq "qquad space" w
-\qquad 
+\qquad
 endsnippet
 
 snippet q "single quad" w
@@ -509,3 +513,8 @@ snippet under "underbrace" w
 \underbrace{$1}_{$2} $0
 endsnippet
 
+snippet mini "minipage" w
+\begin{minipage}{$1\textwidth}
+    $0
+\end{minipage}
+endsnippet

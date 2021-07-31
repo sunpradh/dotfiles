@@ -3,15 +3,14 @@
 """
 
 call plug#begin(stdpath('data') . '/plugged')
-" Language server protocol
+
+" Language server protocol (autocompletion)
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-" Tree-sitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-" Fuzzy finder
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+" Tree-sitter (syntax highlighting engine)
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Fuzzy finder (telescope.nvim is somewhat slow compared to fzf.vim)
+Plug 'junegunn/fzf.vim'
 " Snippets
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -31,11 +30,12 @@ Plug 'farmergreg/vim-lastplace'
 " easy alignment
 Plug 'junegunn/vim-easy-align'
 " cool icons
-" Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 " Colorscheme
 Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
@@ -53,20 +53,17 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-""" Ultisnips
-" Trigger configuration
+""" ULTISNIPS
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<S-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-C-tab>"
-" If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="horizontal"
-" numpy style docstrings for python
 let g:ultisnips_python_style="numpy"
 
 """ LaTeX (vimtex) and markdown
 source $HOME/.config/nvim/latex.vim
 
-""" vimwiki
+""" Vimwiki
 let g:vimwiki_table_mappings = 0
 let g:vimwiki_list = [ {
 	    \ 'path': '~/Università/Note/',
@@ -82,5 +79,25 @@ nmap ga <Plug>(EasyAlign)
 """ Airline
 let g:airline_detect_whitespace = 0
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#coc#enabled = 0
 let g:airline_theme='minimalist'
+
+""" MARKDOWN-PREVIEW
+let g:mkdp_refresh_slow = 1
+let g:mkdp_auto_close = 0
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 1,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 0
+    \ }
+
+
+
+
