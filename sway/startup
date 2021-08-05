@@ -21,6 +21,6 @@ exec dropbox
 # notification daemon
 exec mako
 # bluetooth
-exec blueman-applet
+# exec blueman-applet
 # import the environment for systemd, fixes problems with xdg-desktop-portal
 exec "systemctl --user import-environment"

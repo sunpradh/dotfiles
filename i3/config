@@ -1,5 +1,5 @@
 #==============================
-# i3 CONFIG 
+# i3 CONFIG
 #==============================
 
 #------------------------------
@@ -54,7 +54,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+Return floating toggle
+bindsym $mod+t floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -178,14 +178,14 @@ bindsym XF86MonBrightnessUp   exec brightnessctl -q set 5%+
 # Switch screens
 #bindsym XF86Display exec ~/.local/bin/switch-screen.sh
 # non funziona con Wayland, dando che usa xrandr
-# da riscrivere usando swaymsg 
+# da riscrivere usando swaymsg
 
 # Screenshot
 #bindsym Print		exec --no-startup-id sway-screenshot
 # the AKKO keyboard does not have Print key but have a calculator key
-#bindsym XF86Calculator  exec --no-startup-id sway-screenshot 
+#bindsym XF86Calculator  exec --no-startup-id sway-screenshot
 
-# Shutdown dialog 
+# Shutdown dialog
 bindsym $mod+Shift+BackSpace exec shutdown-menu
 
 # Caps Lock
@@ -248,7 +248,7 @@ bar {
         background $base00
         # text color used for blocks that do not have a color specified.
         statusline $base04
-        # workspaces section            
+        # workspaces section
         #                    border  backgr. text
         focused_workspace  $base02 $base02 $base07
         inactive_workspace $base01 $base01 $base05

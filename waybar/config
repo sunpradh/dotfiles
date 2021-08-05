@@ -1,113 +1,110 @@
 {
-    "layer": "top",	
+    "layer": "top",
     "position": "bottom",
-    "height": 32,
-    "modules-center": ["sway/workspaces"],
-    "modules-right":  ["clock", "tray", "custom/powermenu"],
-    "modules-left": [ 
-	"battery#bat0",
-	"battery#bat1",
-	"temperature",
-	"pulseaudio",
-	"memory",
-	"cpu", 
-	//"custom/memory",
-	//"custom/cpu",
-	"custom/kblayout" ],
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+    "height": 24,
+    "modules-center": [],
+    "modules-right":  [
+        "battery#bat0",
+        "battery#bat1",
+        "cpu",
+        "temperature",
+        "pulseaudio",
+        "custom/kblayout",
+        "clock",
+        "tray",
+        "idle_inhibitor",
+        "custom/powermenu"
+        ],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/window"
+    ],
+    "sway/window": {
+        "format": "<b>{}</b>",
+        "max-length": 100,
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
     "tray": {
         "icon-size": 24,
         "spacing": 6
     },
     "clock": {
-	"interval":	  10,
-	"format":         "{: <b>%H:%M</b>     %a %d %b }",
-        "tooltip-format": "<big><b>{:%Y %B}</b></big>\n<span font_desc='Hack 10'>{calendar}</span>",
+        "interval":       10,
+        "format":         "{:<b>%H:%M</b> %a %d %b}",
+        "tooltip-format": "<big><b>{:%Y %B}</b></big>\n<span font_desc='Iosevka 10'>{calendar}</span>",
         "format-alt":     "{:%Y-%m-%d}"
     },
     "temperature": {
         "critical-threshold": 80,
-        "format": "{icon} {temperatureC}",
-        "format-icons": ["", "", "", "", ""]
+        "format":             "{icon} {temperatureC}",
+        "format-icons":       ["", "", "", "", ""],
+        "on-click":           "foot --app-id=floaterm -o initial_window_width=80c -o initial_window_height=40c watch -n 1 sensors"
     },
     "battery#bat0": {
-	"bat": "BAT0",
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity} {icon}",
-        "format-charging": "{capacity} \uf0e7",
+        "bat":             "BAT0",
+        "states":          { "warning": 30, "critical":  15 },
+        "format":          "{icon} {capacity}",
+        "format-charging": "\uf0e7 {capacity}",
         "format-plugged":  "",
-        "format-alt":      "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-alt":      "{icon} {time}",
+        "format-icons":    ["", "", "", "", ""]
     },
     "battery#bat1": {
-        "bat": "BAT1",
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity} {icon}",
-        "format-charging": "{capacity} \uf0e7",
-        "format-plugged": "",
-        "format-alt": "{time} {icon}",
-        "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "bat":             "BAT1",
+        "states":          { "warning": 30, "critical": 15 },
+        "format":          "{icon} {capacity}",
+        "format-charging": "\uf0e7 {capacity}",
+        "format-plugged":  "",
+        "format-alt":      "{icon} {time}",
+        "format-full":     "",
+        "format-icons":    ["", "", "", "", ""]
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}",
-        "format-bluetooth": "{icon} {volume} ",
+        "scroll-step":            1,
+        "format":                 "{icon} {volume}",
+        "format-bluetooth":       "{icon} {volume} ",
         "format-bluetooth-muted": "{icon}  ",
-        "format-muted": "",
-        "format-source": "",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+        "format-muted":           "",
+        "format-source":          "",
+        "format-source-muted":    "",
+        "format-icons":           {
+            "headphone":          "",
+            "hands-free":         "",
+            "headset":            "",
+            "phone":              "",
+            "portable":           "",
+            "car":                "",
+            "default":            ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click":               "pavucontrol"
     },
     "cpu": {
-        "format": " {usage}",
-        "tooltip": true,
-	"interval": 2,
-	"on-click": "kitty -e htop"
+        "format":   " {usage}",
+        "tooltip":  true,
+        "interval": 2,
+        "on-click": "foot --app-id=floaterm htop"
     },
     "memory": {
-        "format": " {}",
-	"interval": 2,
-	"on-click": "kitty -e htop"
+        "format":   " {}",
+        "interval": 2,
+        "on-click": "foot --app-id=floaterm htop"
     },
     "custom/kblayout": {
-	"format": " <b>{}</b>",
-	"exec": "sway-kbd-indicator",
-	"tooltip": false
+        "exec":     "sway-kbd-indicator",
+        "format":   " <b>{}</b>",
+        "interval": 30,
+        "tooltip":  false,
+        "signal":   1
     },
     "custom/powermenu": {
-	"format": "<big></big>",
-	"on-click": "shutdown-menu",
-	"tooltip": false
-    },
-    "custom/cpu": {
-	"format": " <span background='#303030'>{}</span>",
-	"return-type": "json",
-	"exec":	  "sleep 1 && cpu_bar",
-	"tooltip": false,
-	"on-click": "kitty --class=htop -e htop"
-    },
-    "custom/memory": {
-	"format": " <span background='#303030'>{}</span>",
-	"exec": "mem_bar",
-	"tooltip": false
+        "format":   "<big></big>",
+        "on-click": "shutdown-menu",
+        "tooltip":  false
     }
-
 }
