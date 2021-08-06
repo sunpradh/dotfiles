@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+#
+# Script per i3blocks per mostrare lo stato della batteria
+
+# Varie icone per la batteria
+battery_0="\uf244" # vuoto
+battery_1="\uf243" # 1 quarto
+battery_2="\uf242" # 2 quarti
+battery_3="\uf241" # 3 quarti
+battery_4="\uf240" # pieno
+battery_chr="\uf0e7" # in carica
+battery_unk="\uf128" # sconosciuto
+
+threshold=15
+
+# Il primo argomento devo essere l'id della batteria, di default 0
+instance=${1:-0}
+
+# raccogli l'output
+output=($(acpi -b | sed -n "/Battery $instance/{ s/^[^:]*: //; s/,\? /\n/g; p}"))
+# sepepara l'output
+state=${output[0]}   # "Charging"|"Discharging"|"Unknown"
+perc=${output[1]%\%} # senza il simbolo di percentuale
+time=${output[2]%:*} # senza i secondi
+
+# Seleziona l'icona quando è in scarica o sconosciuto
+(( $perc < 25 )) && icon=$battery_0 || \
+    (( $perc < 50 )) && icon=$battery_1 || \
+    (( $perc < 75 )) && icon=$battery_2 || \
+    (( $perc < 90 )) && icon=$battery_3 || \
+    icon=$battery_4
+# aggiusta la dimensione e la posizione dell'icona
+icon_size=18000
+icon_rise="-5000"
+
+# Seleziona l'icona quando è in carica e aggiusta la dimensione
+[ $state = "Charging" ] && icon=$battery_chr && icon_size=8000 && icon_rise="1000"
+
+# markup per aggiustare l'icona
+pre_icon="<span size=\"$icon_size\" rise=\"$icon_rise\">"
+post_icon='</span> '
+
+# stampa il lo stato
+echo -e "${pre_icon}${icon}${post_icon}<sup>${instance}</sup>  ${perc}% ${time}"
+
+# marca come urgente se la batteria è in condizioni critiche
+(( $perc < $threshold )) && exit 33
+
+exit 0
