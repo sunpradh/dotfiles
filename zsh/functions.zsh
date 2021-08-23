@@ -5,7 +5,7 @@
 # edit configuration files in .config and custom scripts
 config() {
     pushd ~/.config
-    f="$(fd -H -tf | fzf --preview='highlight --force -O ansi -- {}')"
+        f="$(fd -HL -tf | fzf --preview='highlight --force -O ansi -- {}')"
     [ ! -z $f ] && $EDITOR $f
     popd
 }

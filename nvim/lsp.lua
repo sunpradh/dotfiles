@@ -1,5 +1,5 @@
 local lsp = require('lspconfig')
-local completion = require('completion')
+-- local completion = require('completion')
 --require'lspconfig'.pyls.setup{}
 
 local mapper = function(mode, key, result)
@@ -9,7 +9,7 @@ local mapper = function(mode, key, result)
 end
 
 local custom_attach = function()
-    completion.on_attach()
+    -- completion.on_attach()
     -- Move cursor to the next and previous diagnostic
     mapper('n', ']g', 'vim.lsp.diagnostic.goto_next()')
     mapper('n', '[g', 'vim.lsp.diagnostic.goto_prev()')
@@ -25,4 +25,4 @@ end
 
 lsp.pylsp.setup{on_attach = custom_attach}   -- Python
 lsp.clangd.setup{on_attach = custom_attach} -- C/C++
-lsp.texlab.setup{on_attach = custom_attach} -- LaTeX
+--lsp.texlab.setup{on_attach = custom_attach} -- LaTeX

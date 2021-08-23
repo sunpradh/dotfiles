@@ -19,11 +19,11 @@ bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+f exec $term ranger
 bindsym $mod+Shift+v exec pavucontrol
 bindsym $mod+Shift+s exec spotify
-bindsym $mod+Shift+x exec pcmanfm
+bindsym $mod+Shift+x exec caja
 bindsym $mod+Shift+e exec thunderbird
 bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+t exec telegram-desktop
-bindsym $mod+Shift+p exec whatsapp-nativefier-dark
+bindsym $mod+Shift+p exec whatsapp-for-linux
 bindsym $mod+Shift+m exec deadbeef
 
 # Volume
@@ -32,8 +32,8 @@ bindsym XF86AudioLowerVolume exec set-volume down
 bindsym XF86AudioMute	     exec set-volume toggle
 
 # Brightness
-bindsym XF86MonBrightnessDown exec brightnessctl -q set 5%-
-bindsym XF86MonBrightnessUp   exec brightnessctl -q set 5%+
+bindsym XF86MonBrightnessDown exec set-brightness down
+bindsym XF86MonBrightnessUp   exec set-brightness up
 
 # Screenshot
 bindsym Print exec --no-startup-id sway-screenshot

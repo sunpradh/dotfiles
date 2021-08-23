@@ -1,0 +1,9 @@
+#!/bin/sh
+# start wob
+
+SOCKET=${WOBSOCKET:-$XDG_RUNTIME_DIR/wob.sock}
+if [ ! -e $SOCKET ]; then
+    mkfifo $SOCKET
+fi
+
+tail -f $SOCKET | wob

@@ -17,10 +17,15 @@ exec foot --server
 # network manager
 exec nm-applet --indicator
 # cloud services
-exec dropbox
+#exec dropbox
 # notification daemon
 exec mako
 # bluetooth
 # exec blueman-applet
 # import the environment for systemd, fixes problems with xdg-desktop-portal
 exec "systemctl --user import-environment"
+
+# set overlay for volume/brightness
+# set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+# exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+exec start-wob

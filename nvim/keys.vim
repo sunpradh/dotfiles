@@ -28,14 +28,6 @@ noremap Q  <Nop>
 " exit terminal mode
 tnoremap <A-q> <C-\><C-n>
 
-""" TELESCOPE
-" nnoremap <A-f>      <cmd>Telescope find_files<cr>
-" nnoremap <A-b>      <cmd>Telescope buffers<cr>
-" nnoremap <leader>gw <cmd>Telescope live_grep<cr>
-" nnoremap <leader>gs <cmd>Telescope grep_string<cr>
-" nnoremap <leader>ch <cmd>Telescope command_history<cr>
-" nnoremap <leader>fb <cmd>Telescope file_browser<cr>
-
 """ FZF
 nnoremap <A-f>      :Files<CR>
 nnoremap <A-b>      :Buffers<CR>
@@ -43,6 +35,13 @@ nnoremap <leader>gw :BLines<CR>
 nnoremap <leader>rg :Rg<CR>
 nnoremap <leader>ch :History:<CR>
 nnoremap <leader>ht :Helptags<CR>
+
+""" COMPLETION (nvim-compe)
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 """ Misc
 " cancel search results

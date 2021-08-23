@@ -1,4 +1,4 @@
 configuration {
-	font: "Roboto Regular 11";
-	theme: "/home/sunny/.config/rofi/base-16.rasi";
+	font: "Fira Sans 10";
+	theme: "/home/sunny/.config/rofi/gruvbox.rasi";
 }

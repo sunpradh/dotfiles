@@ -20,6 +20,7 @@ alias la="exa --group-directories-first -la"
 
 # short hands
 alias v="nvim"
+alias vim="nvim"
 alias c="config"
 alias vw="vimwiki"
 alias open="xdg-open"

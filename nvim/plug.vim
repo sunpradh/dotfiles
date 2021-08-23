@@ -6,7 +6,8 @@ call plug#begin(stdpath('data') . '/plugged')
 
 " Language server protocol (autocompletion)
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
 " Tree-sitter (syntax highlighting engine)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Fuzzy finder (telescope.nvim is somewhat slow compared to fzf.vim)
@@ -48,6 +49,7 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
     -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = "maintained",
+    disable          = {"latex"},
     highlight        = {enable = true},
     indent           = {enable = true}
 }
@@ -71,6 +73,7 @@ let g:vimwiki_list = [ {
 	    \ 'syntax': 'markdown',
 	    \ 'ext': '.md'
 	    \ } ]
+let g:vimwiki_url_maxsave = 0
 
 """ Easy align
 xmap ga <Plug>(EasyAlign)

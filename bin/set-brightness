@@ -1,0 +1,16 @@
+#!/bin/sh
+# simple script for changing the brightness
+
+SOCKET=${WOBSOCKET:-$XDG_RUNTIME_DIR/wob.sock}
+sed_expr='/Current/ s/.*\(([0-9]+)%\).*/\1/p'
+if [ -e $SOCKET ]; then
+    case "$1" in
+        "up")     brightnessctl set 5%+ | sed -En "$sed_expr" > $SOCKET;;
+        "down")   brightnessctl set 5%- | sed -En "$sed_expr" > $SOCKET;;
+    esac
+else
+    case "$1" in
+        "up")     brightnessctl -q set 5%+ ;;
+        "down")   brightnessctl -q set 5%- ;;
+    esac
+fi

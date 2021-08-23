@@ -3,7 +3,7 @@ let g:tex_flavor = 'latex'
 
 " tex syntax
 let g:tex_fast = 'bMpr'
-let g:tex_comment_nospell=1
+let g:tex_comment_nospell = 1
 
 " vimtex and neovim
 let g:vimtex_compiler_progname = 'nvr'
@@ -30,7 +30,6 @@ let g:vimtex_quickfix_ignore_filters = ['[Oo]verfull', '[Uu]nderfull', 'packages
 let g:vimtex_imaps_enabled=0
 
 " vimtex completion
-lua require'completion'.addCompletionSource('vimtex', require'vimtex'.complete_item)
 let g:completion_chain_complete_list = {
             \ 'tex' : [
             \     {'complete_items': ['texlab', 'vimtex']},
@@ -41,9 +40,7 @@ let g:completion_chain_complete_list = {
 augroup latexgroup
     autocmd!
     " force filetype (necessary with empy files)
-    autocmd BufRead,BufNewFile *.tex set filetype=tex
-    " completion
-    autocmd BufRead *.tex,*.md lua require'completion'.on_attach()
+    autocmd BufRead,BufNewFile *.tex set filetype=tex syntax=tex
     " set spelling and wrapping
     autocmd BufRead *.tex,*.md set spell
     autocmd BufRead *.tex,*.md set spelllang=en,it
@@ -55,4 +52,3 @@ augroup latexgroup
     " cleanup after leaving
     autocmd VimLeave *.tex VimtexClean " auto clean-up
 augroup end
-

@@ -1,10 +1,9 @@
 {
     "layer": "top",
     "position": "bottom",
-    "height": 24,
+        "height": 26,
     "modules-center": [],
     "modules-right":  [
-        "battery#bat0",
         "battery#bat1",
         "cpu",
         "temperature",
@@ -41,19 +40,11 @@
         "format-alt":     "{:%Y-%m-%d}"
     },
     "temperature": {
+        "hwmon-path":         "/sys/class/hwmon/hwmon4/temp1_input",
         "critical-threshold": 80,
         "format":             "{icon} {temperatureC}",
         "format-icons":       ["", "", "", "", ""],
         "on-click":           "foot --app-id=floaterm -o initial_window_width=80c -o initial_window_height=40c watch -n 1 sensors"
-    },
-    "battery#bat0": {
-        "bat":             "BAT0",
-        "states":          { "warning": 30, "critical":  15 },
-        "format":          "{icon} {capacity}",
-        "format-charging": "\uf0e7 {capacity}",
-        "format-plugged":  "",
-        "format-alt":      "{icon} {time}",
-        "format-icons":    ["", "", "", "", ""]
     },
     "battery#bat1": {
         "bat":             "BAT1",

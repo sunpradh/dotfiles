@@ -36,7 +36,7 @@ set nobackup
 set undodir=~/.cache/nvim/undodir
 set undofile
 " set the completion menu
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noselect
 set signcolumn=yes
 set shortmess+=c
 

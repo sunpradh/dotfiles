@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# options
+suspend="鈴"
+shutdown=""
+reboot=""
+logout=""
+#shutdown="\0icon\x1fsystem-shutdown"
+#reboot="\0icon\x1fsystem-reboot"
+#suspend="\0icon\x1fsystem-suspend"
+#logout="\0icon\x1fsystem-log-out"
+
+options="$suspend\n$shutdown\n$reboot\n$logout"
+
+roficmd="rofi -dmenu -normal-window -theme $HOME/.config/rofi/poweroff.rasi"
+
+answer=$( echo -e $options | $roficmd -p '')
+case $answer in
+    $logout)	swaymsg	  exit;;
+    $shutdown)  systemctl poweroff;;
+    $reboot)	systemctl reboot;;
+    $suspend)	systemctl suspend;;
+esac

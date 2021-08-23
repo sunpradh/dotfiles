@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# simple script for changing the volume
+
+SOCKET=${WOBSOCKET:-$XDG_RUNTIME_DIR/wob.sock}
+amixer_opts="-D pulse sset Master"
+sed_expr='s/.*\[([0-9]+)%\].*/\1/p'
+if [ -e $SOCKET ]; then
+    case "$1" in
+        "up")     amixer $amixer_opts 5%+   | sed -En $sed_expr | head -n 1 > $SOCKET;;
+        "down")   amixer $amixer_opts 5%-   | sed -En $sed_expr | head -n 1 > $SOCKET;;
+        "toggle") amixer $amixer_opts toggle| sed -En $sed_expr | head -n 1 > $SOCKET;;
+    esac
+else
+    case "$1" in
+        "up")     amixer -q $amixer_opts 5%+   ;;
+        "down")   amixer -q $amixer_opts 5%-   ;;
+        "toggle") amixer -q $amixer_opts toggle;;
+    esac
+fi

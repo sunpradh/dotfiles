@@ -29,7 +29,7 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+Ctrl+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# change container layout (tabbed, toggle split)
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -48,19 +48,56 @@ bindsym $mod+Shift+a focus child
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Window rules
-for_window [window_role="pop-up"]                 floating enable # floating dialogs
-for_window [window_role="task_dialog"]            floating enable
-for_window [app_id="GNU Octave"]                   floating enable
-for_window [app_id="Matplotlib"]                  floating enable
-for_window [app_id="pavucontrol"]                 floating enable
-for_window [app_id="blueman-manager"]             floating enable
-for_window [app_id="floaterm"]                    floating enable
-for_window [app_id="None"]                        floating enable
+# show scratchpad
+bindsym $mod+s scratchpad show
+
+# === Window rules === #
+
+# Floating windows
+for_window [window_role="pop-up"]      floating enable # floating dialogs
+for_window [window_role="task_dialog"] floating enable
+for_window [app_id="Matplotlib"]       floating enable
+for_window [app_id="pavucontrol"]      floating enable
+for_window [app_id="blueman-manager"]  floating enable
+for_window [app_id="floaterm"]         floating enable
+for_window [app_id="None"]             floating enable
+for_window [app_id="zoom"]             floating enable
+for_window [app_id="sclang"]           floating enable
+for_window [class="MEGAsync"]          floating enable
+
+# Annoying popups
 for_window [title="Microsoft Teams Notification"] floating enable
-for_window [title="Firefox – Indicatore condivisione"] floating enable
-for_window [title="Picture-in-Picture"]           floating enable
-for_window [title="Picture-in-Picture"]           border pixel 1
+for_window [title=".*Indicatore condivisione"] floating enable
+for_window [title=".*Indicatore condivisione"] move scratchpad
+for_window [title=".*Sharing Indicator"] floating enable
+for_window [title=".*Sharing Indicator"] move scratchpad
+for_window [title="Picture-in-Picture"] floating enable
+for_window [title="Picture-in-Picture"] border pixel 1
+
+# Specific workspaces
+assign     [app_id="firefox"]            $ws2
+for_window [app_id="firefox"]            focus
+assign     [class="chromium"]            $ws2
+assign     [app_id="thunderbird"]        $ws4
+for_window [app_id="thunderbird"]        focus
+assign     [app_id="zoom"]               $ws5
+assign     [class="Microsoft Teams.*"]   $ws5
+assign     [app_id="telegramdesktop"]    $ws6
+for_window [app_id="telegramdesktop"]    focus
+assign     [app_id="whatsapp-for-linux"] $ws6
+for_window [app_id="whatsapp-for-linux"] focus
+assign     [class="discord"]             $ws6
+assign     [class="Spotify"]             $ws7
+
+# for_window [app_id="firefox"]            move to workspace $ws2, focus
+# for_window [class="chromium"]            move to workspace $ws2, focus
+# for_window [app_id="thunderbird"]        move to workspace $ws4, focus
+# for_window [app_id="zoom"]               move to workspace $ws5, focus
+# for_window [class="Microsoft Teams.*"]   move to workspace $ws5, focus
+# for_window [app_id="telegramdesktop"]    move to workspace $ws6, focus
+# for_window [app_id="whatsapp-for-linux"] move to workspace $ws6, focus
+# for_window [class="discord"]             move to workspace $ws6, focus
+# for_window [class="Spotify"]             move to workspace $ws7, focus
 
 # always center rofi (in normal-window) in the center
 for_window [class="Rofi"] floating enable

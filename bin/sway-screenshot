@@ -1,0 +1,58 @@
+#!/bin/bash
+#
+# Screenshot prompt for Sway using rofi
+# original: https://github.com/yschaeff/sway_screenshots 
+
+# Menu command
+MENU='rofi -dmenu -l 5 -width 15 -columns 1 -scroll-method 0 -p screenshot'
+
+NOTIFY=$(pidof mako || pidof dunst)
+
+FOCUSED=$(swaymsg -t get_tree | jq '.. | ((.nodes? + .floating_nodes?) // empty) | .[] | select(.focused and .pid) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
+OUTPUTS=$(swaymsg -t get_outputs | jq -r '.[] | select(.active) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
+WINDOWS=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
+
+CHOICE=`$MENU << EOF
+fullscreen
+focused
+region
+select-output
+select-window
+EOF`
+
+
+mkdir -p $(xdg-user-dir PICTURES)/screenshots/
+
+FILENAME="$(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_screenshot.png')"
+#RECORDING="$(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_recording.mp4')"
+
+if [ "$CHOICE" = fullscreen ]
+then
+    grim "$FILENAME"
+elif [ "$CHOICE" = region ]
+then
+    slurp | grim -g - "$FILENAME"
+elif [ "$CHOICE" = select-output ]
+then
+    echo $OUTPUTS | slurp | grim -g - "$FILENAME"
+elif [ "$CHOICE" = select-window ]
+then
+    echo $WINDOWS | slurp | grim -g - "$FILENAME"
+elif [ "$CHOICE" = focused ]
+then
+    grim -g "$(eval echo $FOCUSED)" "$FILENAME"
+elif [ -z "$CHOICE" ]
+then
+    if [ $NOTIFY ]; then
+        notify-send "Screenshot" "Cancelled" -t 1000
+    fi
+    exit 0
+else
+    grim -g "$(eval echo $CHOICE)" "$FILENAME"
+fi
+
+if [ $NOTIFY ]; then
+    notify-send "Screenshot" "File saved as $FILENAME\nand copied to clipboard" -t 6000 -i $FILENAME
+fi
+wl-copy < $FILENAME
+#sxiv $FILENAME

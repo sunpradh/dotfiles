@@ -1,8 +1,8 @@
 * {
     border:        none;
     border-radius: 0;
-    font-family:   Iosevka, "Font Awesome 5 Free", sans-serif;
-    font-size:     13px;
+    font-family:   "Atkinson Hyperlegible", "Font Awesome 5 Free", sans-serif;
+    font-size:     15px;
     min-height:    0;
 }
 
@@ -19,9 +19,11 @@ window#waybar {
 
 #workspaces button {
     padding: 1px 2px;
-    margin:  0px 2px;
+    margin:  0px 6px;
     background-color: transparent;
     min-width: 16px;
+    color: #bdae93;
+    border-bottom: 2px transparent solid;
 }
 
 #workspaces button:hover {
@@ -54,7 +56,6 @@ window#waybar {
 
 #clock {
     background-color: transparent;
-    color:   #ebdbb2;
     padding: 2px 2px;
     margin:  0px 8px;
     min-width:  60px;
@@ -62,7 +63,6 @@ window#waybar {
 
 #window {
     background-color: transparent;
-    color: #ebdbb2;
     border: transparent;
     margin-left: 8px;
 }

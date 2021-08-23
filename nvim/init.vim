@@ -4,7 +4,8 @@ source $HOME/.config/nvim/set.vim
 " Plugins
 source $HOME/.config/nvim/plug.vim
 
-" LSP and autocompletion
+" LSP and autocompletion (completion-nvim)
+luafile $HOME/.config/nvim/compe.lua
 luafile $HOME/.config/nvim/lsp.lua
 command! Diagnostic lua vim.lsp.diagnostic.set_loclist() " diagnostic menu
 let g:completion_enable_snippet = 'UltiSnips'
