@@ -1,6 +1,5 @@
 local lsp = require('lspconfig')
--- local completion = require('completion')
---require'lspconfig'.pyls.setup{}
+local completion = require('completion')
 
 local mapper = function(mode, key, result)
     vim.api.nvim_buf_set_keymap(0, mode, key,
@@ -9,8 +8,9 @@ local mapper = function(mode, key, result)
 end
 
 local custom_attach = function()
-    -- completion.on_attach()
-    -- Move cursor to the next and previous diagnostic
+    -- start completion engine
+    completion.on_attach()
+    -- move cursor to the next and previous diagnostic
     mapper('n', ']g', 'vim.lsp.diagnostic.goto_next()')
     mapper('n', '[g', 'vim.lsp.diagnostic.goto_prev()')
     -- jump between symbols
@@ -23,6 +23,7 @@ local custom_attach = function()
     mapper('n', 'gR', 'vim.lsp.buf.rename()')
 end
 
-lsp.pylsp.setup{on_attach = custom_attach}   -- Python
+lsp.pylsp.setup{on_attach = custom_attach}  -- Python
 lsp.clangd.setup{on_attach = custom_attach} -- C/C++
---lsp.texlab.setup{on_attach = custom_attach} -- LaTeX
+lsp.vimls.setup{on_attach = custom_attach}  -- Vim
+-- lsp.texlab.setup{on_attach = custom_attach} -- LaTeX

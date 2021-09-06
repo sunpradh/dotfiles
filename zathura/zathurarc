@@ -57,3 +57,10 @@ set recolor-keephue true
 
 map [normal] P feedkeys <F5>
 map [presentation] P feedkeys <F5>
+map [normal] <A-c> exec "sh -c 'auto-crop-zathura \"$FILE\"'"
+map [normal] <A-f> exec "firefox %"
+map [normal] <A-o> exec "sh -c 'caja $(dirname $FILE)'"
+map [normal] <A-x> exec "sh -c 'caja $(dirname $FILE)'"
+map <F10> set 'default-bg "#ffffff"'
+map <F9>  set 'first-page-column 1:1'
+map [normal] <A-r> feedkeys <F9><F10><F11><C-n>da
