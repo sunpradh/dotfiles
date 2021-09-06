@@ -23,7 +23,7 @@ bindsym $mod+Shift+x exec caja
 bindsym $mod+Shift+e exec thunderbird
 bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+t exec telegram-desktop
-bindsym $mod+Shift+p exec whatsapp-for-linux
+bindsym $mod+Shift+p exec whatsapp-web
 bindsym $mod+Shift+m exec deadbeef
 
 # Volume

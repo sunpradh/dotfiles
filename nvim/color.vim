@@ -12,3 +12,9 @@ hi LineNr	ctermbg=NONE
 hi SignColumn   ctermbg=NONE
 hi SpellBad     ctermbg=NONE cterm=undercurl
 
+" Only activate the cursorline on the active buffer
+augroup Cursors
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup end

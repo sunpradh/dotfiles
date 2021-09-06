@@ -20,7 +20,7 @@ set smartindent                " Enable smart-indent
 set ruler                      " Show row and column ruler information
 set showmatch                  " Highlight matching brace
 set linebreak                  " break lines between words
-set cursorline                 " highlight current line
+"set cursorline                 " highlight current line
 set complete-=i                " don't autocomplete with included files
 set backspace=indent,eol,start " Backspace behaviour
 set splitbelow                 " new split below
@@ -40,3 +40,5 @@ set completeopt=menuone,noselect
 set signcolumn=yes
 set shortmess+=c
 
+" Leader key
+let mapleader=' '

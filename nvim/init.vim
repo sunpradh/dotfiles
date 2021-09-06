@@ -4,16 +4,16 @@ source $HOME/.config/nvim/set.vim
 " Plugins
 source $HOME/.config/nvim/plug.vim
 
-" LSP and autocompletion (completion-nvim)
-luafile $HOME/.config/nvim/compe.lua
+" LSP (nvim-lspconfig) and autocompletion (completion-nvim)
 luafile $HOME/.config/nvim/lsp.lua
 command! Diagnostic lua vim.lsp.diagnostic.set_loclist() " diagnostic menu
-let g:completion_enable_snippet = 'UltiSnips'
+" Telescope
+luafile $HOME/.config/nvim/telescope.lua
 
 " Key mappings
 source $HOME/.config/nvim/keys.vim
 
-" Colorscheme
+" Theming
 source $HOME/.config/nvim/color.vim
 
 " Trim trailing whitespace
@@ -22,6 +22,7 @@ fun! TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
+
 augroup TRIM
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
@@ -36,4 +37,5 @@ augroup fileaugroup
     autocmd BufRead	 ~/.config/waybar/config    set filetype=jsonc
     autocmd BufRead	 ~/.config/sway/*           set filetype=config
 augroup end
+
 
