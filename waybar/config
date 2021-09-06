@@ -19,7 +19,7 @@
         "sway/window"
     ],
     "sway/window": {
-        "format": "<b>{}</b>",
+        "format": "{}",
         "max-length": 100,
     },
     "idle_inhibitor": {

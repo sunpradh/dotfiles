@@ -6,12 +6,18 @@ call plug#begin(stdpath('data') . '/plugged')
 
 " Language server protocol (autocompletion)
 Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
-Plug 'hrsh7th/nvim-compe'
+" Completion engine
+Plug 'nvim-lua/completion-nvim'
 " Tree-sitter (syntax highlighting engine)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Telescope.nvim
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
 " Fuzzy finder (telescope.nvim is somewhat slow compared to fzf.vim)
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf.vim'
 " Snippets
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -64,6 +70,7 @@ let g:ultisnips_python_style="numpy"
 
 """ LaTeX (vimtex) and markdown
 source $HOME/.config/nvim/latex.vim
+
 
 """ Vimwiki
 let g:vimwiki_table_mappings = 0
