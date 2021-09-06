@@ -6,16 +6,14 @@
 # Configurazione di base
 #------------------------------
 
-
 # modifier key
 set $mod Mod4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-set $term kitty
-bindsym $mod+Return exec $term
+# set the terminal
+set $term alacritty
 
 #------------------------------
 # Window management
@@ -34,10 +32,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # resize window
-bindsym $mod+Left  resize shrink width  10 px or 10 ppt
-bindsym $mod+Right resize grow   width  10 px or 10 ppt
-bindsym $mod+Down  resize grow   height 10 px or 10 ppt
-bindsym $mod+Up    resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+h resize shrink width  10 px or 10 ppt
+bindsym $mod+Ctrl+l resize grow   width  10 px or 10 ppt
+bindsym $mod+Ctrl+j resize grow   height 10 px or 10 ppt
+bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
 
 # split in horizontal orientation
 bindsym $mod+o split h
@@ -46,7 +44,7 @@ bindsym $mod+o split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+F11 fullscreen toggle
+bindsym $mod+Ctrl+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -57,12 +55,10 @@ bindsym $mod+e layout toggle split
 bindsym $mod+t floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+y focus mode_toggle
 
-# focus the parent container
+# focus the parent or child container
 bindsym $mod+a focus parent
-
-# focus the child container
 bindsym $mod+Shift+a focus child
 
 # kill focused window
@@ -80,11 +76,6 @@ for_window [class="MEGAsync"]	       floating enable
 # always center rofi (in normal-window) in the center
 for_window [class="Rofi"] floating enable
 for_window [class="Rofi"] move position center
-
-# inhibit idle for firefox in fullscreen
-#for_window [class=".*"] inhibit_idle fullscreen
-
-
 
 #------------------------------
 # Workspace management
@@ -137,7 +128,6 @@ workspace_auto_back_and_forth yes
 bindsym $mod+Shift+I move workspace to output right
 bindsym $mod+Shift+U move workspace to output left
 
-
 #------------------------------
 # Keyboard shortcuts
 #------------------------------
@@ -147,24 +137,24 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # start a program launcher
-bindsym $mod+d exec "rofi -modi drun,run -show drun"
-#bindsym $mod+d exec wofi --show drun
+bindsym $mod+d exec "rofi -modi drun,run -show drun -show-icons"
 
 # applications shortcuts
+bindsym $mod+Return  exec $term
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+f exec $term -e ranger
 bindsym $mod+Shift+m exec $term -e ncmpcpp
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+x exec pcmanfm
-bindsym $mod+Shift+e exec sylpheed
+bindsym $mod+Shift+e exec thunderbird
 bindsym $mod+Shift+v exec pavucontrol
 bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+t exec telegram-desktop
+bindsym $mod+Shift+p exec whatsapp-web
 bindsym $mod+f	     exec rofi-files
 
 # Window switcher
-#bindsym $mod+Tab exec rofi -show window
-# non funziona bene con wayland, grabba solo le finestre che usano Xwayland
+bindsym $mod+Tab exec rofi -show window
 
 # Volume
 bindsym XF86AudioRaiseVolume exec set-volume up
@@ -175,29 +165,27 @@ bindsym XF86AudioMute	     exec set-volume toggle
 bindsym XF86MonBrightnessDown exec brightnessctl -q set 5%-
 bindsym XF86MonBrightnessUp   exec brightnessctl -q set 5%+
 
-# Switch screens
-#bindsym XF86Display exec ~/.local/bin/switch-screen.sh
-# non funziona con Wayland, dando che usa xrandr
-# da riscrivere usando swaymsg
-
 # Screenshot
-#bindsym Print		exec --no-startup-id sway-screenshot
+bindsym Print       exec --no-startup-id mate-screenshot
+bindsym Shift+Print exec --no-startup-id mate-screenshot --window
+bindsym Ctrl+Print  exec --no-startup-id mate-screenshot --area
 # the AKKO keyboard does not have Print key but have a calculator key
-#bindsym XF86Calculator  exec --no-startup-id sway-screenshot
+bindsym XF86Calculator       exec --no-startup-id mate-screenshot
+bindsym Shift+XF86Calculator exec --no-startup-id mate-screenshot --window
+bindsym Ctrl+XF86Calculator  exec --no-startup-id mate-screenshot --area
 
 # Shutdown dialog
-bindsym $mod+Shift+BackSpace exec shutdown-menu
+bindsym $mod+Shift+BackSpace exec mate-session-save --shutdown-dialog
 
-# Caps Lock
-#bindsym --release Caps_Lock exec pkill -SIGRTMIN+10 i3blocks
-# caps lock disattivato (finalmente)
+# Screenlock
+bindsym $mod+Shift+Escape exec mate-screensaver-command --lock
 
 #------------------------------
 # A E S T H E T I C S
 #------------------------------
 
 # Font
-font pango:Roboto Regular 8
+font pango:Atkinson Hyperlegible 10
 
 # Window borders settings
 default_border pixel 3
@@ -211,48 +199,41 @@ hide_edge_borders smart_no_gaps
 # No focus following mouse
 focus_follows_mouse no
 
+# Gruvbox
+set $bg       #181818
+set $white    #ebdbb2
+set $red      #cc241d
+set $green    #b8bb26
+set $yellow   #d79921
+set $blue     #458588
+set $purple   #b16286
+set $aqua     #689d68
+set $gray     #a89984
+set $darkgray #1d2021
 
-# Base 16 default dark
-set $base00 #181818
-set $base01 #282828
-set $base02 #383838
-set $base03 #585858
-set $base04 #b8b8b8
-set $base05 #d8d8d8
-set $base06 #e8e8e8
-set $base07 #f8f8f8
-set $base08 #ab4642
-set $base09 #dc9656
-set $base0A #f7ca88
-set $base0B #a1b56c
-set $base0C #86c1b9
-set $base0D #7cafc2
-set $base0E #ba8baf
-set $base0F #a16946
+#class                  border    backgr    text      indicator child_border
+client.focused          $white    $white    $darkgray $purple   $white
+client.focused_inactive $darkgray $darkgray $white    $purple   $darkgray
+client.unfocused        $darkgray $darkgray $white    $purple   $darkgray
+client.urgent           $red      $red      $white    $red      $red
 
-# Decorators color
-#class                  border   backgr   text     indicator child_border
-client.focused          $base02  $base02  $base07  $base01 $base07
-client.focused_inactive $base01  $base01  $base05  $base01 $base00
-client.unfocused        $base00  $base00  $base04  $base01 $base00
-client.urgent           $base0A  $base0A  $base00  $base01 $base0A
-
-
-# Use waybar instead of swaybar
+# bar settings
 bar {
     position	    bottom
     status_command  i3blocks
     separator_symbol " "
     colors {
         # bar background color
-        background $base00
+        background $bg
         # text color used for blocks that do not have a color specified.
-        statusline $base04
+        statusline $white
         # workspaces section
-        #                    border  backgr. text
-        focused_workspace  $base02 $base02 $base07
-        inactive_workspace $base01 $base01 $base05
-        active_workspace   $base01 $base01 $nord13
-        urgent_workspace   $base0A $base0A $base01
+        focused_workspace  $gray $white $bg
+        inactive_workspace $bg   $bg    $gray
+        active_workspace   $bg   $bg    $white
+        urgent_workspace   $bg   $red   $bg
     }
 }
+
+# background
+exec --always sh ~/.fehbg

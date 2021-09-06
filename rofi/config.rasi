@@ -1,4 +1,5 @@
 configuration {
 	font: "Fira Sans 10";
-	theme: "/home/sunny/.config/rofi/gruvbox.rasi";
+	theme: "~/.config/rofi/gruvbox.rasi";
 }
+@import "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
