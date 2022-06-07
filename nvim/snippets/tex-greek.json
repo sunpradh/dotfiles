@@ -1,0 +1,134 @@
+{
+    "alpha": {
+        "prefix": "a",
+        "body": [ "\\alpha" ]
+    },
+    "beta": {
+        "prefix": "b",
+        "body": [ "\\beta" ]
+    },
+    "gamma": {
+        "prefix": "g",
+        "body": [ "\\gamma" ]
+    },
+    "delta": {
+        "prefix": "d",
+        "body": [ "\\delta" ]
+    },
+    "epsilon": {
+        "prefix": "e",
+        "body": [ "\\epsilon" ]
+    },
+    "varepsilon": {
+        "prefix": "ve",
+        "body": [ "\\varepsilon" ]
+    },
+    "zeta": {
+        "prefix": "z",
+        "body": [ "\\zeta" ]
+    },
+    "eta": {
+        "prefix": "h",
+        "body": [ "\\eta" ]
+    },
+    "theta": {
+        "prefix": "o",
+        "body": [ "\\theta" ]
+    },
+    "lambda": {
+        "prefix": "l",
+        "body": [ "\\lambda" ]
+    },
+    "mu": {
+        "prefix": "m",
+        "body": [ "\\mu" ]
+    },
+    "nu": {
+        "prefix": "n",
+        "body": [ "\\nu" ]
+    },
+    "xi": {
+        "prefix": "j",
+        "body": [ "\\xi" ]
+    },
+    "phi": {
+        "prefix": "f",
+        "body": [ "\\phi" ]
+    },
+    "varphi": {
+        "prefix": "vf",
+        "body": [ "\\varphi" ]
+    },
+    "rho": {
+        "prefix": "r",
+        "body": [ "\\rho" ]
+    },
+    "sigma": {
+        "prefix": "s",
+        "body": [ "\\sigma" ]
+    },
+    "tau": {
+        "prefix": "t",
+        "body": [ "\\tau" ]
+    },
+    "chi": {
+        "prefix": "x",
+        "body": [ "\\chi" ]
+    },
+    "psi": {
+        "prefix": "c",
+        "body": [ "\\psi" ]
+    },
+    "pi": {
+        "prefix": "p",
+        "body": [ "\\pi" ]
+    },
+    "omega": {
+        "prefix": "w",
+        "body": [ "\\omega" ]
+    },
+    "gamma uppercase": {
+        "prefix": "G",
+        "body": [ "\\Gamma" ]
+    },
+    "delta uppercase": {
+        "prefix": "D",
+        "body": [ "\\Delta" ]
+    },
+    "zeta uppercase": {
+        "prefix": "Z",
+        "body": [ "\\Zeta" ]
+    },
+    "theta uppercase": {
+        "prefix": "O",
+        "body": [ "\\Theta" ]
+    },
+    "lambda uppercase": {
+        "prefix": "L",
+        "body": [ "\\Lambda" ]
+    },
+    "xi uppercase": {
+        "prefix": "J",
+        "body": [ "\\Xi" ]
+    },
+    "phi uppercase": {
+        "prefix": "F",
+        "body": [ "\\Phi" ]
+    },
+    "sigma uppercase": {
+        "prefix": "S",
+        "body": [ "\\Sigma" ]
+    },
+    "pi uppercase": {
+        "prefix": "P",
+        "body": [ "\\Pi" ]
+    },
+    "psi uppercase": {
+        "prefix": "C",
+        "body": [ "\\Psi" ]
+    },
+    "omega uppercase": {
+        "prefix": "W",
+        "body": [ "\\Omega" ]
+    }
+}

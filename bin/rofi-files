@@ -1,45 +1,46 @@
 #!/bin/zsh
 
-# Save history to this file
-histfile="$HOME/.cache/rofi-file.cache"
-# create file if it does not exists
-test ! -e $histfile && touch $histfile
+EDITCMD="foot nvim"
+# Save history to this CHOOSEN
+HISTFILE="$HOME/.cache/rofi-file.cache"
+# create CHOOSEN if it does not exists
+test ! -e $HISTFILE && touch $HISTFILE
 # maximum number of history elements
-histmax=100
+HISTMAX=100
 
-# 1) Search for files only, excluding the music directory
-# 2) separate filename (on the 1st row) and dirname (on the 2nd row in small) 
+# 1) Search for FILES only, excluding the music directory
+# 2) separate filename (on the 1st row) and dirname (on the 2nd row in small)
 #    and separate each entry with a tab
 # 3) Execute rofi in dmenu mode
-files=("${(@f)$(cd $HOME && cat $histfile && fd -a -t f -L -E 'Musica' -E 'Telefono' --one-file-system)}")
-index=$( printf '%s\n' "${files[@]}" |\
+FILES=("${(@f)$(cd $HOME && cat $HISTFILE && fd -a -t f -L -E 'Musica' -E 'Telefono' --one-file-system)}")
+INDEX=$( printf '%s\n' "${FILES[@]}" |\
     sed  -nre 's_(.*)/([^/]*)$_\t\2\n<small><i>\1</i></small>_g; 1{s/^\t//}; p' |\
     sed  "s_${HOME}_~_" |\
-    rofi -l 12  -sep '\t' -eh 2 -dmenu -i -markup-rows -p 'file' -normal-window -format d )
+    rofi -l 12  -sep '\t' -eh 2 -dmenu -i -markup-rows -p 'file' -normal-window -format d  )
 
 # check if something has been chosen, if not exit
-test ! $index && exit 1
+test ! $INDEX && exit 1
 
-# check whether the chosen file exist
-file=$files[$index]
-if [ -e $file ]; then
+# check whether the chosen file $CHOOSEN exist
+CHOOSEN=$FILES[$INDEX]
+if [ -e $CHOOSEN ]; then
     # append to history
-    new_hist=$(grep -Fv "${file}" $histfile)
-    (echo $file && echo $new_hist | head -n $histmax) > $histfile
+    NEWHISTORY=$(grep -Fv "${CHOOSEN}" $HISTFILE)
+    (echo $CHOOSEN && echo $NEWHISTORY | head -n $HISTMAX) > $HISTFILE
 
-    # open the file
-    mtype=$(mimetype -b $file)
+    # open the CHOOSEN
+    mtype=$(mimetype -b $CHOOSEN)
     if [[ ${mtype:0:4} = "text" ]]; then
-          kitty -e nvim $file
+        $EDITCMD $CHOOSEN
     else
-          xdg-open $file
+        xdg-open $CHOOSEN
     fi
 
 else
-    notify-send -t 2000 "File not found" "<i>$file</i> does not exist"
+    notify-send -t 2000 "File not found" "<i>$CHOOSEN</i> does not exist"
 
-    # remove the non existing file from history
-    new_hist=$(grep -v "$file" $histfile)
-    echo $new_hist > $histfile
+    # remove the non existing CHOOSEN from history
+    NEWHISTORY=$(grep -v "$CHOOSEN" $HISTFILE)
+    echo $NEWHISTORY > $HISTFILE
     exit 1
 fi

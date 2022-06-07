@@ -6,26 +6,28 @@
 exec_always xrdb -merge /home/sunny/.Xresources
 
 # Display auto suspend
-exec swayidle -w \
-    timeout 600 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    timeout 1800 'systemctl suspend' \
-    resume 'swaymsg "output * dpms on"' \
+exec swayidle -w
 
 # terminal server
 exec foot --server
+
 # network manager
 exec nm-applet --indicator
+
 # cloud services
-#exec dropbox
+exec dropbox
+
 # notification daemon
 exec mako
+
 # bluetooth
-# exec blueman-applet
+#exec blueman-applet
+
 # import the environment for systemd, fixes problems with xdg-desktop-portal
 exec "systemctl --user import-environment"
 
-# set overlay for volume/brightness
-# set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-# exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+# overlay for volume/brightness
 exec start-wob
+
+# polkit authentication agent
+#exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1

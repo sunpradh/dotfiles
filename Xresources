@@ -1,3 +1,6 @@
+! Xresources
+! Used just to set the font rendering and not much else
+
 Xcursor.size: 24
 Xcursor.theme: xcursor-breeze
 

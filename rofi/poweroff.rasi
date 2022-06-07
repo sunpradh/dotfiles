@@ -1,13 +1,13 @@
 * {
-    backgroundcolor: #181818;
-    separatorcolor: #484848;
-    scrollbarcolor: #484848;
-    foregroundcolor: #d8d8d8;
-    foregroundcolorinverse: #181818;
-    selectioncolor: #585858;
+    backgroundcolor: #1d2021;
+    separatorcolor: #282828;
+    scrollbarcolor: #282828;
+    foregroundcolor: #ebdbb2;
+    foregroundcolorinverse: #1d2021;
+    selectioncolor: #98971a;
 
 
-    font: "Hack Nerd Font 48";
+    font: "Atkinson Hyperlegible 12";
     border-color: @separatorcolor;
     background-color: @backgroundcolor;
     text-color: @foregroundcolor;
@@ -19,15 +19,16 @@
     background-color: @backgroundcolor;
     border-color: @selectioncolor;
     border: 4;
+    border-radius: 6px;
     padding: 10px;
-    width: 450px;
+    width: 200px;
 }
 
 #listview {
-    spacing: 4px;
+    spacing: 0px;
     scrollbar: true;
-    padding: 2px;
-    layout: horizontal;
+    padding: 4px;
+    layout: vertical;
     lines: 4;
 }
 
@@ -38,19 +39,33 @@
 }
 
 #element {
-    padding: 5px 5px 5px 20px;
-    margin: 1px;
+    padding: 5px;
+    margin: 5px;
     border: 0px;
     border-color: @separatorcolor;
     border-radius: 5px;
     background-color: @backgroundcolor;
-    font: "Hack Nerd Font 48";
-    width: 100px;
+    /* width: 100px; */
+}
+
+#element-icon {
+    background-color: transparent;
+    margin: 0px;
+}
+
+#element-text {
+    background-color: transparent;
+    margin-left: 8px;
+}
+
+#element-text.selected {
+    background-color: transparent;
+    text-color: @foregroundcolorinverse;
 }
 
 #element.selected {
     background-color: @selectioncolor;
-    text-color: @foregroundcolor;
+    text-color: @foregroundcolorinverse;
     border-color: @separatorcolor;
 }
 
@@ -59,15 +74,12 @@
 }
 
 #inputbar {
-    margin-bottom: 1px;
     enabled: false;
 }
 
 #scrollbar {
-    width: 0px;
-}
-
-#scrollbar handle {
-    border: 0px;
-    border-color: #ff0000;
+    enabled: false;
+    handle-width: 0px;
+    margin: 0px;
+    padding: 0px;
 }

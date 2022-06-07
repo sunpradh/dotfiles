@@ -1,0 +1,192 @@
+{
+    "usepackage": {
+        "prefix": "pkg",
+        "body": "\\usepackage{$1}$0"
+    },
+
+    "item": {
+        "prefix": "it",
+        "body": "\\item ",
+        "description": "\\item on a newline"
+    },
+
+    "textrm": {
+        "prefix": "trm",
+        "body": "\\textrm{${1:text}}",
+        "description": "roman font"
+    },
+
+    "emph": {
+        "prefix": "emp",
+        "body": "\\emph{${1:text}}",
+        "description": "emphasis font"
+    },
+
+    "textsf": {
+        "prefix": "tsf",
+        "body": "\\textsf{${1:text}}",
+        "description": "sans serif font"
+    },
+
+    "texttt": {
+        "prefix": "ttt",
+        "body": "\\texttt{${1:text}}",
+        "description": "typewriter font"
+    },
+
+    "textit": {
+        "prefix": "tit",
+        "body": "\\textit{${1:text}}",
+        "description": "italic font"
+    },
+
+    "textsl": {
+        "prefix": "tsl",
+        "body": "\\textsl{${1:text}}",
+        "description": "slanted font"
+    },
+
+    "textsc": {
+        "prefix": "tsc",
+        "body": "\\textsc{${1:text}}",
+        "description": "smallcaps font"
+    },
+
+    "underline": {
+        "prefix": "unl",
+        "body": "\\underline{${1:text}}",
+        "description": "Underline text"
+    },
+
+    "textbf": {
+        "prefix": "bf",
+        "body": "\\textbf{${1:text}}",
+        "description": "bold font"
+    },
+
+    "textsuperscript": {
+        "prefix": "tss",
+        "body": "\\textsuperscript{${1:text}}",
+        "description": "Make text a superscript"
+    },
+
+    "textsubscript": {
+        "prefix": "tbs",
+        "body": "\\textsubscript{${1:text}}",
+        "description": "Make text a superscript"
+    },
+
+    "Start column": {
+        "prefix": "col",
+        "body": [
+            "\\column{$1\\textwidth}",
+            "$0"
+        ]
+    },
+
+    "reference": {
+        "prefix": "ref",
+        "body": [
+            "\\ref{$1} $0"
+        ]
+    },
+
+    "refer equation": {
+        "prefix": "eqr",
+        "body": [
+            "\\eqref{eq:$1} $0"
+        ]
+    },
+
+    "refer figure": {
+        "prefix": "figr",
+        "body": [
+            "Fig.~\\ref{fig:$1} $0"
+        ]
+    },
+
+    "refer table": {
+        "prefix": "tabr",
+        "body": [
+            "Tab.~\\ref{tab:$1} $0"
+        ]
+    },
+
+    "refer chapter": {
+        "prefix": "chapr",
+        "body": [
+            "Cap.~\\ref{cha:$1} $0"
+        ]
+    },
+
+    "refer section": {
+        "prefix": "secr",
+        "body": [
+            "Sec.~\\ref{sec:$1} $0"
+        ]
+    },
+
+    "refer subsection": {
+        "prefix": "subr",
+        "body": [
+            "Sec.~\\ref{sub:$1} $0"
+        ]
+    },
+
+    "label": {
+        "prefix": "lab",
+        "body": [
+            "\\label{$1} $0"
+        ]
+    },
+
+    "equation label": {
+        "prefix": "eql",
+        "body": [
+            "\\label{eq:$1} $0"
+        ]
+    },
+
+    "figure label": {
+        "prefix": "figl",
+        "body": [
+            "\\label{fig:$1} $0"
+        ]
+    },
+
+    "cite": {
+        "prefix": "cit",
+        "body": [
+            "\\cite{$1} $0"
+        ]
+    },
+
+    "cite author": {
+        "prefix": "cita",
+        "body": [
+            "\\citeauthor{$1} $0"
+        ]
+    },
+
+    "footnote cite": {
+        "prefix": "fcit",
+        "body": [
+            "\\footcite{$1} $0"
+        ]
+    },
+
+    "footnote": {
+        "prefix": "foot",
+        "body": [
+            "\\footnote{$1} $0"
+        ]
+    },
+
+    "input": {
+        "prefix": "inp",
+        "body": [
+            "\\input{$1} $0"
+        ]
+    }
+
+}

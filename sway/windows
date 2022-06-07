@@ -51,12 +51,12 @@ bindsym $mod+Shift+q kill
 # show scratchpad
 bindsym $mod+s scratchpad show
 
+
 # === Window rules === #
 
 # Floating windows
 for_window [window_role="pop-up"]      floating enable # floating dialogs
 for_window [window_role="task_dialog"] floating enable
-# for_window [app_id="Matplotlib"]       floating enable
 for_window [app_id="pavucontrol"]      floating enable
 for_window [app_id="blueman-manager"]  floating enable
 for_window [app_id="floaterm"]         floating enable
@@ -64,6 +64,7 @@ for_window [app_id="None"]             floating enable
 for_window [app_id="zoom"]             floating enable
 for_window [app_id="sclang"]           floating enable
 for_window [class="MEGAsync"]          floating enable
+for_window [class="nm-connection-editor"] floating enable
 
 # Annoying popups
 for_window [title="Microsoft Teams Notification"] floating enable
@@ -75,19 +76,20 @@ for_window [title="Picture-in-Picture"] floating enable
 for_window [title="Picture-in-Picture"] border pixel 1
 
 # Specific workspaces
-assign     [app_id="firefox"]            $ws2
-for_window [app_id="firefox"]            focus
-assign     [class="chromium"]            $ws2
-assign     [app_id="thunderbird"]        $ws4
-for_window [app_id="thunderbird"]        focus
-assign     [app_id="zoom"]               $ws5
-assign     [class="Microsoft Teams.*"]   $ws5
-assign     [app_id="telegramdesktop"]    $ws6
-for_window [app_id="telegramdesktop"]    focus
-assign     [app_id="whatsapp-online"] $ws6
-for_window [app_id="whatsapp-online"] focus
-assign     [class="discord"]             $ws6
-assign     [class="Spotify"]             $ws7
+assign     [app_id="firefox"] $ws2
+assign     [class="chromium"] $ws2
+assign     [app_id="thunderbird"] $ws4
+assign     [app_id="zoom"] $ws5
+assign     [class="Microsoft Teams.*"] $ws5
+assign     [app_id="telegramdesktop"] $ws6
+assign     [class="whatsapp-nativefier-d40211"] $ws6
+assign     [class="discord"] $ws6
+assign     [class="Spotify"] $ws7
+
+for_window [app_id="firefox"] focus
+for_window [app_id="thunderbird"] focus
+for_window [app_id="telegramdesktop"] focus
+for_window [class="whatsapp-nativefier-d40211"] focus
 
 # always center rofi (in normal-window) in the center
 for_window [class="Rofi"] floating enable

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+dir=$(dirname "$@")
+
+caja "$dir"

@@ -3,7 +3,7 @@
 #
 
 autoload -U compinit colors zcalc
-compinit -d
+compinit -d ~/.cache/zsh/zcompdump
 colors
 # Load dir-colors
 #test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)

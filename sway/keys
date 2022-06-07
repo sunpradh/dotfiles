@@ -10,21 +10,26 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+r reload
 
 # start a program launcher
-bindsym $mod+d exec "rofi -modi drun,run -show drun -normal-window -show-icons"
+bindsym $mod+d exec rofi-drun
+
 # search for files
 bindsym $mod+f exec rofi-files
 
 # applications shortcuts
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+f exec $term ranger
-bindsym $mod+Shift+v exec pavucontrol
-bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+x exec caja
 bindsym $mod+Shift+e exec thunderbird
-bindsym $mod+Shift+b exec blueman-manager
+bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+t exec telegram-desktop
-bindsym $mod+Shift+p exec whatsapp-web
-bindsym $mod+Shift+m exec deadbeef
+bindsym $mod+Shift+p exec whatsapp-nativefier
+bindsym $mod+Shift+v exec pavucontrol
+bindsym $mod+Shift+b exec blueman-manager
+bindsym $mod+Shift+m exec $term --app-id=floaterm htop
+bindsym $mod+Shift+n exec $term --app-id=floaterm nmtui
+
+# Lockscreen
+bindsym $mod+Backspace exec swaylock
 
 # Volume
 bindsym XF86AudioRaiseVolume exec set-volume up
@@ -47,5 +52,7 @@ bindsym $mod+Shift+Backspace exec shutdown-menu
 bindsym $mod+b exec killall -SIGUSR1 waybar
 
 # Update the kbd indicator
-bindsym $mod+space exec pkill --signal SIGRTMIN+1 waybar
+# bindsym $mod+space exec pkill --signal SIGRTMIN+1 waybar
 
+# Fix monitor orientation
+bindsym $mod+Ctrl+d exec fix-displays.sh

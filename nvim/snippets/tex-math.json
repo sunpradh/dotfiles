@@ -1,0 +1,252 @@
+{
+    "Summation symbol only": {
+        "prefix": "sum",
+        "body": [ "\\sum $0" ]
+    },
+    "Summation with only subscript": {
+        "prefix": "sum_",
+        "body": [ "\\sum_{$1} $0" ]
+    },
+    "Summation": {
+        "prefix": "summ",
+        "body": [ "\\sum_{${1:n} = ${2:0}}^{${3:\\infinity}}$0" ]
+    },
+    "Product symbol only": {
+        "prefix": "prod",
+        "body": [ "\\prod $0" ]
+    },
+    "Product with only subscript": {
+        "prefix": "prod_",
+        "body": [ "\\prod_{$1} $0" ]
+    },
+    "Product": {
+        "prefix": "prodd",
+        "body": [ "\\prod_{$1 = $2}^{$3} $0" ]
+    },
+    "Limit": {
+        "prefix": "lim",
+        "body": [ "\\lim_{${1} \\to $2} $0" ]
+    },
+    "Integral symbol only": {
+        "prefix": "int",
+        "body": [ "\\int $0" ]
+    },
+    "Integral with subscript": {
+        "prefix": "int_",
+        "body": [ "\\int_{$1} $0" ]
+    },
+    "Integral complete": {
+        "prefix": "intt",
+        "body": [ "\\int_{$1}^{$2} $0" ]
+    },
+    "Contour integral": {
+        "prefix": "oint",
+        "body": [ "\\oint_{$1} $0" ]
+    },
+    "Right arrow": {
+        "prefix": "ra",
+        "body": [ "\\rightarrow" ]
+    },
+    "Left arrow": {
+        "prefix": "la",
+        "body": [ "\\leftarrow" ]
+    },
+    "Long right arrow": {
+        "prefix": "lra",
+        "body": [ "\\longrightarrow" ]
+    },
+    "Long left arrow": {
+        "prefix": "lla",
+        "body": [ "\\longleftarrow" ]
+    },
+    "Thick right arrow": {
+        "prefix": "Ra",
+        "body": [ "\\Rightarrow" ]
+    },
+    "Thick left arrow": {
+        "prefix": "La",
+        "body": [ "\\Leftarrow" ]
+    },
+    "Long thick right arrow": {
+        "prefix": "Lra",
+        "body": [ "\\Longrightarrow" ]
+    },
+    "Long thick left arrow": {
+        "prefix": "Lla",
+        "body": [ "\\Longleftarrow" ]
+    },
+    "Maps to": {
+        "prefix": "map",
+        "body": [ "\\mapsto" ]
+    },
+    "To": {
+        "prefix": "to",
+        "body": [ "\\to" ]
+    },
+    "implies": {
+        "prefix": "imp",
+        "body": [ "\\implies" ]
+    },
+    "if and only": {
+        "prefix": "iff",
+        "body": [ "\\iff" ]
+    },
+    "Infinity": {
+        "prefix": "8",
+        "body": [ "\\infty" ]
+    },
+    "Partial": {
+        "prefix": "6",
+        "body": [ "\\partial" ]
+    },
+    "circ": {
+        "prefix": "@",
+        "body": [ "\\circ" ]
+    },
+    "times": {
+        "prefix": "xx",
+        "body": [ "\\times" ]
+    },
+    "otimes": {
+        "prefix": "ox",
+        "body": [ "\\otimes" ]
+    },
+    "oplus": {
+        "prefix": "op",
+        "body": [ "\\oplus" ]
+    },
+    "dots": {
+        "prefix": "..",
+        "body": [ "\\dots" ]
+    },
+    "cdots": {
+        "prefix": "c..",
+        "body": [ "\\cdots" ]
+    },
+    "cdot": {
+        "prefix": "cd",
+        "body": [ "\\cdot" ]
+    },
+    "less or equal": {
+        "prefix": ">=",
+        "body": [ "\\geq" ]
+    },
+    "less or equal": {
+        "prefix": "<=",
+        "body": [ "\\leq" ]
+    },
+    "much greater": {
+        "prefix": "<<",
+        "body": [ "\\gg" ]
+    },
+    "much smaller": {
+        "prefix": ">>",
+        "body": [ "\\ll" ]
+    },
+    "equivalent": {
+        "prefix": "==",
+        "body": [ "\\equiv" ]
+    },
+    "Norm": {
+        "prefix": "norm",
+        "body": [ "\\norm{$1}$0" ]
+    },
+    "Absolute value": {
+        "prefix": "abs",
+        "body": [ "\\abs{$1}$0" ]
+    },
+    "Square root": {
+        "prefix": "sq",
+        "body": [ "\\sqrt{$1}$0" ]
+    },
+    "Root": {
+        "prefix": "root",
+        "body": [ "\\sqrt\\[$1\\]{$2}$0" ]
+    },
+    "Ket": {
+        "prefix": "ket",
+        "body": [ "\\ket{$1}$0" ]
+    },
+    "Bra": {
+        "prefix": "bra",
+        "body": [ "\\bra{$1} $0" ]
+    },
+    "Average": {
+        "prefix": "ev",
+        "body": [ "\\ev*{$1}$0" ]
+    },
+    "Bra-ket product": {
+        "prefix": "bk",
+        "body": [ "\\braket{$1}{$2}$0" ]
+    },
+    "Ket-bra product": {
+        "prefix": "kb",
+        "body": [ "\\ketbra{$1}{$2}$0" ]
+    },
+    "Matrix element": {
+        "prefix": "mel",
+        "body": [ "\\mel{$1}{$2}{$3}$0" ]
+    },
+    "math text": {
+        "prefix": "tt",
+        "body": [ "\\text{$1}$0" ]
+    },
+    "qquad space": {
+        "prefix": "qq ",
+        "body": [ "\\qquad " ],
+        "luasnip": { "autotrigger": true }
+    },
+    "single quad": {
+        "prefix": "q",
+        "body": [ "\\quad" ]
+    },
+    "inline math": {
+        "prefix": "$",
+        "body": [ "\\$$1\\$$0" ]
+    },
+    "quantity in () parens": {
+        "prefix": "q)",
+        "body": [ "\\qty( $1 )$0" ],
+        "luasnip": { "autotrigger": true }
+    },
+    "quantity in [] parens": {
+        "prefix": "q]",
+        "body": [ "\\qty[ $1 ]$0" ],
+        "luasnip": { "autotrigger": true }
+    },
+    "quantity in {} parens": {
+        "prefix": "q}",
+        "body": [ "\\qty{ $1 }$0" ],
+        "luasnip": { "autotrigger": true }
+    },
+    "matrix": {
+        "prefix": "mq",
+        "body": [ "\\begin{matrix}", "\t$0", "\\end{matrix}" ]
+    },
+    "matrix quantity in {} parens": {
+        "prefix": "m}",
+        "body": [ "\\begin{Bmatrix}", "\t$0", "\\end{Bmatrix}" ]
+    },
+    "matrix quantity in [] parens": {
+        "prefix": "m]",
+        "body": [ "\\begin{bmatrix}", "\t$0", "\\end{bmatrix}" ]
+    },
+    "matrix quantity in () parens": {
+        "prefix": "m)",
+        "body": [ "\\begin{pmatrix}", "\t$0", "\\end{pmatrix}" ]
+    },
+    "underbrace": {
+        "prefix": "under",
+        "body": [ "\\underbrace{$1}_{$2} $0" ]
+    },
+    "Fraction": {
+        "prefix": "frac",
+        "body": [ "\\frac{$1}{$2} $0" ]
+    },
+    "Fraction2": {
+        "prefix": "//",
+        "body": [ "\\frac{$1}{$2} $0" ],
+        "luasnip": {"autotrigger": true}
+    }
+}
+

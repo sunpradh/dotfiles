@@ -10,18 +10,15 @@
     border-color: @separatorcolor;
     background-color: @backgroundcolor;
     text-color: @foregroundcolor;
-    margin: 0;
-    margin-bottom: 0;
-    margin-top: 0;
-    spacing: 0;
+    margin: 0px;
+    spacing: 0px;
 }
 
 #listview {
-    spacing: 0;
+    spacing: 0px;
     scrollbar: true;
-    margin: 0;
+    padding: 4px;
     dynamic: true;
-
 }
 
 #window {
@@ -39,42 +36,32 @@
 }
 
 #element {
-    children: [element-icon, element-text];
-    padding: 6 6;
-    background-color: @backgroundcolor;
+    padding: 5px;
+    margin: 5px;
+    background-color: transparent;
+    spacing: 4px;
+}
+
+#element-text {
+    background-color: transparent;
+    text-color: @foregroundcolor;
+    padding: 1px;
+}
+
+#element-text.selected {
+    background-color: transparent;
+    text-color: @foregroundcolorinverse;
 }
 
 #element-icon {
-    size: 24;
+    background-color: transparent;
+    size: 24px;
+    padding: 1px;
 }
 
-#element.selected.normal {
+#element.selected {
     background-color: @selectioncolor;
-    text-color: @foregroundcolorinverse;
-    border-radius: 0px;
-
-    border: 0 0 1 0;
-    border-color: @separatorcolor;
-}
-
-#element.alternate.normal {
-    background-color: @altbackgroundcolor;
-}
-
-#element.normal.active {
-    background-color: #434c5e;
-}
-
-#element.alternate.active {
-    background-color: #434c5e;
-}
-
-#element.selected.active {
-    background-color: @selectioncolor;
-    text-color: @foregroundcolorinverse;
-    border-radius: 0px;
-
-    border: 0 0 1 0;
+    border-radius: 5px;
     border-color: @separatorcolor;
 }
 
@@ -96,10 +83,5 @@
 }
 
 #scrollbar {
-    handle-width: 0px;
-}
-
-#scrollbar handle {
-    border: 0px;
-    border-color: #ff0000;
+    enabled: false;
 }

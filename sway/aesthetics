@@ -3,7 +3,7 @@
 #------------------------------
 
 # Font
-font pango:Fira Sans Bold 10
+font pango:Atkinson Hyperlegible 11
 
 # Window borders settings
 default_border pixel 4
@@ -39,13 +39,13 @@ client.urgent           $red      $red      $white    $red      $red
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
     gsettings set $gnome-schema gtk-theme    'Matcha-dark-pueril'
-    gsettings set $gnome-schema icon-theme   'Papirus-Dark'
-    gsettings set $gnome-schema cursor-theme 'xcursor-breeze'
+    gsettings set $gnome-schema icon-theme   'matefaenzadark'
+    gsettings set $gnome-schema cursor-theme 'Adwaita'
     gsettings set $gnome-schema font-name    'Atkinson Hyperlegible 10'
 }
 
 # Wallpaper
-output "*" bg ~/Immagini/wallpapers/leaves.jpg fill #000000
+output "*" bg ~/.wallpaper fill #000000
 
 # Use waybar instead of swaybar
 bar {

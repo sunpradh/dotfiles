@@ -1,0 +1,26 @@
+{
+    "name" : "snippets",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "tex",
+                "path": "./tex.json"
+            },
+            {
+                "language": "tex",
+                "path": "./tex-math.json"
+            },
+            {
+                "language": "tex",
+                "path": "./tex-env.json"
+            },
+            {
+                "language": "tex",
+                "path": "./tex-greek.json"
+            }
+        ]
+    }
+}

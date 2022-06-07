@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rofi -modi drun,run -show drun -normal-window -show-icons -theme-str "#listview { columns: 2; }"

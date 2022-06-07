@@ -2,7 +2,7 @@
 # HISTORY
 #
 
-HISTFILE=~/.zhistory
+HISTFILE="$HOME/.cache/zsh/history"
 HISTSIZE=10000
 SAVEHIST=5000
 WORDCHARS=${WORDCHARS//\/[&.;]} # Don't consider certain characters part of the word

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # simple script for changing the volume
+# TODO: show when volume is muted
 
 SOCKET=${WOBSOCKET:-$XDG_RUNTIME_DIR/wob.sock}
 amixer_opts="-D pulse sset Master"

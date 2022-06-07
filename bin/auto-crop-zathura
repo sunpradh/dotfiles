@@ -5,11 +5,6 @@ cropped_file=$(basename "${file%.pdf}_cropped.pdf")
 tmpdir="/tmp"
 newfile=${tmpdir}/$(basename "${cropped_file}")
 
-echo
-echo file:        \'$file\'
-echo croppedfile: \'$cropped_file\'
-echo newfile:     \'$newfile\'
-echo
 if [ -f "$file" ]; then
     pdf-crop-margins -s -u "${file}" && mv -f "${cropped_file}" $tmpdir
     if [ $? != 0 ]; then

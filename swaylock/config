@@ -1,0 +1,12 @@
+image=~/.wallpaper
+clock
+indicator
+indicator-radius=100
+grace=5
+fade-in=0.5
+font=Atkinson Hyperlegible
+font-size=30
+ring-color=1d2021
+text-color=ebdbb2
+layout-bg-color=00000000
+layout-text-color=ebdbb2

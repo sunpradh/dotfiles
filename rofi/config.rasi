@@ -1,4 +1,4 @@
+@theme  "/home/sunny/.config/rofi/gruvbox.rasi"
 configuration {
-	font: "Fira Sans 10";
-	theme: "/home/sunny/.config/rofi/gruvbox.rasi";
+	font: "Atkinson Hyperlegible 12";
 }

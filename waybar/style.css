@@ -1,7 +1,7 @@
 * {
     border:        none;
     border-radius: 0;
-    font-family:   "Atkinson Hyperlegible", "Font Awesome 5 Free", sans-serif;
+    font-family:   "Atkinson Hyperlegible", "Font Awesome 6 Free", sans-serif;
     font-size:     15px;
     min-height:    0;
 }
@@ -9,21 +9,20 @@
 window#waybar {
     background-color: #1d2021;
     color: #bdae93;
-    border-top: 1px #3c3836 solid;
+    border-bottom: 1px #3c3836 solid;
 }
 
 #workspaces {
-    margin-left:  8px;
-    margin-right: 8px;
+    margin-left:  4px;
 }
 
 #workspaces button {
-    padding: 1px 2px;
-    margin:  0px 6px;
+    padding:          1px 6px;
+    margin:           0px 0px;
     background-color: transparent;
-    min-width: 16px;
-    color: #bdae93;
-    border-bottom: 2px transparent solid;
+    min-width:        16px;
+    color:            #928374;
+    border-bottom:    2px transparent solid;
 }
 
 #workspaces button:hover {
@@ -32,8 +31,8 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    padding-bottom:   0px;
-    border-bottom:    2px #98971a solid;
+    border-top: 2px #b8bb26 solid;
+    color:      #b8bb26;
 }
 
 #workspaces button.urgent {
@@ -44,34 +43,38 @@ window#waybar {
 #battery,
 #temperature,
 #pulseaudio,
-#tray,
 #cpu,
 #custom-memory,
-#custom-kblayout {
-    padding:          2px 2px;
-    margin:           0px 8px;
-    min-width:        40px;
-    background-color: transparent;
+#custom-weather,
+#custom-powermenu,
+#language {
+    margin:    0px 12px;
+    min-width: 45px;
+}
+
+#custom-menu {
+    padding:      2px 2px;
+    margin-right: 12px;
+    margin-left:  12px;
+}
+
+#tray {
+    margin: 0px;
 }
 
 #clock {
-    background-color: transparent;
-    padding: 2px 2px;
-    margin:  0px 8px;
-    min-width:  60px;
+    margin:    0px 0px;
+    min-width: 60px;
 }
 
 #window {
-    background-color: transparent;
-    border: transparent;
+    border:      transparent;
     margin-left: 8px;
 }
 
-#custom-powermenu,
 #idle_inhibitor {
-    padding:          2px 2px;
-    margin:           0px 4px;
-    background-color: transparent;
+    margin-left:  12px;
+    margin-right: 12px;
 }
 
 @keyframes blink {

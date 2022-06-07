@@ -1,0 +1,190 @@
+{
+    "begin env": {
+        "prefix": "begin",
+        "body": [
+            "\\begin{${1:env name}}",
+            "\t${0}",
+            "\\end{${1:env name}}"
+        ]
+    },
+
+    "center env": {
+        "prefix": "center",
+        "body": [
+            "\\begin{center}",
+            "\t${0}",
+            "\\end{center}"
+        ]
+    },
+
+    "equation env": {
+        "prefix": "eq",
+        "body": [
+            "\\begin{equation}",
+            "\t${0}",
+            "\\end{equation}"
+        ]
+    },
+
+    "equation* env": {
+        "prefix": "eq*",
+        "body": [
+            "\\begin{equation*}",
+            "\t${0}",
+            "\\end{equation*}"
+        ]
+    },
+
+    "split env": {
+        "prefix": "split",
+        "body": [
+            "\\begin{split}",
+            "\t${0}",
+            "\\end{split}"
+        ]
+    },
+
+    "align env": {
+        "prefix": "al",
+        "body": [
+            "\\begin{align}",
+            "\t${0}",
+            "\\end{align}"
+        ]
+    },
+
+    "align* env": {
+        "prefix": "al",
+        "body": [
+            "\\begin{align*}",
+            "\t${0}",
+            "\\end{align*}"
+        ]
+    },
+
+    "multline env": {
+        "prefix": "mult",
+        "body": [
+            "\\begin{multline}",
+            "\t${0}",
+            "\\end{multline}"
+        ]
+    },
+
+    "multline* env": {
+        "prefix": "mult*",
+        "body":[
+            "\\begin{multline*}",
+            "\t${0}",
+            "\\end{multline*}"
+        ]
+    },
+
+    "itemize env": {
+        "prefix": "item",
+        "body":[
+            "\\begin{itemize}",
+            "\t\\item $0",
+            "\\end{itemize}"
+        ]
+    },
+
+    "enumerate env": {
+        "prefix": "enum",
+        "body":[
+            "\\begin{enumerate}",
+            "\t\\item $0",
+            "\\end{enumerate}"
+        ]
+    },
+
+    "description env": {
+        "prefix": "enum",
+        "body":[
+            "\\begin{description}",
+            "\t\\item[$1] $0",
+            "\\end{description}"
+        ]
+    },
+
+    "cases env": {
+        "prefix": "case",
+        "body":[
+            "\\begin{cases}",
+            "\t${0}",
+            "\\end{cases}"
+        ]
+    },
+
+    "table env": {
+        "prefix": "table",
+        "body": [
+            "\\begin{table}[${1:htbp}]",
+            "\t\\centering",
+            "\t\\begin{tabular}{${2:<columns>}}",
+            "\t\t${0}",
+            "\t\\end{tabular}",
+            "\\end{table}"
+        ]
+    },
+
+    "frame env": {
+        "prefix": "frame",
+        "body": [
+            "\\begin{frame}{${1:frame title}}",
+            "\t$0",
+            "\\end{frame}"
+        ]
+    },
+
+    "columns env": {
+        "prefix": "cols",
+        "body": [
+            "\\begin{columns}",
+            "\t\\column{${1}\\textwidth}",
+            "\t$0",
+            "\\end{columns}"
+        ]
+    },
+
+    "figure env": {
+        "prefix": "fig",
+        "body": [
+            "\\begin{figure}[${1:htbp}]",
+            "\t\\centering",
+            "\t$0",
+            "\\end{figure}"
+        ]
+    },
+
+    "figure env with includegraphics": {
+        "prefix": "figi",
+        "body": [
+            "\\begin{figure}[${1:htbp}]",
+            "\t\\centering",
+            "\t\\includegraphics[width=${2}\\textwidth]{${3:imagepath}}",
+            "\t$0",
+            "\t\\caption{${4:caption}}",
+            "\t\\label{fig:${5:label}}",
+            "\\end{figure}"
+        ]
+    },
+
+    "tikz env": {
+        "prefix": "tikz",
+        "body": [
+            "\\begin{tikzpicture}",
+            "    $0",
+            "\\end{tikzpicture}"
+        ]
+    },
+
+    "minipage env": {
+        "prefix": "mini",
+        "body": [
+            "\\begin{minipage}{$1\\textwidth}",
+            "    $0",
+            "\\end{minipage}"
+        ]
+    }
+}

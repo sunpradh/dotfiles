@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Screenshot prompt for Sway using rofi
-# original: https://github.com/yschaeff/sway_screenshots 
+# original: https://github.com/yschaeff/sway_screenshots
 
 # Menu command
 MENU='rofi -dmenu -l 5 -width 15 -columns 1 -scroll-method 0 -p screenshot'
@@ -24,7 +24,6 @@ EOF`
 mkdir -p $(xdg-user-dir PICTURES)/screenshots/
 
 FILENAME="$(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_screenshot.png')"
-#RECORDING="$(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_recording.mp4')"
 
 if [ "$CHOICE" = fullscreen ]
 then
@@ -51,8 +50,8 @@ else
     grim -g "$(eval echo $CHOICE)" "$FILENAME"
 fi
 
+wl-copy < $FILENAME
 if [ $NOTIFY ]; then
     notify-send "Screenshot" "File saved as $FILENAME\nand copied to clipboard" -t 6000 -i $FILENAME
 fi
-wl-copy < $FILENAME
 #sxiv $FILENAME

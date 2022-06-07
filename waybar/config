@@ -1,26 +1,45 @@
 {
     "layer": "top",
-    "position": "bottom",
-        "height": 26,
-    "modules-center": [],
+    "position": "top",
+    "height": 32,
+    "modules-center": [ "clock" ],
     "modules-right":  [
         "battery#bat1",
         "cpu",
-        "temperature",
         "pulseaudio",
-        "custom/kblayout",
-        "clock",
+        "sway/language",
+        // "clock",
         "tray",
-        "idle_inhibitor",
-        "custom/powermenu"
+        "idle_inhibitor"
+        // "custom/powermenu"
         ],
     "modules-left": [
-        "sway/workspaces",
-        "sway/window"
+        "custom/menu",
+        "sway/workspaces"
+        // "sway/window"
     ],
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            }
+    },
     "sway/window": {
         "format": "{}",
         "max-length": 100,
+    },
+    "sway/language": {
+        "format":   " <b>{shortDescription}</b>"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -35,7 +54,7 @@
     },
     "clock": {
         "interval":       10,
-        "format":         "{:<b>%H:%M</b> %a %d %b}",
+        "format":         "{:%a %d %b   <b>%H:%M</b>}",
         "tooltip-format": "<big><b>{:%Y %B}</b></big>\n<span font_desc='Iosevka 10'>{calendar}</span>",
         "format-alt":     "{:%Y-%m-%d}"
     },
@@ -86,12 +105,10 @@
         "interval": 2,
         "on-click": "foot --app-id=floaterm htop"
     },
-    "custom/kblayout": {
-        "exec":     "sway-kbd-indicator",
-        "format":   " <b>{}</b>",
-        "interval": 30,
-        "tooltip":  false,
-        "signal":   1
+    "custom/menu": {
+        "format":   "<big></big>",
+        "on-click": "rofi-drun",
+        "tooltip":  false
     },
     "custom/powermenu": {
         "format":   "<big></big>",
@@ -99,3 +116,4 @@
         "tooltip":  false
     }
 }
+// vim: ft=jsonc

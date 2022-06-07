@@ -1,6 +1,21 @@
 local ts = require('telescope')
 
 ts.setup {
+    defaults = {
+        file_ignore_patterns = {
+            "__pycache__",
+            ".pdf$",
+            ".h5$",
+            ".ipynb$",
+            -- annoying latex temp files
+            ".aux$",
+            ".bbl$",
+            ".blg$",
+            ".fls$",
+            ".log$",
+            ".fdb_latexmk$"
+        }
+    },
     extensions = {
         fzf = {
             fuzzy = true,                    -- false will only do exact matching

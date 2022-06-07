@@ -4,7 +4,7 @@
 
 # edit configuration files in .config and custom scripts
 config() {
-    pushd ~/Documenti/dotfiles
+    pushd ~/docs/dotfiles
         f="$(fd -HL -tf | fzf --preview='highlight --force -O ansi -- {}')"
     [ ! -z $f ] && $EDITOR $f
     popd
@@ -32,4 +32,14 @@ md2pdf() {
     filename=${1%.md}
     pandoc ${filename}.md -o ${filename}.pdf && \
         xdg-open ${filename}.pdf
+}
+
+# download videos with youtube-dl and aria2
+ytdl() {
+    # youtube-dl "$1" --format "(mp4)[height=1080][fps<=60]" --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8 -k 5M"
+    youtube-dl "$1" --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8 -k 5M"
+}
+
+ytdl-paste() {
+    ytdl $(wl-paste)
 }

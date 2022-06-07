@@ -70,3 +70,54 @@ class empty(Command):
 
     def execute(self):
         self.fm.run("rm -rf /home/myname/.Trash/{*,.[^.]*}")
+
+
+class FzfSelect(Command):
+    """
+    Select items with `fzf` and `fd`
+    """
+    fd_opts = ""
+    fzf_opts = "--reverse"
+
+    def execute(self):
+        import subprocess
+        import os.path
+        fd_cmd  = "fd "  + self.fd_opts
+        fzf_cmd = "fzf " + self.fzf_opts
+        fzf = self.fm.execute_command(
+            fd_cmd + " | " + fzf_cmd,
+            universal_newlines=True,
+            stdout=subprocess.PIPE
+        )
+        stdout, stderr = fzf.communicate()
+        if fzf.returncode == 0:
+            selected = os.path.abspath(stdout.rstrip('\n'))
+            if os.path.isdir(selected):
+                self.fm.cd(selected)
+            else:
+                self.fm.select_file(selected)
+
+
+class fzf_select_dir(FzfSelect):
+    """
+    :fzf_select_dir
+
+    Select a directory with fzf
+    """
+    fd_opts = "-L -t d -c never"
+
+class fzf_select_item(FzfSelect):
+    """
+    :fzf_select_item
+
+    Select an item in the current folder
+    """
+    fd_opts = "-L -d 1 -c never"
+
+class fzf_find_file(FzfSelect):
+    """
+    :fzf_select_item
+
+    Search for a file with fzf
+    """
+    fd_opts = "-L -t f -c never"
