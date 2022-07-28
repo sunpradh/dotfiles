@@ -30,9 +30,9 @@ set $gray     #a89984
 set $darkgray #1d2021
 
 #class                  border    backgr    text      indicator child_border
-client.focused          $white    $white    $darkgray $purple   $white
-client.focused_inactive $darkgray $darkgray $white    $purple   $darkgray
-client.unfocused        $darkgray $darkgray $white    $purple   $darkgray
+client.focused          $white    $darkgray $white    $purple   $white
+client.focused_inactive $darkgray $darkgray $aqua    $purple   $darkgray
+client.unfocused        $darkgray $darkgray $gray    $purple   $darkgray
 client.urgent           $red      $red      $white    $red      $red
 
 # GTK Section

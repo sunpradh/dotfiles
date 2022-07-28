@@ -1,5 +1,8 @@
 #!/bin/sh
+#
+# Give a filepath and it will open caja (file manager) at the location of the file
+#
+# Used with zathura and sioyek
 
 dir=$(dirname "$@")
-
 caja "$dir"

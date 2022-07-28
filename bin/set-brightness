@@ -1,7 +1,10 @@
 #!/bin/sh
-# simple script for changing the brightness
+
+# Simple script for changing the brightness on sway
+# using brightnessctl and integrating with wob (overlay for showing the level)
 
 SOCKET=${WOBSOCKET:-$XDG_RUNTIME_DIR/wob.sock}
+
 sed_expr='/Current/ s/.*\(([0-9]+)%\).*/\1/p'
 if [ -e $SOCKET ]; then
     case "$1" in

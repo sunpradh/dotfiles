@@ -29,7 +29,6 @@ map [presentation] P feedkeys <F5>
 map [fullscreen]   F feedkeys <F11>
 
 map [normal] <A-c> exec "sh -c 'auto-crop-zathura \"$FILE\"'"
-map [normal] <A-a> exec "atril '%'"
 map [normal] <A-x> exec "open-with-caja '$FILE'"
 
 map <F10> set 'default-bg "#ffffff"'

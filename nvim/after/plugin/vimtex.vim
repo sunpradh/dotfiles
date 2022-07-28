@@ -22,18 +22,21 @@ let g:vimtex_compiler_latexmk = {
     \}
 
 " view with zathura
-let g:vimtex_view_method = 'zathura'
+" let g:vimtex_view_method = 'zathura'
+" view with sioyek
+let g:vimtex_view_method = 'sioyek'
+let g:vimtex_view_sioyek_exe = 'sioyek-new-window'
 
 " disable vimtex foldings
 let g:vimtex_fold_enabled = 0
 
 """ Disable some features
 " overfull/underfull \hbox and all package warnings
-let g:vimtex_quickfix_ignore_filters = ['[Oo]verfull', '[Uu]nderfull', 'packages']
+let g:vimtex_quickfix_ignore_filters = ['[Oo]verfull', '[Uu]nderfull', 'packages', 'float']
 
 " insert maps (using Ultisnips instead)
 let g:vimtex_imaps_enabled = 0
 
 " indent and syntax highlighting (using treesitter instead)
-" let g:vimtex_indent_enabled = 0
-let g:vimtex_syntax_enabled = 1
+let g:vimtex_indent_enabled = 0
+let g:vimtex_syntax_enabled = 0

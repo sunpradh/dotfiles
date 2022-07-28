@@ -8,7 +8,7 @@ let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
-hi Normal	ctermbg=NONE
+hi Normal	ctermbg=NONE guibg=NONE
 hi LineNr	ctermbg=NONE
 hi SignColumn   ctermbg=NONE
 hi SpellBad     ctermbg=NONE cterm=undercurl

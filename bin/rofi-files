@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+# command for editing text files
 EDITCMD="foot nvim"
 # Save history to this CHOOSEN
 HISTFILE="$HOME/.cache/rofi-file.cache"
@@ -12,7 +13,8 @@ HISTMAX=100
 # 2) separate filename (on the 1st row) and dirname (on the 2nd row in small)
 #    and separate each entry with a tab
 # 3) Execute rofi in dmenu mode
-FILES=("${(@f)$(cd $HOME && cat $HISTFILE && fd -a -t f -L -E 'Musica' -E 'Telefono' --one-file-system)}")
+# the syntax for FILES is stolen from the internet
+FILES=("${(@f)$(cd $HOME && cat $HISTFILE && fd -a -t f -L -E 'music' -E 'phone' --one-file-system)}")
 INDEX=$( printf '%s\n' "${FILES[@]}" |\
     sed  -nre 's_(.*)/([^/]*)$_\t\2\n<small><i>\1</i></small>_g; 1{s/^\t//}; p' |\
     sed  "s_${HOME}_~_" |\
@@ -35,7 +37,6 @@ if [ -e $CHOOSEN ]; then
     else
         xdg-open $CHOOSEN
     fi
-
 else
     notify-send -t 2000 "File not found" "<i>$CHOOSEN</i> does not exist"
 

@@ -1,1 +1,3 @@
 .git
+.gitignore
+ranger/plugins/ranger_devicons/

@@ -51,8 +51,8 @@ bindsym $mod+Shift+Backspace exec shutdown-menu
 # Toggle waybar
 bindsym $mod+b exec killall -SIGUSR1 waybar
 
-# Update the kbd indicator
-# bindsym $mod+space exec pkill --signal SIGRTMIN+1 waybar
-
 # Fix monitor orientation
-bindsym $mod+Ctrl+d exec fix-displays.sh
+bindsym $mod+Ctrl+d exec switch-displays
+
+# Toggle title bar
+bindsym $mod+Ctrl+t border toggle 4

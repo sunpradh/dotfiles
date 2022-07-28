@@ -45,14 +45,16 @@ alias cod='conda deactivate'
 alias quspin='conda activate quspin'
 
 # Remote file systems
+alias tp1="ssh theophys01"
+alias tp2="ssh theophys02"
 alias mount-lnxbo="sshfs lnxbo: ~/remote/lnxbo/"
-alias mount-theophys01="sshfs theophys01: ~/remote/theophys01/"
-alias mount-theophys02="sshfs theophys02: ~/remote/theophys02/"
+alias mount-tp1="sshfs theophys01: ~/remote/theophys01/"
+alias mount-tp2="sshfs theophys02: ~/remote/theophys02/"
 alias unmount-lnxbo="fusermount -u ~/remote/lnxbo/"
-alias unmount-theophys01="fusermount -u ~/remote/theophys01/"
-alias unmount-theophys02="fusermount -u ~/remote/theophys02/"
+alias unmount-tp1="fusermount -u ~/remote/theophys01/"
+alias unmount-tp2="fusermount -u ~/remote/theophys02/"
 alias lazy-unmount-lnxbo="fusermount -zu ~/remote/lnxbo/"
-alias lazy-unmount-theophys01="fusermount -zu ~/remote/theophys01/"
-alias lazy-unmount-theophys02="fusermount -zu ~/remote/theophys02/"
+alias lazy-unmount-tp1="fusermount -zu ~/remote/theophys01/"
+alias lazy-unmount-tp2="fusermount -zu ~/remote/theophys02/"
 
 alias backup="rsync -aP * .* --exclude '.cache' --exclude '.local/share/Steam' --exclude 'music' --exclude '.local/share/Trash' /run/media/sunny/SunDATA_1/backup/heisenberg/"
