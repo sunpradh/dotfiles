@@ -53,11 +53,6 @@ end
 
 vim.api.nvim_create_autocmd("BufRead", {
     group = FILES,
-    pattern = "~/.config/waybar/config",
-    callback = set_filetype("jsonc")
-})
-vim.api.nvim_create_autocmd("BufRead", {
-    group = FILES,
     pattern = "~/.config/sway/*",
     callback = set_filetype("config")
 })
