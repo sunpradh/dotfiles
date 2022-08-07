@@ -1,0 +1,6 @@
+-- Options
+-- require("settings.options")
+-- Mappings
+-- require("settings.mappings")
+-- Theme
+-- require("settings.theme")

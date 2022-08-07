@@ -15,8 +15,8 @@ set spell
 set spelllang=en,it
 
 " set folding
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()
 
 " matchparens
 " TODO: da riparare, textobjects tra $ $ non viene riconosciuto

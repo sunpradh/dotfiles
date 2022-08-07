@@ -2,36 +2,8 @@
 " GENERAL SETTINGS
 "========================================
 
-" set nocompatible        " be iMproved, required
-filetype off            " required
-set hidden              " switch buffers even if are unsaved
-set number              " Show line numbers
-set relativenumber      " Show relative line numbers
-set nohlsearch          " Do not highlight all search results
-set smartcase           " Enable smart-case search
-set expandtab           " Expand tabs
-set shiftwidth=4        " Number of auto-indent spaces
-set softtabstop=4       " Number of spaces per Tab
-set smartindent         " Enable smart-indent
-set complete-=i         " don't autocomplete with included files
-set splitbelow          " new split below
-set splitright          " new vsplit right
-set nowrap              " no wrapping lines
-set fillchars=vert:│    " solid lines with split windows
-set title               " set the title of the window
-set scrolloff=8         " min num of lines above/below the cursorline
-set inccommand=nosplit  " show :substitute preview
-" history
-set noswapfile
-set nobackup
-" set the completion menu
-set completeopt=menuone,noselect
-set signcolumn=number " compress the signcolumn
-set shortmess+=c
-
-" Leader key
-let mapleader=' '
-
+lua require('settings.options')
+lua require('settings.mappings')
 
 "========================================
 " PLUGINS (with vim-plug)
@@ -107,22 +79,18 @@ Plug 'karb94/neoscroll.nvim'
 
 call plug#end()
 
-
 "========================================
 " MISC SETTINGS
 "========================================
+
+lua require("settings.theme")
+lua require("settings.autocmds")
 
 " load Comment.nvim
 lua require('Comment').setup()
 
 " load neoscrool.nvim
 lua require('neoscroll').setup()
-
-" Auto resize the windows
-augroup RESIZE
-    autocmd!
-    autocmd VimResized * wincmd =
-augroup end
 
 " diagnostic menu
 command! Diagnostic lua vim.lsp.diagnostic.set_loclist()
