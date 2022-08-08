@@ -1,20 +1,20 @@
--- Load Treesitter
+--
+-- TreeSitter
+--
 require'nvim-treesitter.configs'.setup {
     -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = "all",
     highlight = {enable = true},
     indent = {enable = true},
-    --additional_vim_regex_highlighting = false,
 
     -- Load Treesitter text objects
     textobjects = {
         -- text objects for selection
         select = {
             enable = true,
-
             -- Automatically jump forward to textobj, similar to targets.vim
             lookahead = true,
-
+            -- Keymaps
             keymaps = {
                 -- You can use the capture groups defined in textobjects.scm
                 ["af"] = "@function.outer",

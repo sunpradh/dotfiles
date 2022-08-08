@@ -1,3 +1,6 @@
+--
+-- Snippets
+--
 local ls = require('luasnip')
 
 -- some shorthands...

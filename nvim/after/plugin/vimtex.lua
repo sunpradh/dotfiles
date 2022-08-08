@@ -1,3 +1,7 @@
+--
+-- LaTeX and Vimtex
+--
+
 -- TeX flavor
 vim.g.tex_flavor = 'latex'
 

@@ -1,3 +1,6 @@
+--
+-- Language Server
+--
 local lsp = require('lspconfig')
 
 local mapper = function(mode, key, result)
@@ -8,17 +11,20 @@ end
 
 local custom_attach = function()
     -- move cursor to the next and previous diagnostic
-    mapper('n', ']g',         'vim.diagnostic.goto_next()')
-    mapper('n', '[g',         'vim.diagnostic.goto_prev()')
-    mapper('n', '<leader>dg', 'vim.diagnostic.setloclist()')
+    mapper('n', ']g', 'vim.diagnostic.goto_next()')
+    mapper('n', '[g', 'vim.diagnostic.goto_prev()')
+    -- diagnostic location list
+    mapper('n', '<leader>d', 'vim.diagnostic.setloclist()')
     -- jump between symbols
     mapper('n', 'gd', 'vim.lsp.buf.definition()')
     mapper('n', 'gi', 'vim.lsp.buf.implementation()')
     mapper('n', 'gr', 'vim.lsp.buf.references()')
     mapper('n', 'g0', 'vim.lsp.buf.document_symbol()')
     -- hover popup
-    mapper('n', 'K',     'vim.lsp.buf.hover()')
-    mapper('n', 'gR',    'vim.lsp.buf.rename()')
+    mapper('n', 'K', 'vim.lsp.buf.hover()')
+    -- Rename
+    mapper('n', 'gR', 'vim.lsp.buf.rename()')
+    -- Float window for diagnostic
     mapper('n', '<C-k>', 'vim.diagnostic.open_float()')
 end
 

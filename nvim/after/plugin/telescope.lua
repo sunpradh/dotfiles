@@ -1,6 +1,9 @@
+--
+-- Telescope
+--
 local ts = require('telescope')
 
--- Telescope settings
+-- Settings
 ts.setup {
     defaults = {
         file_ignore_patterns = {
@@ -28,6 +31,7 @@ ts.setup {
     }
 }
 
+-- Fzf extension for Telescope
 ts.load_extension('fzf')
 
 -- Mappings for Telescope
