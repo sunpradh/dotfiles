@@ -1,47 +1,173 @@
-#!/bin/zsh
+#!/usr/bin/env lua
 
-# command for editing text files
-EDITCMD="foot nvim"
-# Save history to this CHOOSEN
-HISTFILE="$HOME/.cache/rofi-file.cache"
-# create CHOOSEN if it does not exists
-test ! -e $HISTFILE && touch $HISTFILE
-# maximum number of history elements
-HISTMAX=100
+--[[ VARIABLES ]]--
+-- Working directory
+local basedir = os.getenv('HOME') or ''
 
-# 1) Search for FILES only, excluding the music directory
-# 2) separate filename (on the 1st row) and dirname (on the 2nd row in small)
-#    and separate each entry with a tab
-# 3) Execute rofi in dmenu mode
-# the syntax for FILES is stolen from the internet
-FILES=("${(@f)$(cd $HOME && cat $HISTFILE && fd -a -t f -L -E 'music' -E 'phone' --one-file-system)}")
-INDEX=$( printf '%s\n' "${FILES[@]}" |\
-    sed  -nre 's_(.*)/([^/]*)$_\t\2\n<small><i>\1</i></small>_g; 1{s/^\t//}; p' |\
-    sed  "s_${HOME}_~_" |\
-    rofi -l 12  -sep '\t' -eh 2 -dmenu -i -markup-rows -p 'file' -normal-window -format d  )
+-- History file
+local history_settings = {
+    file = os.getenv('HOME') .. '/.cache/rofi-file.cache',
+    size = 20
+}
 
-# check if something has been chosen, if not exit
-test ! $INDEX && exit 1
+-- temporary file where to store the choice
+local choicefile = '/tmp/rofi.choice'
+-- with lua is difficult to contemporary read and write to
+-- a io.popen() handler
 
-# check whether the chosen file $CHOOSEN exist
-CHOOSEN=$FILES[$INDEX]
-if [ -e $CHOOSEN ]; then
-    # append to history
-    NEWHISTORY=$(grep -Fv "${CHOOSEN}" $HISTFILE)
-    (echo $CHOOSEN && echo $NEWHISTORY | head -n $HISTMAX) > $HISTFILE
+-- 'fd' settings
+local fd = {
+    bin = 'fd',
+    args = {'-a', '-t', 'f', '-L'},
+    excluded = {'music', 'phone'}
+}
 
-    # open the CHOOSEN
-    mtype=$(mimetype -b $CHOOSEN)
-    if [[ ${mtype:0:4} = "text" ]]; then
-        $EDITCMD $CHOOSEN
-    else
-        xdg-open $CHOOSEN
-    fi
-else
-    notify-send -t 2000 "File not found" "<i>$CHOOSEN</i> does not exist"
+-- 'rofi' settings
+local rofi = {
+    bin = 'rofi',
+    args = {
+        '-l 12',
+        '-sep "\t"',
+        '-eh 2',
+        '-dmenu',
+        '-i',
+        '-markup-rows',
+        '-p "file"',
+        '-format d'
+    }
+}
 
-    # remove the non existing CHOOSEN from history
-    NEWHISTORY=$(grep -v "$CHOOSEN" $HISTFILE)
-    echo $NEWHISTORY > $HISTFILE
-    exit 1
-fi
+
+--[[ FUNCTIONS ]]--
+
+-- Shorthand for executing a command 'cmd' into mode 'mode'
+local function exec(cmd, mode)
+    mode = mode or 'r'
+    return assert(io.popen(cmd, mode))
+end
+
+-- Strip 'dir' from the filename 'fn'
+local function strip_fn(fn, dir)
+    return string.gsub(fn, '^.*' .. dir .. '/', '')
+end
+
+-- Concatenate each element of 'array' into a string,
+-- Optionally each entry can be decorated with a prefix 'pre' and postfix 'post'
+local function array_to_str(arr, pre, post)
+    pre, post = pre or ' ', post or ''
+    local str = ""
+    for _, elem in ipairs(arr) do
+        str = str .. pre .. elem .. post
+    end
+    return str
+end
+
+-- Pipe the contents of 'array' into 'cmd_fd' handler, transforming each entry with 'func'
+local function pipe_array(array, cmd_fd, func)
+    for _, elem in ipairs(array) do
+        local entry = func(elem)
+        cmd_fd:write(entry)
+    end
+    cmd_fd:flush()
+end
+
+-- Read choice
+local function read_choice(cmd_fd, choice_fn, files)
+    if cmd_fd:close() then
+        local cf = assert(io.open(choice_fn, 'r'))
+        local choice = cf:read('n')
+        cf:close()
+        os.execute('rm ' .. choicefile)
+        return files[choice]
+    end
+end
+
+-- Read 'file' into a table, optionally transforming each entry with 'func'
+local function read(file, func)
+    func = func or function(x) return x end
+    local output = {}
+    for line in file:lines() do
+        local entry = func(line)
+        table.insert(output, entry)
+    end
+    file:close()
+    return output
+end
+
+-- Write 'array' to 'file', optionally with 'prefix' for each entry
+local function write(file, array, prefix)
+    prefix = prefix or ''
+    local f = assert(io.open(file, 'w'))
+    for _, v in ipairs(array) do
+        f:write(prefix .. v .. '\n')
+    end
+    f:close()
+end
+
+-- Remove the entries of 'filter' table from 'input' table
+local function filter_out(input, filter)
+    local filter_set = {}
+    for _, v in ipairs(filter) do filter_set[v] = true end
+    local result = {}
+    for _, v in ipairs(input) do
+        if not filter_set[v] then table.insert(result, v) end
+    end
+    return result
+end
+
+-- Concatenate two tables
+local function concat(input1, input2)
+    local result = {}
+    for _, v in ipairs(input1) do table.insert(result, v) end
+    for _, v in ipairs(input2) do table.insert(result, v) end
+    return result
+end
+
+-- Truncate table
+local function truncate(input, size)
+    return {table.unpack(input, 1, size)}
+end
+
+-- Update history table
+local function update_history(item, history)
+    return truncate(concat({item}, filter_out(history, {item})), history_settings.size)
+end
+
+--[[ COMMANDS ]]--
+
+-- 'fd' command
+local fd_cmd = fd.bin
+            .. array_to_str(fd.args)
+            .. array_to_str(fd.excluded, ' -E "', '"')
+            .. ' --base-directory="' .. basedir .. '"'
+
+-- 'rofi' command
+local rofi_cmd = rofi.bin
+        .. array_to_str(rofi.args)
+        .. ' >' .. choicefile
+
+
+--[[
+    MAIN PROGRAM
+--]]
+
+-- Get files
+local fd_exec = exec(fd_cmd, 'r')
+local output = read(fd_exec, function(f) return strip_fn(f, basedir) end)
+local history = read(io.open(history_settings.file), function(f) return strip_fn(f, basedir) end)
+local files = concat(history, filter_out(output, history))
+
+-- Exec rofi
+local rofi_exec = exec(rofi_cmd, 'w')
+pipe_array(files, rofi_exec, function (fn)
+    return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small>%1</small>') .. '\t'
+end)
+
+-- Open selected file and update history
+local choice = read_choice(rofi_exec, choicefile, files)
+if choice then
+    local selected = basedir .. '/' .. choice
+    write(history_settings.file, update_history(choice, history), basedir .. '/')
+    os.execute('xdg-open \'' .. selected .. '\' &')
+end
+
