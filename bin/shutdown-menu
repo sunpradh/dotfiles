@@ -8,7 +8,7 @@ logout="logout\x00icon\x1fsystem-log-out"
 
 options="$suspend\n$shutdown\n$reboot\n$logout"
 
-roficmd="rofi -show-icons -dmenu -normal-window -theme $HOME/.config/rofi/poweroff.rasi"
+roficmd="rofi -show-icons -dmenu -normal-window -theme $HOME/.config/rofi/menu.rasi"
 
 answer=$( echo -e $options | $roficmd -p '')
 case $answer in

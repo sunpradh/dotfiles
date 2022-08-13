@@ -4,7 +4,7 @@
 # original: https://github.com/yschaeff/sway_screenshots
 
 # Menu command
-MENU='rofi -dmenu -l 5 -width 15 -columns 1 -scroll-method 0 -p screenshot'
+MENU="rofi -dmenu -l 5 -width 15 -columns 1 -scroll-method 0 -p screenshot -theme $HOME/.config/rofi/menu.rasi"
 
 NOTIFY=$(pidof mako || pidof dunst)
 
@@ -16,8 +16,8 @@ CHOICE=`$MENU << EOF
 fullscreen
 focused
 region
-select-output
-select-window
+output
+window
 EOF`
 
 
@@ -31,10 +31,10 @@ then
 elif [ "$CHOICE" = region ]
 then
     slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = select-output ]
+elif [ "$CHOICE" = output ]
 then
     echo $OUTPUTS | slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = select-window ]
+elif [ "$CHOICE" = window ]
 then
     echo $WINDOWS | slurp | grim -g - "$FILENAME"
 elif [ "$CHOICE" = focused ]
@@ -54,4 +54,3 @@ wl-copy < $FILENAME
 if [ $NOTIFY ]; then
     notify-send "Screenshot" "File saved as $FILENAME\nand copied to clipboard" -t 6000 -i $FILENAME
 fi
-#sxiv $FILENAME
