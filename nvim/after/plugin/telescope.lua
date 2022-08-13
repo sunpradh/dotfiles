@@ -17,7 +17,8 @@ ts.setup {
             ".blg$",
             ".fls$",
             ".log$",
-            ".fdb_latexmk$"
+            ".fdb_latexmk$",
+            ".gz$"
         }
     },
     extensions = {

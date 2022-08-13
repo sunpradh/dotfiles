@@ -34,6 +34,6 @@ vim.o.swapfile = false
 vim.o.backup = false
 
 -- Completion menu option
-vim.o.completeopt = "menuone,noselect"
-vim.opt.shortmess:append("c")
-vim.opt.complete:remove("i")  	-- don't autocomplete with included files
+-- vim.o.completeopt = "menuone,noselect"
+-- vim.opt.shortmess:append("c")
+-- vim.opt.complete:remove("i")  	-- don't autocomplete with included files

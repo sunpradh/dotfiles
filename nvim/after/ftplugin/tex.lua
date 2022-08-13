@@ -1,5 +1,10 @@
--- Completion for nvim-cmp
-require('cmp').setup.buffer({ source = {{ name = 'omni' }}})
+-- Completion for nvim-cmp using omnifunc (given by vimtex)
+-- require('cmp').setup.buffer {
+--   sources = { { name = 'buffer' },
+--   },
+-- }
+---- nvim-cmp and vimtex don't seem to work togheter,
+---- superseded by texlab
 
 -- Wrapping and spelling
 vim.o.wrap = true

@@ -2,30 +2,29 @@
 -- Language Server
 --
 local lsp = require('lspconfig')
+local keymap = require('settings.keymap')
 
-local mapper = function(mode, key, result)
-    vim.api.nvim_buf_set_keymap(0, mode, key,
-        "<cmd>lua "..result.."<cr>",
-        {noremap = true, silent = true})
-end
+local nmap = keymap.nnoremap
+-- move cursor to the next and previous diagnostics
+nmap(']g', vim.diagnostic.goto_next)
+nmap('[g', vim.diagnostic.goto_prev)
+-- float window for diagnostics
+nmap('<space>e', vim.diagnostic.open_float)
+-- locations of all diagnostics
+nmap('<space>q', vim.diagnostic.setloclist)
 
-local custom_attach = function()
-    -- move cursor to the next and previous diagnostic
-    mapper('n', ']g', 'vim.diagnostic.goto_next()')
-    mapper('n', '[g', 'vim.diagnostic.goto_prev()')
-    -- diagnostic location list
-    mapper('n', '<leader>d', 'vim.diagnostic.setloclist()')
+local custom_attach = function(client, bufnr)
+    local mapper = keymap.bind('n', {noremap=true, silent=true, buffer=bufnr})
     -- jump between symbols
-    mapper('n', 'gd', 'vim.lsp.buf.definition()')
-    mapper('n', 'gi', 'vim.lsp.buf.implementation()')
-    mapper('n', 'gr', 'vim.lsp.buf.references()')
-    mapper('n', 'g0', 'vim.lsp.buf.document_symbol()')
+    mapper('gd', vim.lsp.buf.definition)
+    mapper('gD', vim.lsp.buf.declaration)
+    mapper('gi', vim.lsp.buf.implementation)
+    mapper('gr', vim.lsp.buf.references)
+    mapper('g0', vim.lsp.buf.document_symbol)
     -- hover popup
-    mapper('n', 'K', 'vim.lsp.buf.hover()')
+    mapper('K', vim.lsp.buf.hover)
     -- Rename
-    mapper('n', 'gR', 'vim.lsp.buf.rename()')
-    -- Float window for diagnostic
-    mapper('n', '<C-k>', 'vim.diagnostic.open_float()')
+    mapper('gR', vim.lsp.buf.rename)
 end
 
 -- For lua language server
@@ -50,10 +49,20 @@ lsp.pylsp.setup {
 }
 
 -- C/C++
-lsp.clangd.setup{
+lsp.ccls.setup {
     on_attach = custom_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    init_options = {
+        compilationDatabaseDirectory = ".";
+        index = {
+            threads = 0;
+        };
+        clang = {
+            excludeArgs = { "-frounding-math"} ;
+        };
+    }
 }
+
 
 -- Lua
 lsp.sumneko_lua.setup {
@@ -75,4 +84,10 @@ lsp.sumneko_lua.setup {
             telemetry = { enable = false, },
         },
     },
+}
+
+-- LaTeX
+lsp.texlab.setup{
+    on_attach = custom_attach,
+    capabilities = capabilities,
 }
