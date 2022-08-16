@@ -7,6 +7,7 @@
     foregroundcolorinverse: #1d2021;
     selectioncolor: #98971a;
 
+    font: "Atkinson Hyperlegible 12";
     border-color: @separatorcolor;
     background-color: @backgroundcolor;
     text-color: @foregroundcolor;
@@ -17,15 +18,15 @@
 #listview {
     spacing: 0px;
     scrollbar: true;
-    padding: 4px;
+    padding: 8px;
     dynamic: true;
 }
 
 #window {
     background-color: @backgroundcolor;
     border-color: @selectioncolor;
-    border: 4;
-    border-radius: 6px;
+    border: 2;
+    border-radius: 4px;
     width: 700px;
 }
 
@@ -50,7 +51,7 @@
 
 #element-text.selected {
     background-color: transparent;
-    text-color: @foregroundcolorinverse;
+    text-color: @foregroundcolor;
 }
 
 #element-icon {
@@ -60,26 +61,29 @@
 }
 
 #element.selected {
-    background-color: @selectioncolor;
-    border-radius: 5px;
-    border-color: @separatorcolor;
+    background-color: @altbackgroundcolor;
+    border-radius: 4px;
+    border-color: @selectioncolor;
+    border: 1px;
 }
 
 #inputbar {
     border: 0 0 1 0;
-    margin: 0;
+    margin: 8px;
     spacing: 0;
     border-color: @separatorcolor;
+    childer: ["prompt", "entry"];
 }
 
 #prompt {
-    padding: 8;
+    font: "Symbols Nerd Font 15";
+    padding: 8px;
     background-color: @backgroundcolor;
-    border: 0 1 0 0;
+    border: 0 0 0 0;
 }
 
 #entry {
-    padding: 8;
+    padding: 8px;
 }
 
 #scrollbar {

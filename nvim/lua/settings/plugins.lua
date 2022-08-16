@@ -60,6 +60,7 @@ require('packer').startup(function(use)
     -- Colorscheme
     use 'rktjmp/lush.nvim'
     use 'ellisonleao/gruvbox.nvim'
+    use "EdenEast/nightfox.nvim"
 
     -- Markdown preview
     use {"iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end}

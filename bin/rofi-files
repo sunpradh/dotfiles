@@ -32,7 +32,7 @@ local rofi = {
         '-dmenu',
         '-i',
         '-markup-rows',
-        '-p "file"',
+        '-p ""',
         '-format d'
     }
 }
@@ -160,7 +160,7 @@ local files = concat(history, filter_out(output, history))
 -- Exec rofi
 local rofi_exec = exec(rofi_cmd, 'w')
 pipe_array(files, rofi_exec, function (fn)
-    return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small>%1</small>') .. '\t'
+    return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small><i>%1</i></small>') .. '\t'
 end)
 
 -- Open selected file and update history

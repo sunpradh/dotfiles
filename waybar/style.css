@@ -1,15 +1,15 @@
 * {
+    font-family:   "Input Sans Condensed, Condensed", "Font Awesome 6 Free", sans-serif;
+    font-size:     13px;
     border:        none;
     border-radius: 0;
-    font-family:   "Atkinson Hyperlegible", "Font Awesome 6 Free", sans-serif;
-    font-size:     15px;
     min-height:    0;
 }
 
 window#waybar {
-    background-color: #1d2021;
-    color: #bdae93;
-    border-bottom: 1px #3c3836 solid;
+    background-color: #161616;
+    color:            #dfdfe0;
+    border-bottom:    1px #282828 solid;
 }
 
 #workspaces {
@@ -21,8 +21,8 @@ window#waybar {
     margin:           0px 0px;
     background-color: transparent;
     min-width:        16px;
-    color:            #928374;
-    border-bottom:    2px transparent solid;
+    color:            #dfdfe0;
+    border-top:       2px transparent solid;
 }
 
 #workspaces button:hover {
@@ -31,13 +31,19 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-top: 2px #b8bb26 solid;
-    color:      #b8bb26;
+    border-top: 2px #08bdba solid;
+    color:      #08bdba;
 }
 
 #workspaces button.urgent {
-    background-color: #fb4934;
-    color:            #181818;
+    background-color: #ee5396;
+    color:            #161616;
+}
+
+
+#clock {
+    margin:    0px 0px;
+    min-width: 60px;
 }
 
 #battery,
@@ -46,36 +52,23 @@ window#waybar {
 #cpu,
 #custom-memory,
 #custom-weather,
-#custom-powermenu,
 #language {
     margin:    0px 12px;
     min-width: 45px;
 }
 
+#idle_inhibitor ,
+#custom-powermenu,
 #custom-menu {
     padding:      2px 2px;
-    margin-right: 12px;
-    margin-left:  12px;
+    margin-right: 6px;
+    margin-left:  6px;
 }
 
 #tray {
-    margin: 0px;
+    margin-right: 6px;
 }
 
-#clock {
-    margin:    0px 0px;
-    min-width: 60px;
-}
-
-#window {
-    border:      transparent;
-    margin-left: 8px;
-}
-
-#idle_inhibitor {
-    margin-left:  12px;
-    margin-right: 12px;
-}
 
 @keyframes blink {
     to {

@@ -1,9 +1,9 @@
-font=Atkinson Hyperlegible 12
-background-color=#32302f
-text-color=#ebdbb2
-border-color=#98971a
-border-size=4
-border-radius=8
+font=Input Sans Condensed, Condensed 10
+background-color=#161616
+text-color=#dfdfe0
+border-color=#08bdba
+border-size=2
+border-radius=4
 width=400
 padding=10
 default-timeout=5000

@@ -11,24 +11,21 @@
     text-color:             @foregroundcolor;
 
     font: "Input Sans Condensed, Condensed 10";
-    italicfont: "Input Sans Condensed, Condensed Italic 10";
-}
-
-#window {
-    background-color: @backgroundcolor;
-    border-color: @selectioncolor;
-    border: 2;
-    border-radius: 6px;
-    padding: 10px;
-    width: 200px;
 }
 
 #listview {
     spacing: 0px;
     scrollbar: true;
-    padding: 4px;
-    layout: vertical;
-    lines: 4;
+    padding: 8px;
+    dynamic: true;
+}
+
+#window {
+    background-color: @backgroundcolor;
+    border-color: @selectioncolor;
+    border-radius: 4px;
+    border: 2;
+    width: 700px;
 }
 
 #mainbox {
@@ -40,60 +37,54 @@
 #element {
     padding: 5px;
     margin: 5px;
-    border: 0px;
-    border-color: @separatorcolor;
-    border-radius: 5px;
-    background-color: @backgroundcolor;
-}
-
-#element-icon {
     background-color: transparent;
-    enabled: false;
+    spacing: 4px;
 }
 
 #element-text {
     background-color: transparent;
-    horizontal-align: 0.5;
-    margin-left: 0px;
-    padding: 4px;
+    text-color: @foregroundcolor;
+    padding: 1px;
 }
 
 #element-text.selected {
     background-color: transparent;
-    text-color: @selectioncolor;
+    text-color: @foregroundcolor;
+}
+
+#element-icon {
+    background-color: transparent;
+    size: 24px;
+    padding: 1px;
 }
 
 #element.selected {
     background-color: @altbackgroundcolor;
-    text-color: @foregroundcolor;
+    border-radius: 4px;
     border-color: @selectioncolor;
     border: 1px;
 }
 
-#element.normal {
-    background-color: transparent;
-}
-
 #inputbar {
-    enabled: true;
-    background-color: transparent;
-    horizontal-align: 0.5;
-    children: [ "dummy", "prompt", "dummy"];
-    padding: 5px;
     border: 0 0 1 0;
+    margin: 8px;
+    spacing: 0;
+    border-color: @separatorcolor;
+    childer: ["prompt", "entry"];
 }
 
 #prompt {
-    color: @foregroundcolor;
-    horizontal-align: 0.5;
-    font: @italicfont;
+    font: "Symbols Nerd Font 15";
+    padding: 8px;
+    background-color: @backgroundcolor;
+    border: 0 0 0 0;
 }
 
-#dummy { expand: true; }
+#entry {
+    padding: 8px;
+}
 
 #scrollbar {
     enabled: false;
-    handle-width: 0px;
-    margin: 0px;
-    padding: 0px;
+    width: 0px;
 }

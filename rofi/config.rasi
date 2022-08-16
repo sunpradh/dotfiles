@@ -1,4 +1,1 @@
-@theme  "/home/sunny/.config/rofi/gruvbox.rasi"
-configuration {
-	font: "Atkinson Hyperlegible 12";
-}
+@theme  "/home/sunny/.config/rofi/carbonfox.rasi"

@@ -3,10 +3,10 @@
 #------------------------------
 
 # Font
-font pango:Atkinson Hyperlegible 11
+font pango:Input Sans Condensed, Condensed 13px
 
 # Window borders settings
-default_border pixel 4
+default_border pixel 2
 
 # Gaps
 gaps              inner 0
@@ -17,23 +17,23 @@ hide_edge_borders smart
 # No focus following mouse
 focus_follows_mouse no
 
-# Gruvbox
-set $bg       #181818
-set $white    #ebdbb2
-set $red      #cc241d
-set $green    #b8bb26
-set $yellow   #d79921
-set $blue     #458588
-set $purple   #b16286
-set $aqua     #689d68
-set $gray     #a89984
-set $darkgray #1d2021
+# Carbonfox theme
+set $bg     #161616
+set $fg     #f2f4f8
+set $red    #ee5396
+set $green  #25be6a
+set $yellow #08bdba
+set $blue   #78a9ff
+set $purple #be95ff
+set $aqua   #33b1ff
+set $white  #dfdfe0
+set $gray   #282828
 
-#class                  border    backgr    text      indicator child_border
-client.focused          $white    $darkgray $white    $purple   $white
-client.focused_inactive $darkgray $darkgray $aqua    $purple   $darkgray
-client.unfocused        $darkgray $darkgray $gray    $purple   $darkgray
-client.urgent           $red      $red      $white    $red      $red
+#class                  border  backgr  text    indicator  child_border
+client.focused          $white  $white  $bg     $purple    $white
+client.focused_inactive $gray   $gray   $fg     $aqua      $gray
+client.unfocused        $gray   $gray   $white  $aqua      $gray
+client.urgent           $red    $red    $bg     $red       $red
 
 # GTK Section
 set $gnome-schema org.gnome.desktop.interface
@@ -41,11 +41,11 @@ exec_always {
     gsettings set $gnome-schema gtk-theme    'Matcha-dark-pueril'
     gsettings set $gnome-schema icon-theme   'matefaenzadark'
     gsettings set $gnome-schema cursor-theme 'Adwaita'
-    gsettings set $gnome-schema font-name    'Atkinson Hyperlegible 10'
+    gsettings set $gnome-schema font-name    'Input Sans Condensed, Condensed 12px'
 }
 
 # Wallpaper
-output "*" bg ~/.wallpaper fill #000000
+output "*" bg ~/.wallpaper tile #000000
 
 # Use waybar instead of swaybar
 bar {

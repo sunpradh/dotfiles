@@ -2,9 +2,7 @@
 ### Zathura document viewer config file
 ###
 
-#
 # General options
-#
 set selection-clipboard clipboard
 set window-title-basename true
 set statusbar-basename true
@@ -13,16 +11,12 @@ set first-page-column 1:1:2
 set guioptions shv
 
 
-#
 # SyncTeX with neovim-remote
-#
 set synctex true
 set synctex-editor-command  "nvr --remote-silent %f -c %l"
 
 
-#
 # Mappings
-#
 map [normal]       P feedkeys <F5>
 map [normal]       F feedkeys <F11>
 map [presentation] P feedkeys <F5>
@@ -32,7 +26,7 @@ map [normal] <A-c> exec "sh -c 'auto-crop-zathura \"$FILE\"'"
 map [normal] <A-x> exec "open-with-caja '$FILE'"
 
 map <F10> set 'default-bg "#ffffff"'
-map <F9>  set 'default-bg "#1d2021"'
+map <F9>  set 'default-bg "#161616"'
 map <F8>  set 'first-page-column 1:1'
 map [normal] <A-r> feedkeys <F9><F10><F11><C-n>da
 
@@ -42,38 +36,37 @@ map [normal] <A-r> feedkeys <F9><F10><F11><C-n>da
 #
 set font "Atkinson Hyperlegible 12"
 
-# colors inspired by the gruvbox theme
-set default-bg              "#1d2021"
-set default-fg              "#ebdbb2"
+# colors inspired by the carbonfox theme
+set default-bg              "#161616"
+set default-fg              "#f2f4f8"
 
-set statusbar-bg            "#1d2021"
-set statusbar-fg            "#ebdbb2"
+set statusbar-bg            "#161616"
+set statusbar-fg            "#f2f4f8"
 
-set inputbar-bg             "#1d2021"
-set inputbar-fg             "#ebdbb2"
+set inputbar-bg             "#161616"
+set inputbar-fg             "#f2f4f8"
 #
-set notification-bg         "#ebdbb2"
-set notification-fg         "#1d2021"
+set notification-bg         "#f2f4f8"
+set notification-fg         "#161616"
 
-set notification-error-bg   "#cc241d"
-set notification-error-fg   "#1d2021"
+set notification-error-bg   "#ee5396"
+set notification-error-fg   "#161616"
 
-set notification-warning-bg "#d79921"
-set notification-warning-fg "#1d2021"
+set notification-warning-bg "#25be6a"
+set notification-warning-fg "#161616"
 
-set highlight-color         "#b48ead"
-set highlight-active-color  "#d79921"
+set highlight-color         "#08bdda"
+set highlight-active-color  "#25be6a"
 set highlight-transparency  0.8
 
-set completion-bg           "#1d2021"
-set completion-fg           "#ebdbb2"
+set completion-bg           "#161616"
+set completion-fg           "#f2f4f8"
 
-set completion-highlight-fg "#1d2021"
-set completion-highlight-bg "#d79921"
+set completion-highlight-fg "#161616"
+set completion-highlight-bg "#25be6a"
 
-set recolor-lightcolor      "#1d2021"
-set recolor-darkcolor       "#ebdbb2"
+set recolor-lightcolor      "#161616"
+set recolor-darkcolor       "#f2f4f8"
 
 set recolor                 "false"
 set recolor-keephue true
-
