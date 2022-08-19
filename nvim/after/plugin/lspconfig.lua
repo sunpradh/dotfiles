@@ -25,6 +25,8 @@ local custom_attach = function(client, bufnr)
     mapper('K', vim.lsp.buf.hover)
     -- Rename
     mapper('gR', vim.lsp.buf.rename)
+    -- Code actions
+    mapper('gA', vim.lsp.buf.code_action)
 end
 
 -- For lua language server
@@ -90,4 +92,33 @@ lsp.sumneko_lua.setup {
 lsp.texlab.setup{
     on_attach = custom_attach,
     capabilities = capabilities,
+    settings = {
+        texlab = {
+            diagnostics = {
+                ignoredPatterns = {"[Oo]verfull.*"}
+            }
+        }
+    }
 }
+
+lsp.grammar_guard.setup({
+    on_attach = custom_attach,
+    capabilities = capabilities,
+    cmd = {'/usr/bin/ltex-ls'},
+    settings = {
+        ltex = {
+            enabled = { "latex", "tex", "bib", "markdown" },
+            language = "en",
+            diagnosticSeverity = "information",
+            setenceCacheSize = 2000,
+            additionalRules = {
+                enablePickyRules = true,
+                motherTongue = "it",
+            },
+            dictionary = {},
+            disabledRules = {},
+            hiddenFalsePositives = {},
+            checkFrequency = "edit",
+        }
+    }
+})

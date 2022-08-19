@@ -13,15 +13,8 @@ require'lualine'.setup({
     sections = {
         lualine_a = {'mode'},
         lualine_b = {
-            {
-                'filename',
-                file_status = true,  -- displays file status (readonly status, modified status)
-                path = 1,            -- 0 = just filename, 1 = relative path, 2 = absolute path
-                shorting_target = 40 -- Shortens path to leave 40 space in the window
-                -- for other components. Terrible name any suggestions?
-            }
-        },
-        lualine_c = {
+            { 'branch' },
+            { 'diff' },
             {
                 'diagnostics',
                 sources = {'nvim_diagnostic'},
@@ -30,6 +23,15 @@ require'lualine'.setup({
                 colored = false, -- displays diagnostics status in color if set to true
                 update_in_insert = false, -- Update diagnostics in insert mode
                 always_visible = false, -- Show diagnostics even if count is 0, boolean or function returning boolean
+            }
+        },
+        lualine_c = {
+            {
+                'filename',
+                file_status = true,  -- displays file status (readonly status, modified status)
+                path = 1,            -- 0 = just filename, 1 = relative path, 2 = absolute path
+                shorting_target = 40 -- Shortens path to leave 40 space in the window
+                -- for other components. Terrible name any suggestions?
             }
         },
         lualine_x = {
@@ -51,3 +53,5 @@ require'lualine'.setup({
     tabline = {},
     extensions = {}
 })
+
+vim.o.laststatus = 3

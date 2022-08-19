@@ -3,6 +3,9 @@
 --
 
 require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+
     -- Language server protocol (autocompletion and more)
     use 'neovim/nvim-lspconfig'
 
@@ -16,7 +19,6 @@ require('packer').startup(function(use)
 
     -- Tree-sitter (syntax highlighting engine)
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    -- use 'nvim-treesitter/nvim-treesitter-textobjects'
 
     -- Telescope / fuzzy finder
     use 'nvim-lua/plenary.nvim'
@@ -35,15 +37,17 @@ require('packer').startup(function(use)
     use 'lewis6991/spellsitter.nvim'
     use 'andymass/vim-matchup'
     use 'wellle/targets.vim'
+    use "brymer-meneses/grammar-guard.nvim"
 
-    -- Statusline
+    -- Statusline and bufferline
     use 'nvim-lualine/lualine.nvim'
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
     -- Easy comments
     use 'numToStr/Comment.nvim'
 
     -- Easy surround
-    use 'tpope/vim-surround'
+    use "kylechui/nvim-surround"
 
     -- remember last saved place
     use 'farmergreg/vim-lastplace'
@@ -62,17 +66,25 @@ require('packer').startup(function(use)
     use 'ellisonleao/gruvbox.nvim'
     use "EdenEast/nightfox.nvim"
 
-    -- Markdown preview
-    use {"iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end}
-
     -- Smooth scrolling
     use 'karb94/neoscroll.nvim'
 
+    -- Indent blanklines
+    use "lukas-reineke/indent-blankline.nvim"
+
+    -- Autopairs
+    use "windwp/nvim-autopairs"
+
+    -- Fast motions
+    use "ggandor/leap.nvim"
 end)
 
--- load Comment.nvim
+-- load plugins that do not require configuration
 require('Comment').setup()
-
--- load neoscrool.nvim
 require('neoscroll').setup()
-
+require('bufferline').setup()
+require('indent_blankline').setup()
+require('nvim-surround').setup()
+require('nvim-autopairs').setup()
+require('leap').set_default_keymaps()
+require('grammar-guard').init()
