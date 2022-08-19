@@ -21,7 +21,8 @@
         "all-outputs": false,
         "format": "{name} {icon}",
         "format-icons": {
-            "1": "",
+            // "1": "",
+            "1": "",
             "2": "",
             "3": "",
             "4": "",
@@ -52,9 +53,9 @@
     },
     "clock": {
         "interval":       10,
-        "format":         "{:%a %d %b   <b>%H:%M</b>}",
+        "format":         "{:<b>%H:%M</b>}",
         "tooltip-format": "<big><b>{:%Y %B}</b></big>\n<span font_desc='Input Mono Condensed, Condensed 10'>{calendar}</span>",
-        "format-alt":     "{:%Y-%m-%d}"
+        "format-alt":     "{:%A %d %B %Y}"
     },
     "temperature": {
         "hwmon-path":         "/sys/class/hwmon/hwmon4/temp1_input",
@@ -110,7 +111,7 @@
     },
     "custom/powermenu": {
         "format":   "<big></big>",
-        "on-click": "shutdown-menu",
+        "on-click": "rofi-logout",
         "tooltip":  false
     }
 }

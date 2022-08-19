@@ -15,6 +15,9 @@ bindsym $mod+d exec rofi-drun
 # search for files
 bindsym $mod+f exec rofi-files
 
+# recent files
+bindsym $mod+r exec rofi-recent
+
 # applications shortcuts
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+f exec $term ranger
@@ -46,7 +49,7 @@ bindsym Print exec --no-startup-id sway-screenshot
 bindsym XF86Calculator exec --no-startup-id sway-screenshot
 
 # Shutdown dialog
-bindsym $mod+Shift+Backspace exec shutdown-menu
+bindsym $mod+Shift+Backspace exec rofi-logout
 
 # Toggle waybar
 bindsym $mod+b exec killall -SIGUSR1 waybar

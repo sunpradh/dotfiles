@@ -84,7 +84,7 @@ assign     [class="Microsoft Teams.*"] $ws5
 assign     [app_id="telegramdesktop"] $ws6
 assign     [class="whatsapp-nativefier-d40211"] $ws6
 assign     [class="discord"] $ws6
-assign     [class="Spotify"] $ws7
+assign     [title="Spotify"] $ws7
 
 for_window [app_id="firefox"] focus
 for_window [app_id="thunderbird"] focus
