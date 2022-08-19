@@ -1,0 +1,130 @@
+#!/usr/bin/env lua
+
+--[[ VARIABLES ]]--
+local home = os.getenv('HOME') or ''
+local recent_file = home .. '/.local/share/recently-used.xbel'
+
+-- temporary file where to store the choice
+local choicefile = '/tmp/rofi-recent.choice'
+-- with lua is difficult to contemporary read and write to
+-- a io.popen() handler
+
+-- 'rofi' settings
+local rofi = {
+    bin = 'rofi',
+    args = {
+        '-l 12',
+        '-sep "\t"',
+        '-eh 2',
+        '-dmenu',
+        '-i',
+        '-markup-rows',
+        '-p " "',
+        '-format d'
+    }
+}
+
+--[[ FUNCTIONS ]]--
+
+-- Strip 'dir' from the filename 'fn'
+local function strip_fn(fn, dir, sub)
+    sub = sub or ''
+    return string.gsub(fn, '^.*' .. dir .. '/', '')
+end
+
+-- Concatenate each element of 'array' into a string,
+-- Optionally each entry can be decorated with a prefix 'pre' and postfix 'post'
+local function array_to_str(arr, pre, post)
+    pre, post = pre or ' ', post or ''
+    local str = ""
+    for _, elem in ipairs(arr) do
+        str = str .. pre .. elem .. post
+    end
+    return str
+end
+
+-- Read 'file' into a table, optionally transforming each entry with 'func'
+local function read(file, func)
+    func = func or function(x) return x end
+    local output = {}
+    for line in file:lines() do
+        local entry = func(line)
+        if entry then
+            table.insert(output, 1, entry)
+        end
+    end
+    file:close()
+    return output
+end
+
+-- Get file name
+local function get_file(line)
+    local _, _, fn = string.find(line, 'href="file://([^"]*)"')
+    -- TODO convert HTML hex code to ascii
+    if not fn then return nil end
+    local symbols = {}
+    for x in string.gmatch(fn, '%%(..)') do
+        symbols[x] = string.char(tonumber('0x' .. x) or 0x20)
+        -- print(x, '"' .. symbols[x] .. '"')
+    end
+    for code, symbol in pairs(symbols) do
+        fn = string.gsub(fn, '%%' .. code, symbol)
+    end
+    return fn
+end
+
+
+-- Read choice
+local function read_choice(cmd_fd, choice_fn, files)
+    if cmd_fd:close() then
+        local cf = assert(io.open(choice_fn, 'r'))
+        local choice = cf:read('n')
+        cf:close()
+        os.execute('rm ' .. choicefile)
+        return files[choice]
+    end
+end
+
+-- Pipe the contents of 'array' into 'cmd_fd' handler, transforming each entry with 'func'
+local function pipe_array(array, cmd_fd, func)
+    for _, elem in ipairs(array) do
+        local entry = func(elem)
+        cmd_fd:write(entry)
+    end
+    cmd_fd:flush()
+end
+
+-- Shorthand for executing a command 'cmd' into mode 'mode'
+local function exec(cmd, mode)
+    mode = mode or 'r'
+    return assert(io.popen(cmd, mode))
+end
+
+
+-- 'rofi' command
+local rofi_cmd = rofi.bin
+        .. array_to_str(rofi.args)
+        .. ' >' .. choicefile
+
+
+--[[
+    MAIN PROGRAM
+--]]
+
+-- Get files
+local files = read(io.open(recent_file), get_file)
+
+-- Exec rofi
+local rofi_exec = exec(rofi_cmd, 'w')
+pipe_array(files, rofi_exec,
+    function (fn)
+        fn = string.gsub(fn, home, '~')
+    return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small><i>%1</i></small>') .. '\t'
+end)
+
+-- Open selected file and update history
+local choice = read_choice(rofi_exec, choicefile, files)
+if choice then
+    os.execute('xdg-open \'' .. choice .. '\' &')
+end
+

@@ -11,7 +11,7 @@ local history_settings = {
 }
 
 -- temporary file where to store the choice
-local choicefile = '/tmp/rofi.choice'
+local choicefile = '/tmp/rofi-files.choice'
 -- with lua is difficult to contemporary read and write to
 -- a io.popen() handler
 
