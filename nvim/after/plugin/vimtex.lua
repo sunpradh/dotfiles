@@ -37,7 +37,7 @@ vim.g.vimtex_fold_enabled = 0
 -- Disable overfull/underfull \hbox and all package warnings
 vim.g.vimtex_quickfix_ignore_filters = {'[Oo]verfull', '[Uu]nderfull', 'packages', 'float'}
 
--- insert maps (using Ultisnips instead)
+-- insert maps (using luasnip instead)
 vim.g.vimtex_imaps_enabled = 0
 
 -- indent and syntax highlighting (using treesitter instead)
@@ -45,4 +45,4 @@ vim.g.vimtex_indent_enabled = 0
 vim.g.vimtex_syntax_enabled = 0
 
 -- enable completion
-vim.g.vimtex_complete_enabled = 1
+vim.g.vimtex_complete_enabled = 0

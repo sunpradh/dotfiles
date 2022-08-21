@@ -5,11 +5,11 @@
 -- Options
 require('settings.options')
 
--- Mappings
-require('settings.mappings')
-
 -- Plugins (packer.nvim)
 require('settings.plugins')
+
+-- Mappings
+require('settings.mappings')
 
 -- Theme
 require('settings.theme')

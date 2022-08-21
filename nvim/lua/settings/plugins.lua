@@ -37,7 +37,7 @@ require('packer').startup(function(use)
     use 'lewis6991/spellsitter.nvim'
     use 'andymass/vim-matchup'
     use 'wellle/targets.vim'
-    use "brymer-meneses/grammar-guard.nvim"
+    use 'barreiroleo/ltex_extra.nvim'
 
     -- Statusline and bufferline
     use 'nvim-lualine/lualine.nvim'
@@ -77,6 +77,9 @@ require('packer').startup(function(use)
 
     -- Fast motions
     use "ggandor/leap.nvim"
+
+    -- Limelight
+    use "junegunn/limelight.vim"
 end)
 
 -- load plugins that do not require configuration
@@ -87,4 +90,3 @@ require('indent_blankline').setup()
 require('nvim-surround').setup()
 require('nvim-autopairs').setup()
 require('leap').set_default_keymaps()
-require('grammar-guard').init()

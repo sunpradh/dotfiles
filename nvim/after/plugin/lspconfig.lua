@@ -101,13 +101,21 @@ lsp.texlab.setup{
     }
 }
 
-lsp.grammar_guard.setup({
-    on_attach = custom_attach,
+-- LaTeX language tool
+lsp.ltex.setup({
+    on_attach = function(client, bufnr)
+        custom_attach(client, bufnr)
+        require('ltex_extra').setup({
+            load_langs = { "en-US", "it" },
+            init_check = true,
+            path = nil,
+            log_level = "none",
+        })
+    end,
     capabilities = capabilities,
-    cmd = {'/usr/bin/ltex-ls'},
     settings = {
         ltex = {
-            enabled = { "latex", "tex", "bib", "markdown" },
+            enabled = { "latex", "tex", "bib" },
             language = "en",
             diagnosticSeverity = "information",
             setenceCacheSize = 2000,
