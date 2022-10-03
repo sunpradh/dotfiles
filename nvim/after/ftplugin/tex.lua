@@ -1,17 +1,24 @@
--- Completion for nvim-cmp using omnifunc (given by vimtex)
--- require('cmp').setup.buffer {
---   sources = { { name = 'buffer' },
---   },
--- }
----- nvim-cmp and vimtex don't seem to work togheter,
----- superseded by texlab
-
 -- Wrapping and spelling
 vim.o.wrap = true
 vim.o.linebreak = true
 require('spellsitter').setup()
 vim.o.spell = true
 vim.o.spelllang = "en,it"
+
+-- Autopairs
+-- TODO: these autopairs are not perfect
+local Rule = require('nvim-autopairs.rule')
+local npairs = require('nvim-autopairs')
+local cond = require('nvim-autopairs.conds')
+
+npairs.add_rule(
+    Rule('$', '$', {'tex', 'latex'})
+        :with_move(cond.after_text('$'))
+)
+npairs.add_rule(
+    Rule('\\{', '\\}', {'tex', 'latex'})
+        -- :with_move(cond.after_text('\\}'))
+)
 
 -- matchparens
 -- TODO: da riparare, textobjects tra $ $ non viene riconosciuto
@@ -28,7 +35,7 @@ nmap('<leader>cf', 'zM') -- close
 
 -- emph or textbf selection
 vmap('<leader>e', 'di\\emph{<C-R>"}<Esc>') -- emph
-vmap('<leader>b', 'di\textbf{<C-R>"}<Esc>') -- textbf
+vmap('<leader>b', 'di\\textbf{<C-R>"}<Esc>') -- textbf
 
 -- center env
 vmap('<leader>ce', 'di\\begin{center}<CR><C-R>"<CR>\\end{center}<ESC>=ae%k')
