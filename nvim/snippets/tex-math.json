@@ -5,11 +5,12 @@
     },
     "Summation with only subscript": {
         "prefix": "sum_",
-        "body": [ "\\sum_{$1} $0" ]
+        "body": [ "\\sum_{$1} $0" ],
+        "luasnip": { "autotrigger": true }
     },
     "Summation": {
         "prefix": "summ",
-        "body": [ "\\sum_{${1:n} = ${2:0}}^{${3:\\infinity}}$0" ]
+        "body": [ "\\sum_{${1:n} = ${2:0}}^{${3:\\infty}}$0" ]
     },
     "Product symbol only": {
         "prefix": "prod",
@@ -17,15 +18,17 @@
     },
     "Product with only subscript": {
         "prefix": "prod_",
-        "body": [ "\\prod_{$1} $0" ]
+        "body": [ "\\prod_{$1} $0" ],
+        "luasnip": { "autotrigger": true }
     },
     "Product": {
         "prefix": "prodd",
         "body": [ "\\prod_{$1 = $2}^{$3} $0" ]
     },
     "Limit": {
-        "prefix": "lim",
-        "body": [ "\\lim_{${1} \\to $2} $0" ]
+        "prefix": "lim_",
+        "body": [ "\\lim_{${1} \\to $2} $0" ],
+        "luasnip": { "autotrigger": true }
     },
     "Integral symbol only": {
         "prefix": "int",
@@ -33,11 +36,12 @@
     },
     "Integral with subscript": {
         "prefix": "int_",
-        "body": [ "\\int_{$1} $0" ]
+        "body": [ "\\int_{$1} $0" ],
+        "luasnip": { "autotrigger": true }
     },
     "Integral complete": {
         "prefix": "intt",
-        "body": [ "\\int_{$1}^{$2} $0" ]
+        "body": [ "\\int_{${1:0}}^{${2:\\infty}} $0" ]
     },
     "Contour integral": {
         "prefix": "oint",
@@ -105,11 +109,13 @@
     },
     "times": {
         "prefix": "xx",
-        "body": [ "\\times" ]
+        "body": [ "\\times" ],
+        "luasnip": { "autotrigger": true }
     },
     "otimes": {
         "prefix": "ox",
-        "body": [ "\\otimes" ]
+        "body": [ "\\otimes" ],
+        "luasnip": { "autotrigger": true }
     },
     "oplus": {
         "prefix": "op",
@@ -199,10 +205,6 @@
     "single quad": {
         "prefix": "q",
         "body": [ "\\quad" ]
-    },
-    "inline math": {
-        "prefix": "$",
-        "body": [ "\\$$1\\$$0" ]
     },
     "quantity in () parens": {
         "prefix": "q)",
