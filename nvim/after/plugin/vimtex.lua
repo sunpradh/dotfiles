@@ -29,7 +29,6 @@ vim.g.vimtex_compiler_latexmk = {
 -- vim.g.vimtex_view_method = 'zathura'
 -- view with sioyek
 vim.g.vimtex_view_method = 'sioyek'
-vim.g.vimtex_view_sioyek_exe = 'sioyek-new-window'
 
 -- disable vimtex foldings
 vim.g.vimtex_fold_enabled = 0
