@@ -4,6 +4,7 @@
 
 vim.o.termguicolors = true
 vim.o.background = 'dark'
+vim.o.winbar = '%f'
 
 -- Carbonfox (from nightfox)
 require('nightfox').setup({
@@ -29,3 +30,4 @@ change_bg(
     {'Cursorline', 'Folded', 'CursorLineNr'},
     '0', '#282828'
 )
+vim.cmd("hi VertSplit guifg=#484848")

@@ -41,7 +41,6 @@ require('packer').startup(function(use)
 
     -- Statusline and bufferline
     use 'nvim-lualine/lualine.nvim'
-    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
     -- Easy comments
     use 'numToStr/Comment.nvim'
@@ -85,7 +84,6 @@ end)
 -- load plugins that do not require configuration
 require('Comment').setup()
 require('neoscroll').setup()
-require('bufferline').setup()
 require('indent_blankline').setup()
 require('nvim-surround').setup()
 require('nvim-autopairs').setup()

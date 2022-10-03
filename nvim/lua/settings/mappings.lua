@@ -13,7 +13,6 @@ nmap('<A-h>', '<C-w>h')
 nmap('<A-j>', '<C-w>j')
 nmap('<A-k>', '<C-w>k')
 nmap('<A-l>', '<C-w>l')
-nmap('<leader>b', '<cmd>BufferLinePick<CR>')
 
 -- Create new windows and tabs
 nmap('<A-x>',   '<cmd>new<CR>')
