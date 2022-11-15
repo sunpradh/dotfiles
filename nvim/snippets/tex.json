@@ -187,6 +187,20 @@
         "body": [
             "\\input{$1} $0"
         ]
+    },
+
+    "hspace": {
+        "prefix": "hs",
+        "body": [
+            "\\hspace{$1} $0"
+        ]
+    },
+
+    "vspace": {
+        "prefix": "vs",
+        "body": [
+            "\\vspace*{$1} $0"
+        ]
     }
 
 }

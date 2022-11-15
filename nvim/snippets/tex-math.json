@@ -249,6 +249,14 @@
         "prefix": "//",
         "body": [ "\\frac{$1}{$2} $0" ],
         "luasnip": {"autotrigger": true}
+    },
+    "Commutator": {
+        "prefix": "com",
+        "body": [ "\\comm{$1}{$2} $0" ]
+    },
+    "Anticommutator": {
+        "prefix": "acom",
+        "body": [ "\\acomm{$1}{$2} $0" ]
     }
 }
 
