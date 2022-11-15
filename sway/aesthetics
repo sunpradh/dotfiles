@@ -7,6 +7,7 @@ font pango:Input Sans Condensed, Condensed 13px
 
 # Window borders settings
 default_border pixel 2
+title_align center
 
 # Gaps
 gaps              inner 0

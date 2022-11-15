@@ -1,6 +1,8 @@
 #!/bin/sh
+#
+# Put the external display on the left of the laptop display in swaywm
 
-swaymsg output eDP-1 pos 1920 0
-# swaymsg output "'Philips Consumer Electronics Company PHL 243V7 0x00003364'" pos 0 0
-EXT_DISPLAY=$(swaymsg -t get_outputs | jq '.[] | select(.name != "eDP-1").name')
-swaymsg output $EXT_DISPLAY pos 0 0
+EXT_DISPLAY_NAME=$(swaymsg -t get_outputs | jq '.[] | select(.name != "eDP-1").name')
+EXT_DISPLAY_WIDTH=$(swaymsg -t get_outputs | jq '.[] | select(.name != "eDP-1").current_mode.width')
+swaymsg output $EXT_DISPLAY_NAME pos 0 0
+swaymsg output eDP-1 pos $EXT_DISPLAY_WIDTH 0

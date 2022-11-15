@@ -97,3 +97,6 @@ for_window [class="Rofi"] move position center
 
 # inhibit idle for firefox in fullscreen
 for_window [class=".*"] inhibit_idle fullscreen
+
+# sioyek windows with title bar
+for_window [class="sioyek"] border normal

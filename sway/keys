@@ -6,9 +6,6 @@
 set $term footclient
 bindsym $mod+Return exec $term
 
-# reload the configuration file
-bindsym $mod+Shift+r reload
-
 # start a program launcher
 bindsym $mod+d exec rofi-drun
 
@@ -51,6 +48,9 @@ bindsym XF86Calculator exec --no-startup-id sway-screenshot
 # Shutdown dialog
 bindsym $mod+Shift+Backspace exec rofi-logout
 
+# reload the configuration file
+bindsym $mod+Ctrl+r reload
+
 # Toggle waybar
 bindsym $mod+b exec killall -SIGUSR1 waybar
 
@@ -59,3 +59,8 @@ bindsym $mod+Ctrl+d exec switch-displays
 
 # Toggle title bar
 bindsym $mod+Ctrl+t border toggle 4
+
+# Toggle laptop monitor
+bindsym $mod+Ctrl+m exec reset-monitor
+
+

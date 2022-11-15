@@ -1,0 +1,5 @@
+#!/bin/sh
+
+swaymsg output eDP-1 disable
+swaymsg output eDP-1 enable
+
