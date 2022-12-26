@@ -9,25 +9,25 @@ exec_always xrdb -merge /home/sunny/.Xresources
 exec swayidle -w
 
 # terminal server
-exec foot --server
+exec foot --server --log-no-syslog
 
 # network manager
 exec nm-applet --indicator
-
-# cloud services
-exec dropbox
-
-# notification daemon
-exec mako
-
-# bluetooth
-#exec blueman-applet
 
 # import the environment for systemd, fixes problems with xdg-desktop-portal
 exec "systemctl --user import-environment"
 
 # overlay for volume/brightness
 exec start-wob
+
+## now done via systemd --user
+## cloud services
+# exec dropbox
+## notification daemon
+# exec mako
+
+# bluetooth
+#exec blueman-applet
 
 # polkit authentication agent
 #exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1

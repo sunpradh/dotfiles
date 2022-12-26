@@ -34,7 +34,7 @@ map [normal] <A-r> feedkeys <F9><F10><F11><C-n>da
 #
 # Aestetic options
 #
-set font "Atkinson Hyperlegible 12"
+set font "Input Mono Condensed Light 14"
 
 # colors inspired by the carbonfox theme
 set default-bg              "#161616"

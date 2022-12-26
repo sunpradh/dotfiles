@@ -5,4 +5,5 @@
 # Used with zathura and sioyek
 
 dir=$(dirname "$@")
-caja "$dir"
+# caja "$dir"
+nemo "$dir"

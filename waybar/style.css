@@ -4,6 +4,7 @@
     border:        none;
     border-radius: 0;
     min-height:    0;
+    color:         #dfdfe0;
 }
 
 window#waybar {
