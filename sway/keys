@@ -18,7 +18,7 @@ bindsym $mod+r exec rofi-recent
 # applications shortcuts
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+f exec $term ranger
-bindsym $mod+Shift+x exec caja
+bindsym $mod+Shift+x exec nemo
 bindsym $mod+Shift+e exec thunderbird
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+t exec telegram-desktop
@@ -58,9 +58,7 @@ bindsym $mod+b exec killall -SIGUSR1 waybar
 bindsym $mod+Ctrl+d exec switch-displays
 
 # Toggle title bar
-bindsym $mod+Ctrl+t border toggle 4
+bindsym $mod+Ctrl+t border toggle 2
 
 # Toggle laptop monitor
 bindsym $mod+Ctrl+m exec reset-monitor
-
-

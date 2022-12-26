@@ -4,7 +4,7 @@
 # TODO: show when volume is muted
 
 SOCKET=${WOBSOCKET:-$XDG_RUNTIME_DIR/wob.sock}
-amixer_opts="-D pulse sset Master"
+amixer_opts="sset Master"
 sed_expr='s/.*\[([0-9]+)%\].*/\1/p'
 if [ -e $SOCKET ]; then
     case "$1" in

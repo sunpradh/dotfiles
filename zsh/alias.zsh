@@ -27,6 +27,7 @@ alias slides="cd ~/docs/uni/slides/"
 alias drop="cd ~/remote/Dropbox/"
 alias dot="cd ~/docs/dotfiles/"
 alias kitaev="cd ~/docs/uni/writing/kitaev\ long-range/"
+alias phd="cd ~/docs/phd-thesis/"
 
 # short hands
 alias v="nvim"

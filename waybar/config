@@ -4,6 +4,7 @@
     "height": 32,
     "modules-center": [ "clock" ],
     "modules-right":  [
+        "battery#bat0",
         "battery#bat1",
         "cpu",
         "pulseaudio",
@@ -64,9 +65,19 @@
         "format-icons":       ["", "", "", "", ""],
         "on-click":           "foot --app-id=floaterm -o initial_window_width=80c -o initial_window_height=40c watch -n 1 sensors"
     },
+    "battery#bat0": {
+        "bat":             "BAT0",
+        "states":          { "warning": 30, "critical": 15 },
+        "format":          "{icon} {capacity}",
+        "format-charging": "\uf0e7 {capacity}",
+        "format-plugged":  "",
+        "format-alt":      "{icon} {time}",
+        "format-full":     "",
+        "format-icons":    ["", "", "", "", ""]
+    },
     "battery#bat1": {
         "bat":             "BAT1",
-        "states":          { "warning": 30, "critical": 15 },
+        "states":          { "warning": 0, "critical": 0 }, // TEMPORARY FIX
         "format":          "{icon} {capacity}",
         "format-charging": "\uf0e7 {capacity}",
         "format-plugged":  "",

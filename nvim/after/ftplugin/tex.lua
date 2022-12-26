@@ -1,7 +1,7 @@
 -- Wrapping and spelling
 vim.o.wrap = true
 vim.o.linebreak = true
-require('spellsitter').setup()
+-- require('spellsitter').setup()
 vim.o.spell = true
 vim.o.spelllang = "en,it"
 
@@ -19,11 +19,6 @@ npairs.add_rule(
     Rule('\\{', '\\}', {'tex', 'latex'})
         -- :with_move(cond.after_text('\\}'))
 )
-
--- matchparens
--- TODO: da riparare, textobjects tra $ $ non viene riconosciuto
-vim.g.matchup_override_vimtex = 1
-vim.g.vimtex_text_obj_variant = 'targets'
 
 ---- Mappings
 local nmap = require('settings.keymap').nnoremap

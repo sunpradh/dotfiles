@@ -13,7 +13,7 @@ nmap('<space>e', vim.diagnostic.open_float)
 -- locations of all diagnostics
 nmap('<space>q', vim.diagnostic.setloclist)
 
-local custom_attach = function(client, bufnr)
+local on_attach = function(client, bufnr)
     local mapper = keymap.bind('n', {noremap=true, silent=true, buffer=bufnr})
     -- jump between symbols
     mapper('gd', vim.lsp.buf.definition)
@@ -35,11 +35,11 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 -- Integrate nvim-cmp and lspconfig
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Python
 lsp.pylsp.setup {
-    on_attach = custom_attach,
+    on_attach = on_attach,
     capabilities = capabilities,
     settings = {
         pylsp = {
@@ -52,7 +52,7 @@ lsp.pylsp.setup {
 
 -- C/C++
 lsp.ccls.setup {
-    on_attach = custom_attach,
+    on_attach = on_attach,
     capabilities = capabilities,
     init_options = {
         compilationDatabaseDirectory = ".";
@@ -68,7 +68,7 @@ lsp.ccls.setup {
 
 -- Lua
 lsp.sumneko_lua.setup {
-    on_attach = custom_attach,
+    on_attach = on_attach,
     capabilities = capabilities,
     settings = {
         Lua = {
@@ -90,43 +90,43 @@ lsp.sumneko_lua.setup {
 
 -- LaTeX
 lsp.texlab.setup{
-    on_attach = custom_attach,
+    on_attach = on_attach,
     capabilities = capabilities,
     settings = {
         texlab = {
             diagnostics = {
-                ignoredPatterns = {"[Oo]verfull.*"}
+                ignoredPatterns = {"[Oo]verfull.*", "[Uu]nderfull.*"}
             }
         }
     }
 }
 
--- LaTeX language tool
-lsp.ltex.setup({
-    on_attach = function(client, bufnr)
-        custom_attach(client, bufnr)
-        require('ltex_extra').setup({
-            load_langs = { "en-US", "it" },
-            init_check = true,
-            path = nil,
-            log_level = "none",
-        })
-    end,
-    capabilities = capabilities,
-    settings = {
-        ltex = {
-            enabled = { "latex", "tex", "bib" },
-            language = "en",
-            diagnosticSeverity = "information",
-            setenceCacheSize = 2000,
-            additionalRules = {
-                enablePickyRules = true,
-                motherTongue = "it",
-            },
-            dictionary = {},
-            disabledRules = {},
-            hiddenFalsePositives = {},
-            checkFrequency = "edit",
-        }
-    }
-})
+-- -- LaTeX language tool
+-- lsp.ltex.setup({
+--     on_attach = function(client, bufnr)
+--         custom_attach(client, bufnr)
+--         require('ltex_extra').setup({
+--             load_langs = { "en-US", "it" },
+--             init_check = true,
+--             path = nil,
+--             log_level = "none",
+--         })
+--     end,
+--     capabilities = capabilities,
+--     settings = {
+--         ltex = {
+--             enabled = { "latex", "tex", "bib" },
+--             language = "en",
+--             diagnosticSeverity = "information",
+--             setenceCacheSize = 2000,
+--             additionalRules = {
+--                 enablePickyRules = true,
+--                 motherTongue = "it",
+--             },
+--             dictionary = {},
+--             disabledRules = {},
+--             hiddenFalsePositives = {},
+--             checkFrequency = "edit",
+--         }
+--     }
+-- })

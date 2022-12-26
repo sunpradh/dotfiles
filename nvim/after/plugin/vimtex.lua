@@ -34,14 +34,14 @@ vim.g.vimtex_view_method = 'sioyek'
 vim.g.vimtex_fold_enabled = 0
 
 -- Disable overfull/underfull \hbox and all package warnings
-vim.g.vimtex_quickfix_ignore_filters = {'[Oo]verfull', '[Uu]nderfull', 'packages', 'float'}
+vim.g.vimtex_quickfix_ignore_filters = {'[Oo]verfull', '[Uu]nderfull', 'packages', 'float', 'Font Warning'}
 
 -- insert maps (using luasnip instead)
 vim.g.vimtex_imaps_enabled = 0
 
 -- indent and syntax highlighting (using treesitter instead)
-vim.g.vimtex_indent_enabled = 0
-vim.g.vimtex_syntax_enabled = 0
+vim.g.vimtex_indent_enabled = 1
+vim.g.vimtex_syntax_enabled = 1
 
 -- enable completion
 vim.g.vimtex_complete_enabled = 0

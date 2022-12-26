@@ -4,8 +4,8 @@
 require'nvim-treesitter.configs'.setup {
     -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = "all",
-    highlight = {enable = true},
-    indent = {enable = true},
+    highlight = {enable = true, disable = {"latex", "tex"}},
+    indent = {enable = true, disable = {"latex", "tex"}},
 
     -- Load Treesitter text objects
     textobjects = {
