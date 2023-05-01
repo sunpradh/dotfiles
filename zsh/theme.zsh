@@ -9,6 +9,8 @@ colors
 #test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 ## Plugins section: Enable fish style features
+# Autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

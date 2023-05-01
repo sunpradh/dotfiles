@@ -24,5 +24,8 @@ source ${ZDOTDIR}/functions.zsh
 # Custom aliases
 source ${ZDOTDIR}/alias.zsh
 
+# Foot terminal integration
+source ${ZDOTDIR}/foot.zsh
+
 # Conda
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
