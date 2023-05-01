@@ -28,8 +28,8 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # switch to prev/next workspace
-bindsym $mod+p workspace prev
-bindsym $mod+n workspace next
+# bindsym $mod+p workspace prev
+# bindsym $mod+n workspace next
 bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace

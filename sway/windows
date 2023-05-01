@@ -3,22 +3,28 @@
 #------------------------------
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym {
+    $mod+h focus left
+    $mod+j focus down
+    $mod+k focus up
+    $mod+l focus right
+}
 
 # move focused window
-bindsym $mod+Shift+h move left  40px
-bindsym $mod+Shift+j move down  40px
-bindsym $mod+Shift+k move up    40px
-bindsym $mod+Shift+l move right 40px
+bindsym {
+    $mod+Shift+h move left  40px
+    $mod+Shift+j move down  40px
+    $mod+Shift+k move up    40px
+    $mod+Shift+l move right 40px
+}
 
 # resize window
-bindsym $mod+Ctrl+h resize shrink width  40 px
-bindsym $mod+Ctrl+l resize grow   width  40 px
-bindsym $mod+Ctrl+j resize grow   height 40 px
-bindsym $mod+Ctrl+k resize shrink height 40 px
+bindsym {
+    $mod+Ctrl+h resize shrink width  40px
+    $mod+Ctrl+l resize grow   width  40px
+    $mod+Ctrl+j resize grow   height 40px
+    $mod+Ctrl+k resize shrink height 40px
+}
 
 # split in horizontal orientation
 bindsym $mod+o split h
@@ -48,22 +54,24 @@ bindsym $mod+Shift+a focus child
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# show scratchpad
+# scratchpad
 bindsym $mod+s scratchpad show
+bindsym $mod+Ctrl+s move scratchpad
 
 
 # === Window rules === #
 
 # Floating windows
-for_window [window_role="pop-up"]      floating enable # floating dialogs
-for_window [window_role="task_dialog"] floating enable
-for_window [app_id="pavucontrol"]      floating enable
-for_window [app_id="blueman-manager"]  floating enable
-for_window [app_id="floaterm"]         floating enable
-for_window [app_id="None"]             floating enable
-for_window [app_id="zoom"]             floating enable
-for_window [app_id="sclang"]           floating enable
-for_window [class="MEGAsync"]          floating enable
+for_window [window_role="pop-up"]         floating enable # floating dialogs
+for_window [window_role="task_dialog"]    floating enable
+for_window [app_id="pavucontrol"]         floating enable
+for_window [app_id="blueman-manager"]     floating enable
+for_window [app_id="floaterm"]            floating enable
+for_window [app_id="None"]                floating enable
+for_window [app_id="zoom"]                floating enable
+for_window [app_id="sclang"]              floating enable
+for_window [app_id="python3"]             floating enable
+for_window [class="MEGAsync"]             floating enable
 for_window [class="nm-connection-editor"] floating enable
 
 # Annoying popups
@@ -72,19 +80,27 @@ for_window [title=".*Indicatore condivisione"] floating enable
 for_window [title=".*Indicatore condivisione"] move scratchpad
 for_window [title=".*Sharing Indicator"] floating enable
 for_window [title=".*Sharing Indicator"] move scratchpad
-for_window [title="Picture-in-Picture"] floating enable
-for_window [title="Picture-in-Picture"] border pixel 1
+
+# Picture in picture
+for_window [title="^Picture-in-Picture$"] {
+    floating enable
+    resize set height 280
+    resize set width  500
+    move position 1410 760
+    border none
+    sticky toggle
+}
 
 # Specific workspaces
-assign     [app_id="firefox"] $ws2
-assign     [class="chromium"] $ws2
-assign     [app_id="thunderbird"] $ws4
-assign     [app_id="zoom"] $ws5
-assign     [class="Microsoft Teams.*"] $ws5
-assign     [app_id="telegramdesktop"] $ws6
-assign     [class="whatsapp-nativefier-d40211"] $ws6
-assign     [class="discord"] $ws6
-assign     [title="Spotify"] $ws7
+assign [app_id="firefox"] $ws2
+assign [class="chromium"] $ws2
+assign [app_id="thunderbird"] $ws4
+assign [app_id="zoom"] $ws5
+assign [class="Microsoft Teams.*"] $ws5
+assign [app_id="telegramdesktop"] $ws6
+assign [class="whatsapp-nativefier-d40211"] $ws6
+assign [class="discord"] $ws6
+assign [title="Spotify"] $ws7
 
 for_window [app_id="firefox"] focus
 for_window [app_id="thunderbird"] focus
