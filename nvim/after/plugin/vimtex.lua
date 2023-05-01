@@ -26,9 +26,9 @@ vim.g.vimtex_compiler_latexmk = {
 }
 
 -- view with zathura
--- vim.g.vimtex_view_method = 'zathura'
+vim.g.vimtex_view_method = 'zathura'
 -- view with sioyek
-vim.g.vimtex_view_method = 'sioyek'
+-- vim.g.vimtex_view_method = 'sioyek'
 
 -- disable vimtex foldings
 vim.g.vimtex_fold_enabled = 0
@@ -44,4 +44,4 @@ vim.g.vimtex_indent_enabled = 1
 vim.g.vimtex_syntax_enabled = 1
 
 -- enable completion
-vim.g.vimtex_complete_enabled = 0
+vim.g.vimtex_complete_enabled = 1

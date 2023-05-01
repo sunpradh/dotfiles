@@ -198,9 +198,8 @@
         "body": [ "\\text{$1}$0" ]
     },
     "qquad space": {
-        "prefix": "qq ",
-        "body": [ "\\qquad " ],
-        "luasnip": { "autotrigger": true }
+        "prefix": "qq",
+        "body": [ "\\qquad" ]
     },
     "single quad": {
         "prefix": "q",

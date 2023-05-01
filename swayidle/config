@@ -1,2 +1,2 @@
-timeout 605 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
-timeout 1200 'systemctl suspend' resume 'swaymsg "output * dpms on"'
+timeout 605 'swaymsg "output * dpms off"' resume 'swaymsg "output * power on"'
+timeout 1200 'systemctl suspend' resume 'swaymsg "output * power on"'

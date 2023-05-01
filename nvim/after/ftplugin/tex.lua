@@ -1,23 +1,34 @@
 -- Wrapping and spelling
 vim.o.wrap = true
 vim.o.linebreak = true
--- require('spellsitter').setup()
 vim.o.spell = true
 vim.o.spelllang = "en,it"
 
 -- Autopairs
--- TODO: these autopairs are not perfect
 local Rule = require('nvim-autopairs.rule')
 local npairs = require('nvim-autopairs')
 local cond = require('nvim-autopairs.conds')
 
-npairs.add_rule(
-    Rule('$', '$', {'tex', 'latex'})
-        :with_move(cond.after_text('$'))
-)
+-- auto $ $
+-- too buggy
+-- npairs.add_rule(
+--     Rule('$', '$', {'tex', 'latex'})
+--         -- don't open pairs if there are non-space characters before
+--         :with_pair(cond.not_before_regex('%S', 1))
+--         -- just move the cursor the next character is $
+--         :with_move(cond.after_text('$'))
+-- )
+
+-- auto \{ \}
 npairs.add_rule(
     Rule('\\{', '\\}', {'tex', 'latex'})
         -- :with_move(cond.after_text('\\}'))
+)
+
+-- auto ` '
+npairs.remove_rule('`')
+npairs.add_rule(
+    Rule('`', '\'', {'tex', 'latex'})
 )
 
 ---- Mappings

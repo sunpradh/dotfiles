@@ -19,14 +19,6 @@ quickopen() {
 zle -N quickopen
 bindkey '^O' quickopen
 
-# quickly open vimwiki
-VIMWIKIDIR="$HOME/Università/Note/"
-vimwiki() {
-    pushd $VIMWIKIDIR
-    nvim +VimwikiIndex
-    popd
-}
-
 # convert markdown to pdf with pandoc
 md2pdf() {
     filename=${1%.md}
@@ -42,4 +34,14 @@ ytdl() {
 
 ytdl-paste() {
     ytdl $(wl-paste)
+}
+
+# print the contents of a csv file using pandas
+csv() {
+    python -c "import pandas; print(pandas.read_csv('${1}'))"
+}
+
+csvhead() {
+    python -c "import pandas
+for n, f in enumerate(pandas.read_csv('${1}')): print(f'{n+1:>3}  {f}')"
 }

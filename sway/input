@@ -2,16 +2,21 @@
 # Input
 #------------------------------
 
-# American + italian layout
+# Keyboard
 input type:keyboard {
+    # American + italian layout
     xkb_layout it,us
     xkb_options caps:ctrl_modifier,grp:win_space_toggle
 }
 
+# Touchpad
 input type:touchpad {
     tap disabled
     natural_scroll enabled
 }
+
+# Hide cursor after inactivity
+seat * hide_cursor 10000
 
 # Monitor configurations
 set $laptop eDP-1
@@ -24,6 +29,7 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 # modifier key
 set $mod Mod4
+set $alt Mod1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

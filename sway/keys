@@ -2,8 +2,11 @@
 # Keyboard shortcuts
 #------------------------------
 
-# start a terminal
+# Default terminal
 set $term footclient
+set $floaterm footclient --app-id=floaterm
+
+# start a terminal
 bindsym $mod+Return exec $term
 
 # start a program launcher
@@ -15,30 +18,47 @@ bindsym $mod+f exec rofi-files
 # recent files
 bindsym $mod+r exec rofi-recent
 
-# applications shortcuts
-bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+f exec $term ranger
-bindsym $mod+Shift+x exec nemo
-bindsym $mod+Shift+e exec thunderbird
-bindsym $mod+Shift+s exec spotify
-bindsym $mod+Shift+t exec telegram-desktop
-bindsym $mod+Shift+p exec whatsapp-nativefier
-bindsym $mod+Shift+v exec pavucontrol
-bindsym $mod+Shift+b exec blueman-manager
-bindsym $mod+Shift+m exec $term --app-id=floaterm htop
-bindsym $mod+Shift+n exec $term --app-id=floaterm nmtui
+# window switcher
+bindsym $alt+Tab exec rofi-windows
+
+# Applications
+bindsym {
+    $mod+Shift+w exec firefox
+    $mod+Shift+f exec $term ranger
+    $mod+Shift+x exec nemo
+    $mod+Shift+e exec thunderbird
+    $mod+Shift+s exec spotify
+    $mod+Shift+t exec telegram-desktop
+    $mod+Shift+p exec whatsapp-nativefier
+    $mod+Shift+v exec pavucontrol
+    $mod+Shift+b exec blueman-manager
+    $mod+Shift+m exec $floaterm htop
+    $mod+Shift+n exec $floaterm nmtui
+}
 
 # Lockscreen
 bindsym $mod+Backspace exec swaylock
 
 # Volume
-bindsym XF86AudioRaiseVolume exec set-volume up
-bindsym XF86AudioLowerVolume exec set-volume down
-bindsym XF86AudioMute	     exec set-volume toggle
+bindsym {
+    XF86AudioRaiseVolume exec set-volume up
+    XF86AudioLowerVolume exec set-volume down
+    XF86AudioMute	 exec set-volume toggle
+}
+
+# Playback control
+bindsym {
+    XF86AudioPlay  exec playerctl play-pause
+    $mod+p         exec playerctl play-pause
+    XF86AudioNext  exec playerctl next
+    XF86AudioPrev  exec playerctl previous
+}
 
 # Brightness
-bindsym XF86MonBrightnessDown exec set-brightness down
-bindsym XF86MonBrightnessUp   exec set-brightness up
+bindsym {
+    XF86MonBrightnessDown exec set-brightness down
+    XF86MonBrightnessUp   exec set-brightness up
+}
 
 # Screenshot
 bindsym Print exec --no-startup-id sway-screenshot
