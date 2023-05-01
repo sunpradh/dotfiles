@@ -4,7 +4,7 @@ indicator
 indicator-radius=100
 grace=5
 fade-in=0.5
-font=Atkinson Hyperlegible
+font=Input Sans Condensed
 font-size=30
 ring-color=1d2021
 text-color=ebdbb2

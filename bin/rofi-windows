@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export DMENU_CMD='rofi -i -p  -dmenu'
+winfocus
