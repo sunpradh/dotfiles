@@ -19,11 +19,11 @@ ls.config.set_config({
 })
 
 -- Helper function for TeX snippets
-local asciify = function(args, _)
+local function asciify(args, _)
     return string.gsub(string.lower(args[1][1]), '%W', '_')
 end
 
-local cmd_surround = function(_, snip, cmd)
+local function cmd_surround(_, snip, cmd)
     if (#snip.captures > 1 and snip.captures[2] ~= " ") then
             return "\\" .. cmd .. "{" .. snip.captures[1] .. "}" .. snip.captures[2]
     else
@@ -31,11 +31,11 @@ local cmd_surround = function(_, snip, cmd)
     end
 end
 
-local frac_surround = function(_, snip)
+local function frac_surround(_, snip)
     return "\\frac{" .. snip.captures[1] .. "}{" .. snip.captures[2] .. "}"
 end
 
-local tex_section = function(name, label_prefix)
+local function tex_section(name, label_prefix)
     return s(label_prefix, {
         t('\\' .. name .. '{'), i(1), t({ '}', '' }),
         t('\\label{' .. label_prefix .. ':'), f(asciify, {1}), i(2), t({ '}', '', '' }),
@@ -43,28 +43,28 @@ local tex_section = function(name, label_prefix)
     })
 end
 
-local tex_auto_superscript = function (trig, text)
+local function tex_auto_superscript(trig, text)
     return s(
         {trig="%s+" .. trig .. "%s+", regTrig=true, wordTrig=false},
-        t("^{" .. text .. "} ")
+        t("^{" .. text .. "}")
     )
 end
 
-local tex_auto_surround = function(trig, cmd)
+local function tex_auto_surround(trig, cmd)
     return s(
         {trig=trig .. "%s+(%S+)([ _^$]+)", regTrig=true, wordTrig=true},
         { f(cmd_surround, {}, {user_args = {cmd}})}
         )
 end
 
-local tex_partial_frac = function(trig_exp)
+local function tex_partial_frac(trig_exp)
     return s(
         {trig=trig_exp, regTrig=true, wordTrig=false},
         { f(cmd_surround, {}, {user_args = {"frac"}}), t("{"), i(1), t("} "), i(0)}
     )
 end
 
-local tex_full_frac = function(trig_exp)
+local function tex_full_frac(trig_exp)
     return s(
         {trig=trig_exp, regTrig=true, wordTrig=false},
         { f(frac_surround, {}), t(" ") }

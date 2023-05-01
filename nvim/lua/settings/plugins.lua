@@ -14,7 +14,6 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/cmp-omni'
     use 'hrsh7th/nvim-cmp'
 
     -- Tree-sitter (syntax highlighting engine)
@@ -30,7 +29,7 @@ require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
 
     -- Note taking
-    use 'vimwiki/vimwiki'
+    -- use 'vimwiki/vimwiki'
 
     -- LaTeX
     use 'lervag/vimtex'
