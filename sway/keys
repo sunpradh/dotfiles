@@ -4,7 +4,7 @@
 
 # Default terminal
 set $term footclient
-set $floaterm footclient --app-id=floaterm
+set $floaterm footclient --app-id=floaterm -W 100x30
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -72,13 +72,14 @@ bindsym $mod+Shift+Backspace exec rofi-logout
 bindsym $mod+Ctrl+r reload
 
 # Toggle waybar
-bindsym $mod+b exec killall -SIGUSR1 waybar
+# bindsym $mod+b exec killall -SIGUSR1 waybar
+bindsym $mod+b gaps inner all toggle 10
 
 # Fix monitor orientation
 bindsym $mod+Ctrl+d exec switch-displays
 
 # Toggle title bar
-bindsym $mod+Ctrl+t border toggle 2
+bindsym $mod+Ctrl+t border toggle 5
 
 # Toggle laptop monitor
 bindsym $mod+Ctrl+m exec reset-monitor

@@ -20,14 +20,12 @@ exec "systemctl --user import-environment"
 # overlay for volume/brightness
 exec start-wob
 
-## now done via systemd --user
-## cloud services
-# exec dropbox
-## notification daemon
-# exec mako
+# Dropbox
+exec dropbox
 
 # bluetooth
-#exec blueman-applet
+exec blueman-applet
 
-# polkit authentication agent
-#exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+## now done via systemd --user
+## notification daemon
+# exec mako

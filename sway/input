@@ -5,13 +5,13 @@
 # Keyboard
 input type:keyboard {
     # American + italian layout
-    xkb_layout it,us
+    xkb_layout us,it
     xkb_options caps:ctrl_modifier,grp:win_space_toggle
 }
 
 # Touchpad
 input type:touchpad {
-    tap disabled
+    tap enabled
     natural_scroll enabled
 }
 
@@ -20,8 +20,15 @@ seat * hide_cursor 10000
 
 # Monitor configurations
 set $laptop eDP-1
+set $officemonitor "LG Electronics 31MU97 0x000011CC"
 #output $laptop scale 1.25
 output $laptop position 0 0 resolution 1920x1080@60Hz
+output $officemonitor scale 1.25
+
+output HEADLESS-1 {
+    pos 1920,0
+    mode 1920x1080
+}
 
 # Disable laptop screen when the lid is closed
 bindswitch --reload --locked lid:on  output $laptop disable

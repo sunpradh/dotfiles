@@ -71,8 +71,11 @@ for_window [app_id="None"]                floating enable
 for_window [app_id="zoom"]                floating enable
 for_window [app_id="sclang"]              floating enable
 for_window [app_id="python3"]             floating enable
+for_window [app_id="zenity"]              floating enable
+for_window [app_id="wdisplays"]           floating enable
 for_window [class="MEGAsync"]             floating enable
 for_window [class="nm-connection-editor"] floating enable
+for_window [class="Skype"]                floating enable
 
 # Annoying popups
 for_window [title="Microsoft Teams Notification"] floating enable
@@ -99,17 +102,18 @@ assign [app_id="zoom"] $ws5
 assign [class="Microsoft Teams.*"] $ws5
 assign [app_id="telegramdesktop"] $ws6
 assign [class="whatsapp-nativefier-d40211"] $ws6
+assign [app_id="com.ktechpit.whatsie"] $ws6
 assign [class="discord"] $ws6
 assign [title="Spotify"] $ws7
 
 for_window [app_id="firefox"] focus
-for_window [app_id="thunderbird"] focus
+# for_window [app_id="thunderbird"] focus
 for_window [app_id="telegramdesktop"] focus
 for_window [class="whatsapp-nativefier-d40211"] focus
 
 # always center rofi (in normal-window) in the center
 for_window [class="Rofi"] floating enable
-for_window [class="Rofi"] move position center
+# for_window [class="Rofi"] move position center
 
 # inhibit idle for firefox in fullscreen
 for_window [class=".*"] inhibit_idle fullscreen
