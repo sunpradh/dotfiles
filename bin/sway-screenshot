@@ -4,40 +4,45 @@
 # original: https://github.com/yschaeff/sway_screenshots
 
 # Menu command
-MENU="rofi -dmenu -l 5 -width 15 -columns 1 -scroll-method 0 -p screenshot -theme $HOME/.config/rofi/menu.rasi"
+MENU="rofi -dmenu -p screenshot -theme $HOME/.config/rofi/oneline.rasi"
 
 NOTIFY=$(pidof mako || pidof dunst)
+
+fullscreen=" current screen"
+focused=" current window"
+region=" select area"
+window=" select window"
+output=" select screen"
+
+OPTIONS="${fullscreen}\n${focused}\n${region}\n${window}\n${output}"
+CHOICE=$(echo -e $OPTIONS | $MENU)
+
 
 FOCUSED=$(swaymsg -t get_tree | jq '.. | ((.nodes? + .floating_nodes?) // empty) | .[] | select(.focused and .pid) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 OUTPUTS=$(swaymsg -t get_outputs | jq -r '.[] | select(.active) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 WINDOWS=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 
-CHOICE=`$MENU << EOF
-fullscreen
-focused
-region
-output
-window
-EOF`
+echo $CHOICE
 
-
+# Create screenshot directory if not present
 mkdir -p $(xdg-user-dir PICTURES)/screenshots/
 
+#
 FILENAME="$(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_screenshot.png')"
 
-if [ "$CHOICE" = fullscreen ]
+if [ "$CHOICE" = "$fullscreen" ]
 then
     grim "$FILENAME"
-elif [ "$CHOICE" = region ]
+elif [ "$CHOICE" = "$region" ]
 then
     slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = output ]
+elif [ "$CHOICE" = "$output" ]
 then
-    echo $OUTPUTS | slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = window ]
+    echo "$OUTPUTS" | slurp | grim -g - "$FILENAME"
+elif [ "$CHOICE" = "$window" ]
 then
-    echo $WINDOWS | slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = focused ]
+    echo "$WINDOWS" | slurp | grim -g - "$FILENAME"
+elif [ "$CHOICE" = "$focused" ]
 then
     grim -g "$(eval echo $FOCUSED)" "$FILENAME"
 elif [ -z "$CHOICE" ]
@@ -51,6 +56,7 @@ else
 fi
 
 wl-copy < $FILENAME
+
 if [ $NOTIFY ]; then
     notify-send "Screenshot" "File saved as $FILENAME\nand copied to clipboard" -t 6000 -i $FILENAME
 fi

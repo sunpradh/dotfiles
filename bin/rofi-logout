@@ -8,9 +8,9 @@ logout="logout\x00icon\x1fsystem-log-out"
 
 options="$suspend\n$shutdown\n$reboot\n$logout"
 
-roficmd="rofi -p goodbye -dmenu -normal-window -theme $HOME/.config/rofi/menu.rasi"
+roficmd="rofi -dmenu -normal-window -theme ~/.config/rofi/fullscreen.rasi"
 
-answer=$( echo -e $options | $roficmd -p '')
+answer=$( echo -e $options | $roficmd )
 case $answer in
     logout)   swaymsg exit;;
     shutdown) systemctl poweroff;;

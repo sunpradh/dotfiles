@@ -1,4 +1,5 @@
 #!/bin/sh
 
-export DMENU_CMD='rofi -i -p  -dmenu'
+export DMENU_CMD='rofi -i -p windows -dmenu -theme ~/.config/rofi/dropdown.rasi'
+# `winfocus` is in `swaytools`
 winfocus

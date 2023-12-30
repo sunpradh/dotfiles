@@ -19,7 +19,7 @@ local choicefile = '/tmp/rofi-files.choice'
 local fd = {
     bin = 'fd',
     args = {'-a', '-t', 'f', '-L'},
-    excluded = {'music', 'phone'}
+    excluded = {'music', 'phone', 'remote', 'imgs'}
 }
 
 -- 'rofi' settings
@@ -27,13 +27,13 @@ local rofi = {
     bin = 'rofi',
     args = {
         '-l 12',
-        '-sep "\t"',
-        '-eh 2',
+        -- '-sep "\t"',
         '-dmenu',
         '-i',
         '-markup-rows',
-        '-p ""',
-        '-format d'
+        '-format d', -- index based return
+        '-p "Files"',
+        '-theme ~/.config/rofi/dropdown.rasi' -- dropdown style
     }
 }
 
@@ -160,7 +160,11 @@ local files = concat(history, filter_out(output, history))
 -- Exec rofi
 local rofi_exec = exec(rofi_cmd, 'w')
 pipe_array(files, rofi_exec, function (fn)
-    return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small><i>%1</i></small>') .. '\t'
+    -- return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small><i>%1</i></small>') .. '\t'
+    return string.gsub(fn,
+        '(.+)/([^/]+)$',
+        '%2  <span color="grey" size="smaller">~/%1</span>'
+    ) .. '\n'
 end)
 
 -- Open selected file and update history
@@ -168,6 +172,7 @@ local choice = read_choice(rofi_exec, choicefile, files)
 if choice then
     local selected = basedir .. '/' .. choice
     write(history_settings.file, update_history(choice, history), basedir .. '/')
+    print(selected)
     os.execute('xdg-open \'' .. selected .. '\' &')
 end
 

@@ -14,13 +14,13 @@ local rofi = {
     bin = 'rofi',
     args = {
         '-l 12',
-        '-sep "\t"',
-        '-eh 2',
+        -- '-sep "\t"',
         '-dmenu',
         '-i',
         '-markup-rows',
-        '-p " "',
-        '-format d'
+        '-p "Recent"',
+        '-format d', -- index based return
+        '-theme ~/.config/rofi/dropdown.rasi' -- dropdown style
     }
 }
 
@@ -64,8 +64,11 @@ local function get_file(line)
     if not fn then return nil end
     local symbols = {}
     for x in string.gmatch(fn, '%%(..)') do
-        symbols[x] = string.char(tonumber('0x' .. x) or 0x20)
-        -- print(x, '"' .. symbols[x] .. '"')
+        if x ~= "25" then  -- there was a bug with percentage sign
+            symbols[x] = string.char(tonumber('0x' .. x) or 0x20)
+        else
+            symbols[x] = "%%%%"
+        end
     end
     for code, symbol in pairs(symbols) do
         fn = string.gsub(fn, '%%' .. code, symbol)
@@ -119,7 +122,8 @@ local rofi_exec = exec(rofi_cmd, 'w')
 pipe_array(files, rofi_exec,
     function (fn)
         fn = string.gsub(fn, home, '~')
-    return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small><i>%1</i></small>') .. '\t'
+    -- return string.gsub(fn, '(.+)/([^/]+)$', '%2\n<small><i>%1</i></small>') .. '\t'
+    return string.gsub(fn, '(.+)/([^/]+)$', '%2  <span color="grey" size="smaller">%1</span>') .. '\n'
 end)
 
 -- Open selected file and update history
