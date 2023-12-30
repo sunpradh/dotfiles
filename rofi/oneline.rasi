@@ -1,0 +1,63 @@
+* {
+    bg:        #000000;
+    fg:        #dfdfe0;
+    selectbg:  #282828;
+    selectfg:  #f0f0f0;
+
+    background-color:       transparent;
+    text-color:             @fg;
+
+    font: "Input Sans Narrow 12";
+    padding: 2px 0px;
+}
+
+window {
+    background-color: @bg;
+    location: north;
+    y-offset: -1px;
+    width: 100%;
+    children: [ mainbox,message ];
+}
+
+mainbox {
+    orientation: horizontal;
+    children: [ inputbar,listview ];
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 1px 8px;
+    width: 20%;
+    children: [ prompt,entry ];
+}
+
+listview {
+    layout: horizontal;
+    spacing: 10px;
+}
+
+prompt, entry, element-text {
+    padding: 4px 4px;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    vertical-align: 0.5;
+    padding: 0px 0px 0px 8px;
+}
+
+element {
+    vertical-align: 0.5;
+    spacing: 4px;
+    padding: 2px;
+}
+
+element.selected {
+    background-color: @selectbg;
+    border-radius: 3px;
+}
+
+element-text.selected {
+    background-color: transparent;
+    text-color: @selectfg;
+}

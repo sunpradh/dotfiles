@@ -86,7 +86,7 @@
 #prompt {
     color: @foregroundcolor;
     horizontal-align: 0.5;
-    font: @italicfont;
+    highlight: bold;
 }
 
 #dummy { expand: true; }

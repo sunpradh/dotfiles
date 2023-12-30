@@ -1,0 +1,62 @@
+* {
+    bg:           #161616;
+    fg:           #707070;
+    select:       #ffffff;
+    sep:          #282828;
+    border-color: @sep;
+    text-color: @fg;
+    background-color: transparent;
+
+    font: "Input Sans Condensed, Regular 24";
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0.8);
+    fullscreen: true;
+    padding: 0px;
+    location: center;
+}
+
+mainbox {
+    padding: 0px;
+    orientation: vertical;
+}
+
+listview {
+    scrollbar: false;
+    layout: horizontal;
+    margin:  calc(50% - 50px) calc(50% - 500px);
+    width: 800px;
+    spacing: 10px;
+    cycle: true;
+}
+
+element {
+    width: 240px;
+    padding: 20px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element-text.selected {
+    text-color: @select;
+}
+
+element-icon {
+    enabled: false;
+}
+
+inputbar {
+    enabled: false;
+}
+
+scrollbar {
+    enabled: false;
+}
+
+prompt {
+    enables: false;
+}

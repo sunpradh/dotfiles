@@ -6,18 +6,12 @@
     separatorcolor:         #282828;
     scrollbarcolor:         #161616;
     selectioncolor:         #08bdba;
+
     border-color:           @separatorcolor;
     background-color:       @backgroundcolor;
     text-color:             @foregroundcolor;
 
     font: "Input Sans Condensed, Condensed 10";
-}
-
-#listview {
-    spacing: 0px;
-    scrollbar: true;
-    padding: 8px;
-    dynamic: true;
 }
 
 #window {
@@ -32,6 +26,13 @@
     border: 0;
     padding: 0;
     background-color: @backgroundcolor;
+}
+
+#listview {
+    spacing: 0px;
+    scrollbar: true;
+    padding: 8px;
+    dynamic: true;
 }
 
 #element {
