@@ -34,7 +34,14 @@ vim.g.vimtex_view_method = 'zathura'
 vim.g.vimtex_fold_enabled = 0
 
 -- Disable overfull/underfull \hbox and all package warnings
-vim.g.vimtex_quickfix_ignore_filters = {'[Oo]verfull', '[Uu]nderfull', 'packages', 'float', 'Font Warning'}
+vim.g.vimtex_quickfix_ignore_filters = {
+    '[Oo]verfull',
+    '[Uu]nderfull',
+    'packages',
+    'float',
+    'Font Warning',
+    'OpenType feature'
+}
 
 -- insert maps (using luasnip instead)
 vim.g.vimtex_imaps_enabled = 0

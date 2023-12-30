@@ -1,6 +1,7 @@
 --
 -- Language Server
 --
+
 local lsp = require('lspconfig')
 local keymap = require('settings.keymap')
 
@@ -13,7 +14,7 @@ nmap('<space>e', vim.diagnostic.open_float)
 -- locations of all diagnostics
 nmap('<space>q', vim.diagnostic.setloclist)
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
     local mapper = keymap.bind('n', {noremap=true, silent=true, buffer=bufnr})
     -- jump between symbols
     mapper('gd', vim.lsp.buf.definition)
@@ -100,33 +101,3 @@ lsp.texlab.setup{
         }
     }
 }
-
--- -- LaTeX language tool
--- lsp.ltex.setup({
---     on_attach = function(client, bufnr)
---         custom_attach(client, bufnr)
---         require('ltex_extra').setup({
---             load_langs = { "en-US", "it" },
---             init_check = true,
---             path = nil,
---             log_level = "none",
---         })
---     end,
---     capabilities = capabilities,
---     settings = {
---         ltex = {
---             enabled = { "latex", "tex", "bib" },
---             language = "en",
---             diagnosticSeverity = "information",
---             setenceCacheSize = 2000,
---             additionalRules = {
---                 enablePickyRules = true,
---                 motherTongue = "it",
---             },
---             dictionary = {},
---             disabledRules = {},
---             hiddenFalsePositives = {},
---             checkFrequency = "edit",
---         }
---     }
--- })

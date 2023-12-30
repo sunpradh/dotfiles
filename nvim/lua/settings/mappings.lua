@@ -23,6 +23,10 @@ nmap('<A-Tab>', '<cmd>tabn<CR>')
 -- Remap <C-^> (alternate files)
 nmap('<Backspace>', '<C-^>')
 
+-- Move through the location list
+nmap('<Tab>',   ':cnext<CR>')
+nmap('<S-Tab>', ':cprev<CR>')
+
 -- Disable annoying keymaps
 nmap('q:', '<Nop>')
 nmap('q?', '<Nop>')
@@ -51,6 +55,9 @@ nmap('<leader>rw', '<cmd>%s/\\<<C-r><C-w>\\>//g<Left><Left>')
 
 -- EasyAlign
 nxmap('ga', '<Plug>(EasyAlign)')
+
+-- Fix jump forward
+nmap('<C-i>', '<C-S-i>')
 
 
 ---- Thanks ThePrimeagen for these keymaps

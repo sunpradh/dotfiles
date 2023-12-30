@@ -33,7 +33,6 @@ require('packer').startup(function(use)
 
     -- LaTeX
     use 'lervag/vimtex'
-    use 'barreiroleo/ltex_extra.nvim'
 
     -- Statusline and bufferline
     use 'nvim-lualine/lualine.nvim'
@@ -69,14 +68,11 @@ require('packer').startup(function(use)
 
     -- Autopairs
     use "windwp/nvim-autopairs"
-
-    -- Limelight
-    use "junegunn/limelight.vim"
 end)
 
 -- load plugins that do not require configuration
 require('Comment').setup()
 require('neoscroll').setup()
-require('indent_blankline').setup()
+require('ibl').setup({ scope = {show_start = false, show_end = false}})
 require('nvim-surround').setup()
 require('nvim-autopairs').setup()
