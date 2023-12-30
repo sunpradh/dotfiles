@@ -104,7 +104,7 @@ class fzf_select_dir(FzfSelect):
 
     Select a directory with fzf
     """
-    fd_opts = "-L -t d -c never"
+    fd_opts = "-L -t d -c never --one-file-system"
 
 class fzf_select_item(FzfSelect):
     """
@@ -112,7 +112,7 @@ class fzf_select_item(FzfSelect):
 
     Select an item in the current folder
     """
-    fd_opts = "-L -d 1 -c never"
+    fd_opts = "-L -d 1 -c never --one-file-system"
 
 class fzf_find_file(FzfSelect):
     """
@@ -120,4 +120,4 @@ class fzf_find_file(FzfSelect):
 
     Search for a file with fzf
     """
-    fd_opts = "-L -t f -c never"
+    fd_opts = "-L -t f -c never --one-file-system"

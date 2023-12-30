@@ -90,6 +90,9 @@ handle_extension() {
 	    jq --color-output . "${FILE_PATH}" && exit 5
 	    python -m json.tool -- "${FILE_PATH}" && exit 5
 	    ;;
+        ### Custom
+        ipynb) # Preview python notebooks
+            nbpreview -d --no-files --cs standard --no-images --no-paging "${FILE_PATH}" && exit 5
     esac
 }
 
