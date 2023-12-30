@@ -20,6 +20,7 @@ alias la="exa --group-directories-first -la"
 
 # folders
 alias uni="cd ~/docs/uni/"
+alias media="cd /run/media/sunny/"
 alias wri="cd ~/docs/uni/writing/"
 alias code="cd ~/docs/uni/code/"
 alias art="cd ~/docs/uni/articles/"

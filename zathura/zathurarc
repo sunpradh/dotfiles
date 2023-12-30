@@ -1,6 +1,6 @@
-###
-### Zathura document viewer config file
-###
+#
+# Zathura document viewer config file
+#
 
 # General options
 set selection-clipboard clipboard
@@ -10,11 +10,9 @@ set incremental-search true
 set first-page-column 1:1:2
 set guioptions shv
 
-
 # SyncTeX with neovim-remote
 set synctex true
 set synctex-editor-command  "nvr --remote-silent %f -c %l"
-
 
 # Mappings
 map [normal]       P feedkeys <F5>
@@ -22,19 +20,30 @@ map [normal]       F feedkeys <F11>
 map [presentation] P feedkeys <F5>
 map [fullscreen]   F feedkeys <F11>
 
-map [normal] <A-c> exec "sh -c 'auto-crop-zathura \"$FILE\"'"
-map [normal] <A-x> exec "open-with-caja '$FILE'"
+# Auto-crop the pdf
+# map [normal] <A-c> exec "sh -c 'auto-crop-zathura \"$FILE\"'"
 
-map <F10> set 'default-bg "#ffffff"'
-map <F9>  set 'default-bg "#161616"'
-map <F8>  set 'first-page-column 1:1'
+# Open in the file manager
+map [normal] <A-f> exec "nemo '$FILE'"
+
+# Open with Xournal++ for annotations
+map [normal] <A-x> exec "xournalpp '$FILE'"
+
+# Open with Okular
+map [normal] <A-o> exec "okular '$FILE'"
+
+# Change background
+map <F10> set "default-bg \"#ffffff\""
+map <F9>  set "default-bg \"#161616\""
+map <F8>  set "first-page-column 1:1"
+# Reading mode
 map [normal] <A-r> feedkeys <F9><F10><F11><C-n>da
 
 
 #
 # Aestetic options
 #
-set font "Input Mono Condensed Light 14"
+set font "Input Mono Condensed 10"
 
 # colors inspired by the carbonfox theme
 set default-bg              "#161616"

@@ -2,3 +2,5 @@
 .luarc.json
 __pycache__
 ranger/plugins/ranger_devicons
+nvim/plugin
+nvim/spell
