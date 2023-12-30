@@ -1,6 +1,6 @@
 * {
-    font-family:   "Input Sans Condensed, Condensed", "Font Awesome 6 Free", sans-serif;
-    font-size:     13px;
+    font-family:   "Inter", "Font Awesome 6 Free", sans-serif;
+    font-size:     16px;
     border:        none;
     border-radius: 0;
     min-height:    0;
@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background-color: #161616;
+    background-color: #000000;
     color:            #dfdfe0;
     border-bottom:    1px #282828 solid;
 }
@@ -18,12 +18,12 @@ window#waybar {
 }
 
 #workspaces button {
-    padding:          1px 6px;
+    padding:          0px 6px;
     margin:           0px 0px;
     background-color: transparent;
     min-width:        16px;
     color:            #dfdfe0;
-    border-top:       2px transparent solid;
+    border-top:       4px transparent solid;
 }
 
 #workspaces button:hover {
@@ -32,7 +32,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-top: 2px #08bdba solid;
+    border-top: 4px #08bdba solid;
     color:      #08bdba;
 }
 
@@ -81,11 +81,11 @@ window#waybar {
 #battery.critical:not(.charging) {
     background-color:          inherit;
     color:                     #ff9999;
-    /* animation-name:            blink; */
-    /* animation-duration:        0.5s; */
-    /* animation-timing-function: linear; */
-    /* animation-iteration-count: infinite; */
-    /* animation-direction:       alternate; */
+    animation-name:            blink;
+    animation-duration:        0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:       alternate;
 }
 
 label:focus {

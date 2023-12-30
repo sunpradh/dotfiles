@@ -1,45 +1,27 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 32,
-    "modules-center": [ "clock" ],
+    "height": 30,
+    "modules-left": [
+        "sway/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
     "modules-right":  [
         "battery#bat0",
-        "battery#bat1",
-        "cpu",
         "pulseaudio",
         "sway/language",
         "tray",
-        "idle_inhibitor",
-        "custom/powermenu"
+        "idle_inhibitor"
         ],
-    "modules-left": [
-        "custom/menu",
-        "sway/workspaces"
-    ],
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": false,
-        "format": "{name} {icon}",
-        "format-icons": {
-            // "1": "",
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
-            "7": "",
-            "8": "",
-            "9": "",
-            }
-    },
-    "sway/window": {
-        "format": "{}",
-        "max-length": 100,
+        "format": " {name} "
     },
     "sway/language": {
-        "format":   " <b>{shortDescription}</b>"
+        "format":   " {shortDescription}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -53,31 +35,14 @@
         "spacing": 6
     },
     "clock": {
-        "interval":       10,
-        "format":         "{:<b>%H:%M</b>}",
+        "interval":       5,
+        "format":         "{:%a %d %b  %H:%M}",
         "tooltip-format": "<big><b>{:%Y %B}</b></big>\n<span font_desc='Input Mono Condensed, Condensed 10'>{calendar}</span>",
         "format-alt":     "{:%A %d %B %Y}"
-    },
-    "temperature": {
-        "hwmon-path":         "/sys/class/hwmon/hwmon4/temp1_input",
-        "critical-threshold": 80,
-        "format":             "{icon} {temperatureC}",
-        "format-icons":       ["", "", "", "", ""],
-        "on-click":           "foot --app-id=floaterm -o initial_window_width=80c -o initial_window_height=40c watch -n 1 sensors"
     },
     "battery#bat0": {
         "bat":             "BAT0",
         "states":          { "warning": 30, "critical": 15 },
-        "format":          "{icon} {capacity}",
-        "format-charging": "\uf0e7 {capacity}",
-        "format-plugged":  "",
-        "format-alt":      "{icon} {time}",
-        "format-full":     "",
-        "format-icons":    ["", "", "", "", ""]
-    },
-    "battery#bat1": {
-        "bat":             "BAT1",
-        "states":          { "warning": 0, "critical": 0 }, // TEMPORARY FIX
         "format":          "{icon} {capacity}",
         "format-charging": "\uf0e7 {capacity}",
         "format-plugged":  "",
@@ -103,27 +68,6 @@
             "default":            ["", "", ""]
         },
         "on-click":               "pavucontrol"
-    },
-    "cpu": {
-        "format":   " {usage}",
-        "tooltip":  true,
-        "interval": 2,
-        "on-click": "foot --app-id=floaterm htop"
-    },
-    "memory": {
-        "format":   " {}",
-        "interval": 2,
-        "on-click": "foot --app-id=floaterm htop"
-    },
-    "custom/menu": {
-        "format":   "<big></big>",
-        "on-click": "rofi-drun",
-        "tooltip":  false
-    },
-    "custom/powermenu": {
-        "format":   "<big></big>",
-        "on-click": "rofi-logout",
-        "tooltip":  false
     }
 }
 // vim: ft=jsonc
