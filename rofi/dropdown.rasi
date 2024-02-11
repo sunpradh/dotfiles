@@ -7,7 +7,7 @@
     background-color:       transparent;
     text-color:             @fg;
 
-    font: "Input Sans Narrow 12";
+    font: "Fira Code 11";
     padding: 2px 0px;
 }
 

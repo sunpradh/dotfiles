@@ -7,7 +7,7 @@
     text-color: @fg;
     background-color: transparent;
 
-    font: "Input Sans Condensed, Regular 24";
+    font: "Fira Code 24";
 }
 
 window {
