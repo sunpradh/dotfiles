@@ -1,0 +1,15 @@
+##
+## Display configuration
+##
+
+# Laptop Monitor
+set $laptop eDP-1
+output $laptop position 0 0 resolution 1920x1080@60Hz
+
+# Office monitor
+set $officemonitor "LG Electronics 31MU97 0x000011CC"
+output $officemonitor position 1920 0 resolution 3840x2160@60Hz scale 1.5
+
+# Disable laptop screen when the lid is closed
+bindswitch --reload --locked lid:on  output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable

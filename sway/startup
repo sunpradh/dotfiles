@@ -1,6 +1,6 @@
-#------------------------------
-# Startup applications
-#------------------------------
+##
+## Startup applications
+##
 
 # Load Xresources
 exec_always xrdb -merge /home/sunny/.Xresources
@@ -24,8 +24,7 @@ exec start-wob
 exec dropbox
 
 # bluetooth
-exec blueman-applet
+# done bia waybar applet
 
-## now done via systemd --user
-## notification daemon
-# exec mako
+# mako notification daemon
+# activated via systemd

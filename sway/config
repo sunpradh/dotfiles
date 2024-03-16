@@ -3,8 +3,9 @@
 #==============================
 
 include ./input
+include ./output
 include ./workspaces
 include ./windows
 include ./keys
-include ./aesthetics
+include ./theme
 include ./startup

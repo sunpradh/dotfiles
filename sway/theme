@@ -1,0 +1,56 @@
+##
+## Theme configuration
+##
+
+# Font
+font pango:Hubot Sans Medium 15px
+
+# Window borders settings
+default_border pixel 5
+title_align center
+titlebar_padding 5 5
+
+# Gaps
+gaps              inner 10
+smart_gaps        on
+smart_borders     off
+hide_edge_borders smart
+
+# No focus following mouse
+focus_follows_mouse no
+
+# Colors
+set $bg     #161616
+set $fg     #f2f4f8
+set $red    #d02020
+set $lred   #C62020
+set $bred   #ff0000
+set $gray   #282828
+set $lgray  #484848
+
+# Color entry order
+# 1: class name
+# 2: titlebar border color
+# 3: titlebar background color
+# 4: titlebar text color
+# 5: indicator (where new windows are open)
+# 6: all-around window border color
+
+# #1                    #2      #3      #4      #5      #6
+client.focused          $red    $red    $fg     $lred   $red
+client.focused_inactive $lgray  $lgray  $fg     $lred   $lgray
+client.unfocused        $gray   $gray   $fg     $lgray  $gray
+client.urgent           $bred   $bred   $bg     $bred   $bred
+
+## GTK settings
+## Use nwg-look
+
+# Wallpaper
+# output "*" bg ~/.wallpaper fill #000000
+output "*" bg #CACACA solid_color
+
+# Use waybar instead of swaybar
+bar {
+    swaybar_command waybar
+}
+

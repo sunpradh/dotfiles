@@ -1,11 +1,12 @@
-#------------------------------
-# Input
-#------------------------------
+##
+## Input configuration
+##
 
 # Keyboard
 input type:keyboard {
     # American + italian layout
     xkb_layout us,it
+    # Caps lock as Ctrl, Win+Space toggle layout
     xkb_options caps:ctrl_modifier,grp:win_space_toggle
 }
 
@@ -18,25 +19,12 @@ input type:touchpad {
 # Hide cursor after inactivity
 seat * hide_cursor 10000
 
-# Monitor configurations
-set $laptop eDP-1
-set $officemonitor "LG Electronics 31MU97 0x000011CC"
-#output $laptop scale 1.25
-output $laptop position 0 0 resolution 1920x1080@60Hz
-output $officemonitor scale 1.25
-
-output HEADLESS-1 {
-    pos 1920,0
-    mode 1920x1080
-}
-
-# Disable laptop screen when the lid is closed
-bindswitch --reload --locked lid:on  output $laptop disable
-bindswitch --reload --locked lid:off output $laptop enable
-
 # modifier key
 set $mod Mod4
 set $alt Mod1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# Disable primary selection
+primary_selection disabled

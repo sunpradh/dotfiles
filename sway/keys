@@ -1,10 +1,10 @@
-#------------------------------
-# Keyboard shortcuts
-#------------------------------
+##
+## Keyboard shortcuts
+##
 
 # Default terminal
 set $term footclient
-set $floaterm footclient --app-id=floaterm -W 100x30
+set $floaterm footclient --app-id=floaterm -W 110x35
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -23,23 +23,21 @@ bindsym $alt+Tab exec rofi-windows
 
 # Applications
 bindsym {
-    $mod+Shift+w exec firefox
-    $mod+Shift+f exec $term ranger
-    $mod+Shift+x exec nemo
-    $mod+Shift+e exec thunderbird
-    $mod+Shift+s exec spotify
-    $mod+Shift+t exec telegram-desktop
-    $mod+Shift+p exec whatsapp-nativefier
-    $mod+Shift+v exec pavucontrol
-    $mod+Shift+b exec blueman-manager
-    $mod+Shift+m exec $floaterm htop
-    $mod+Shift+n exec $floaterm nmtui
+    $mod+Shift+w exec firefox          # browser
+    $mod+Shift+f exec $term yazi       # TUI file manager
+    $mod+Shift+x exec nemo             # GUI file manager
+    $mod+Shift+e exec thunderbird      # email client
+    $mod+Shift+p exec ferdium-wayland  # messaging
+    $mod+Shift+v exec pavucontrol      # volume control
+    $mod+Shift+b exec blueberry        # bluetooth control
+    $mod+Shift+m exec $floaterm btop   # system monitor
+    $mod+Shift+n exec $floaterm nmtui  # network manager
 }
 
 # Lockscreen
 bindsym $mod+Backspace exec swaylock
 
-# Volume
+# Volume control
 bindsym {
     XF86AudioRaiseVolume exec set-volume up
     XF86AudioLowerVolume exec set-volume down
@@ -58,12 +56,11 @@ bindsym {
 bindsym {
     XF86MonBrightnessDown exec set-brightness down
     XF86MonBrightnessUp   exec set-brightness up
+    XF86Display           exec swaymsg output eDP-1 toggle
 }
 
 # Screenshot
 bindsym Print exec --no-startup-id sway-screenshot
-# the AKKO keyboard does not have Print key but have a calculator key for some reason
-bindsym XF86Calculator exec --no-startup-id sway-screenshot
 
 # Shutdown dialog
 bindsym $mod+Shift+Backspace exec rofi-logout
@@ -71,15 +68,8 @@ bindsym $mod+Shift+Backspace exec rofi-logout
 # reload the configuration file
 bindsym $mod+Ctrl+r reload
 
-# Toggle waybar
-# bindsym $mod+b exec killall -SIGUSR1 waybar
+# Toggle gaps
 bindsym $mod+b gaps inner all toggle 10
-
-# Fix monitor orientation
-bindsym $mod+Ctrl+d exec switch-displays
 
 # Toggle title bar
 bindsym $mod+Ctrl+t border toggle 5
-
-# Toggle laptop monitor
-bindsym $mod+Ctrl+m exec reset-monitor
