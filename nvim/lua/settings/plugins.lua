@@ -28,9 +28,6 @@ require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
 
-    -- Note taking
-    -- use 'vimwiki/vimwiki'
-
     -- LaTeX
     use 'lervag/vimtex'
 
@@ -56,8 +53,6 @@ require('packer').startup(function(use)
     use 'kyazdani42/nvim-web-devicons'
 
     -- Colorscheme
-    use 'rktjmp/lush.nvim'
-    use 'ellisonleao/gruvbox.nvim'
     use "EdenEast/nightfox.nvim"
 
     -- Smooth scrolling

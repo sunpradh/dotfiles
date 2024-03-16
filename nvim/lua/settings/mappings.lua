@@ -59,6 +59,10 @@ nxmap('ga', '<Plug>(EasyAlign)')
 -- Fix jump forward
 nmap('<C-i>', '<C-S-i>')
 
+-- Fix layout changing shortcut
+nmap('<D-Space>', '<Nop>')
+imap('<D-Space>', '<Nop>')
+
 
 ---- Thanks ThePrimeagen for these keymaps
 

@@ -4,22 +4,21 @@
 
 vim.o.termguicolors = true
 vim.o.background = 'dark'
-vim.o.winbar = '%f'
+-- Window bar title
+vim.o.winbar = '%f %m %h'
+-- Global statusline
+vim.o.laststatus = 3
 
--- Carbonfox (from nightfox)
+-- Terafox colorscheme
 require('nightfox').setup({
     options = {
-        styles = {
-            comments = "italic",
-            conditionals = "bold",
-            keywords = "bold",
-            strings = "italic",
-            types = "bold"
-        }
+        transparent = true
     }
 })
-vim.cmd('colorscheme carbonfox')
+vim.cmd('colorscheme terafox')
 
+
+-- Tweak colorscheme
 local function change_bg(higroups, ctermbg, guibg)
     for _, group in ipairs(higroups) do
         vim.cmd("hi " .. group .. " ctermbg=" .. ctermbg .." guibg=" .. guibg)
@@ -28,6 +27,5 @@ end
 
 change_bg(
     {'Cursorline', 'Folded', 'CursorLineNr'},
-    '0', '#282828'
+    '0', '#333333'
 )
-vim.cmd("hi VertSplit guifg=#484848")
