@@ -13,7 +13,7 @@ config() {
 # Quickly open a file using fzf and ranger's rifle
 quickopen() {
     f="$(fd -tf $1 | fzf --reverse --height=80%)"
-    [ ! -z $f ] && rifle $f
+    [ ! -z $f ] && xdg-open $f
     zle reset-prompt
 }
 zle -N quickopen
@@ -26,16 +26,6 @@ md2pdf() {
         xdg-open ${filename}.pdf
 }
 
-# download videos with youtube-dl and aria2
-ytdl() {
-    # youtube-dl "$1" --format "(mp4)[height=1080][fps<=60]" --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8 -k 5M"
-    youtube-dl "$1" --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8 -k 5M"
-}
-
-ytdl-paste() {
-    ytdl $(wl-paste)
-}
-
 # print the contents of a csv file using pandas
 csv() {
     python -c "import pandas; print(pandas.read_csv('${1}'))"
@@ -44,4 +34,52 @@ csv() {
 csvhead() {
     python -c "import pandas
 for n, f in enumerate(pandas.read_csv('${1}')): print(f'{n+1:>3}  {f}')"
+}
+
+# Microphone loopback (to hear the microphone)
+microphone-loop() {
+    if [ $1 = "on" ]; then
+        echo "Activating microphone loopback"
+        pactl load-module module-loopback latency_msec=1
+    fi
+    if [ $1 = "off" ]; then
+        echo "Deactivating microphone loopback"
+        pactl unload-module module-loopback
+    fi
+}
+
+# Convert from all the FLAC files in a directory into OPUS
+# optional argument: --remove-after
+flac2opus() {
+    for file in **/*.flac; do
+        ffmpeg -i "${file}" -c:a libopus -b:a 160K "${file%flac}opus"
+    done
+
+    if [[ ! -z $1 ]]; then
+        if [[ $1 == "--remove-after" ]]; then
+            answer='y'
+            echo
+        elif [[ $1 == '--keep' ]]; then
+            answer='n'
+            echo
+        fi
+    else
+        echo -e "\n$(tput bold)> Remove .flac files? [N/y]$(tput sgr0)"
+        read answer
+    fi
+    # if [[ ! -z $1 && $1 = "--remove-after" ]]; then
+    #     answer="y"
+    #     echo
+    # else
+    #     echo -e "\n$(tput bold)> Remove .flac files? [N/y]$(tput sgr0)"
+    #     read answer
+    # fi
+
+    if [[ $answer = "Y" || $answer = "y" ]]; then
+        echo "Removing .flac files"
+        rm -rfv **/*.flac
+    else
+        echo "Keeping .flac files"
+    fi
+    echo -e "\n$(tput bold)Done!$(tput sgr0)"
 }

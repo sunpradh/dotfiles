@@ -17,7 +17,7 @@ input type:touchpad {
 }
 
 # Hide cursor after inactivity
-seat * hide_cursor 10000
+# seat * hide_cursor 10000
 
 # modifier key
 set $mod Mod4

@@ -8,14 +8,18 @@ amixer_opts="sset Master"
 sed_expr='s/.*\[([0-9]+)%\].*/\1/p'
 if [ -e $SOCKET ]; then
     case "$1" in
-        "up")     amixer $amixer_opts 5%+   | sed -En $sed_expr | head -n 1 > $SOCKET;;
-        "down")   amixer $amixer_opts 5%-   | sed -En $sed_expr | head -n 1 > $SOCKET;;
-        "toggle") amixer $amixer_opts toggle| sed -En $sed_expr | head -n 1 > $SOCKET;;
+        "up")        amixer $amixer_opts 5%+    | sed -En $sed_expr | head -n 1 > $SOCKET;;
+        "down")      amixer $amixer_opts 5%-    | sed -En $sed_expr | head -n 1 > $SOCKET;;
+        "smallup")   amixer $amixer_opts 1%+    | sed -En $sed_expr | head -n 1 > $SOCKET;;
+        "smalldown") amixer $amixer_opts 1%-    | sed -En $sed_expr | head -n 1 > $SOCKET;;
+        "toggle")    amixer $amixer_opts toggle | sed -En $sed_expr | head -n 1 > $SOCKET;;
     esac
 else
     case "$1" in
         "up")     amixer -q $amixer_opts 5%+   ;;
         "down")   amixer -q $amixer_opts 5%-   ;;
+        "smallup")     amixer -q $amixer_opts 1%+   ;;
+        "smalldown")   amixer -q $amixer_opts 1%-   ;;
         "toggle") amixer -q $amixer_opts toggle;;
     esac
 fi

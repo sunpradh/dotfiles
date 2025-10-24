@@ -2,7 +2,9 @@
 -- Language Server
 --
 
-local lsp = require('lspconfig')
+-- local lsp = require('lspconfig')
+local lsp = vim.lsp.config
+local enable = vim.lsp.enable
 local keymap = require('settings.keymap')
 
 local nmap = keymap.nnoremap
@@ -39,7 +41,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Python
-lsp.pylsp.setup {
+lsp("pylsp", {
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {
@@ -49,10 +51,11 @@ lsp.pylsp.setup {
             }
         }
     }
-}
+})
+enable("pylsp")
 
 -- C/C++
-lsp.ccls.setup {
+lsp("ccls", {
     on_attach = on_attach,
     capabilities = capabilities,
     init_options = {
@@ -64,11 +67,12 @@ lsp.ccls.setup {
             excludeArgs = { "-frounding-math"} ;
         };
     }
-}
+})
+enable("ccls")
 
 
 -- Lua
-lsp.lua_ls.setup {
+lsp("lua_ls", {
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {
@@ -87,10 +91,12 @@ lsp.lua_ls.setup {
             telemetry = { enable = false, },
         },
     },
-}
+})
+enable("lua_ls")
 
 -- LaTeX
-lsp.texlab.setup{
+-- lsp.texlab.setup{
+lsp("texlab", {
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {
@@ -100,4 +106,9 @@ lsp.texlab.setup{
             }
         }
     }
-}
+})
+enable("texlab")
+
+-- Julia
+lsp("julials", {})
+enable("julials")

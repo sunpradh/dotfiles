@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+
+# import sys
+import argparse
+import re
+import subprocess
+from urllib import request, error
+
+def get_bibtex(doi,ispreprint):
+    if ispreprint:
+        url = f"https://arxiv.org/bibtex/{doi}"
+    else:
+        if "doi.org" in doi:
+            doi = re.findall("^.*doi.org/(.*)$", doi)[0]
+        url = f"https://api.crossref.org/works/{doi}/transform/application/x-bibtex"
+    req = request.Request(url)
+
+    try:
+        with request.urlopen(req) as response:
+            return response.read().decode()
+    except error.HTTPError as e:
+        return f"HTTP Error: {e.code}"
+    except error.URLError as e:
+        return f"URL Error: {e.reason}"
+
+def format_bib(bibstr):
+    command = ["bibtool", "-k"]
+    process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+    output, _ = process.communicate(input=bibstr)
+
+    return output
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+            description="Convert DOI or Arxiv ID to Bibtex"
+            )
+    parser.add_argument(
+            "doi",
+            help="DOI or Arxiv ID of paper"
+            )
+    parser.add_argument(
+            "-a",
+            "--arxiv",
+            help="Treat provided DOI as Arxiv ID",
+            action="store_true",
+            default=False,
+            )
+    parser.add_argument(
+        "-n",
+        "--noformat",
+        help="Format entry using bibtool",
+        action="store_true",
+        default=False,
+    )
+    args = parser.parse_args()
+
+    bibtex = get_bibtex(args.doi, args.arxiv)
+    if not args.noformat:
+        output = format_bib(bibtex)
+    else:
+        output = bibtex
+    print(output)
+

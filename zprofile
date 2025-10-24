@@ -1,6 +1,7 @@
 # Extends $PATH
 if [[ ! $PATH =~ $HOME ]]; then
     export PATH=${PATH}:${HOME}/.local/bin
+    export PATH=${PATH}:${HOME}/.cargo/bin
 fi
 
 # Dotfiles
@@ -25,6 +26,9 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Ranger file manager visual fix
 export RANGER_DEVICONS_SEPARATOR='  '
+
+# Disable at-spi (assistance technology)
+NO_AT_BRIDGE=1
 
 #
 # Autostart swaywm

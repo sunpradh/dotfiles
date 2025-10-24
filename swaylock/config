@@ -1,4 +1,5 @@
-image=~/.wallpaper
+# image=~/.wallpaper
+color=7C98B3
 clock
 indicator
 indicator-radius=100

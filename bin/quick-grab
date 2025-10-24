@@ -1,0 +1,11 @@
+#!/bin/bash
+
+NOTIFY=$(pidof mako || pidof dunst)
+FILENAME="$(mktemp)"
+slurp | grim -g - "$FILENAME"
+wl-copy < $FILENAME
+if [ $NOTIFY ]; then
+    notify-send "Quick Screenshot" "Screenshot copied to clipboard" -t 6000 -i $FILENAME
+fi
+
+sleep 10 && rm "$FILENAME"

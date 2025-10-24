@@ -54,6 +54,7 @@ require('packer').startup(function(use)
 
     -- Colorscheme
     use "EdenEast/nightfox.nvim"
+    use "rebelot/kanagawa.nvim"
 
     -- Smooth scrolling
     use 'karb94/neoscroll.nvim'

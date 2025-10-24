@@ -133,6 +133,13 @@
         ]
     },
 
+    "refer appendix": {
+        "prefix": "appr",
+        "body": [
+            "Appendix \\ref{app:$1} $0"
+        ]
+    },
+
     "label": {
         "prefix": "lab",
         "body": [

@@ -16,6 +16,7 @@ bindsym {
     $mod+Shift+j move down  40px
     $mod+Shift+k move up    40px
     $mod+Shift+l move right 40px
+    $mod+c move position center
 }
 
 # resize window
@@ -42,7 +43,7 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+t floating toggle
 
-# toggle between floating and floating when cycling between windows
+# toggle between floating and tiling when cycling between windows
 bindsym $mod+y focus mode_toggle
 
 # focus the parent container
@@ -53,6 +54,8 @@ bindsym $mod+Shift+a focus child
 
 # kill focused window
 bindsym $mod+Shift+q kill
+# kill window with middle mouse button
+bindsym button2 kill
 
 # scratchpad
 bindsym $mod+s scratchpad show
@@ -64,19 +67,25 @@ bindsym $mod+Ctrl+s move scratchpad
 ##
 
 # Floating windows
-for_window [window_role="pop-up"]         floating enable # floating dialogs
-for_window [window_role="task_dialog"]    floating enable
-for_window [app_id="pavucontrol"]         floating enable
-for_window [app_id="blueman-manager"]     floating enable
-for_window [app_id="blueberry.py"]        floating enable
-for_window [app_id="floaterm"]            floating enable
-for_window [app_id="None"]                floating enable
-for_window [app_id="zoom"]                floating enable
-for_window [app_id="sclang"]              floating enable
-for_window [app_id="python3"]             floating enable
-for_window [app_id="zenity"]              floating enable
-for_window [app_id="wdisplays"]           floating enable
-for_window [class="nm-connection-editor"] floating enable
+for_window [window_role="pop-up"]           floating enable # floating dialogs
+for_window [window_role="task_dialog"]      floating enable
+for_window [app_id="pavucontrol"]           floating enable
+for_window [app_id="blueberry.py"]          floating enable
+for_window [app_id="floaterm"]              floating enable
+for_window [app_id="btop"]                  floating enable
+for_window [app_id="None"]                  floating enable
+for_window [app_id="zoom"]                  floating enable
+for_window [app_id="sclang"]                floating enable
+for_window [app_id="python3"]               floating enable
+for_window [app_id="zenity"]                floating enable
+for_window [app_id="wdisplays"]             floating enable
+for_window [app_id="scrcpy"]                floating enable
+for_window [class="nm-connection-editor"]   floating enable
+for_window [title="Extension.*Bitwarden.*"] floating enable
+# for_window [app_id="thunderbird" title="^$"] {
+#     floating enable
+#     move position 73ppt 73ppt
+# }
 
 # Annoying popups
 for_window [title=".*Indicatore condivisione"]     floating enable
@@ -92,18 +101,37 @@ for_window [title="^Picture-in-Picture$"] {
     resize set height 25ppt
     resize set width  25ppt
     move position 73ppt 73ppt
-    border none
+    border pixel 1
     sticky toggle
 }
 
 # Specific workspaces
-assign [app_id="firefox"]     $ws2
-assign [class="chromium"]     $ws2
-assign [app_id="thunderbird"] $ws4
+assign [app_id="firefox"]     $ws1
+assign [app_id="thunderbird"] $ws5
 assign [app_id="ferdium"]     $ws6
 
-for_window [app_id="firefox"]     focus
-for_window [app_id="thunderbird"] focus
+for_window [class="Joplin"] move to scratchpad
 
-# inhibit idle for firefox in fullscreen
+# inhibit idle for windows in fullscreen
 for_window [class=".*"] inhibit_idle fullscreen
+
+# Remove border from evince notes window
+for_window [app_id="org.gnome.Evince" title="Unknown"]  border pixel 1
+
+# Remove titlebar for some window
+for_window [app_id="ferdium"]     border pixel $border_width
+
+# Insert an icon for some specific windows
+for_window [app_id="org.gnome.Evince" title=".*\.pdf.*"]   title_format "   %title"
+for_window [app_id="org.gnome.Evince" title=".*\.djvu.*"]  title_format "   %title"
+for_window [app_id="org.gnome.Evince"]        title_format "   %title"
+for_window [app_id="zathura"]       title_format "   %title"
+for_window [app_id="firefox"]       title_format "    %title"
+for_window [app_id="footclient"]    title_format "    %title"
+for_window [app_id="floaterm"]      title_format "    %title"
+for_window [app_id="nemo"]          title_format "    %title"
+for_window [app_id="yazi"]          title_format "    %title"
+for_window [app_id="thunderbird"]   title_format "    %title"
+for_window [app_id="deadbeef"]      title_format "󰝚    %title"
+for_window [app_id="btop"]          title_format "    %title"
+for_window [app_id="pavucontrol"]   title_format "󰕾    %title"

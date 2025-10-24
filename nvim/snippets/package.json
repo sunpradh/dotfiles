@@ -6,19 +6,19 @@
     "contributes": {
         "snippets": [
             {
-                "language": "tex",
+                "language": ["tex", "markdown"],
                 "path": "./tex.json"
             },
             {
-                "language": "tex",
+                "language": ["tex", "markdown"],
                 "path": "./tex-math.json"
             },
             {
-                "language": "tex",
+                "language": ["tex", "markdown"],
                 "path": "./tex-env.json"
             },
             {
-                "language": "tex",
+                "language": ["tex", "markdown"],
                 "path": "./tex-greek.json"
             }
         ]

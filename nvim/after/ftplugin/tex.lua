@@ -40,8 +40,8 @@ nmap('<leader>of', 'zR') -- open
 nmap('<leader>cf', 'zM') -- close
 
 -- emph or textbf selection
-vmap('<leader>e', 'di<Space>\\emph{<C-R>"}<Esc>') -- emph
-vmap('<leader>b', 'di<Space>\\textbf{<C-R>"}<Esc>') -- textbf
+vmap('<leader>e', 'di\\emph{<C-R>"}<Esc>') -- emph
+vmap('<leader>b', 'di\\textbf{<C-R>"}<Esc>') -- textbf
 
 -- Surround selection with a columns env
 vmap('<leader>col', 'dO\\begin{columns}<CR>\\end{columns}<CR><ESC>kPko\\column{\\textwidth}<ESC>F{a')

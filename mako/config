@@ -1,9 +1,9 @@
 font=Inter 12
-background-color=#161616
-text-color=#dfdfe0
-border-color=#08bdba
+background-color=#242424
+text-color=#d0d0d0
+border-color=#d02020
 border-size=2
-border-radius=4
+border-radius=0
 width=500
 padding=10
 default-timeout=5000

@@ -10,12 +10,14 @@ vim.o.winbar = '%f %m %h'
 vim.o.laststatus = 3
 
 -- Terafox colorscheme
-require('nightfox').setup({
-    options = {
-        transparent = true
-    }
-})
-vim.cmd('colorscheme terafox')
+-- require('nightfox').setup({
+--     options = {
+--         transparent = true
+--     }
+-- })
+-- vim.cmd('colorscheme terafox')
+
+vim.cmd('colorscheme kanagawa-dragon')
 
 
 -- Tweak colorscheme
@@ -24,6 +26,8 @@ local function change_bg(higroups, ctermbg, guibg)
         vim.cmd("hi " .. group .. " ctermbg=" .. ctermbg .." guibg=" .. guibg)
     end
 end
+
+change_bg({'Normal', 'TelescopeBorder'}, 'none', 'none')
 
 change_bg(
     {'Cursorline', 'Folded', 'CursorLineNr'},

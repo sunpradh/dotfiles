@@ -27,5 +27,11 @@ source ${ZDOTDIR}/alias.zsh
 # Foot terminal integration
 source ${ZDOTDIR}/foot.zsh
 
+# yazi file manager integration
+source ${ZDOTDIR}/yazi.zsh
+
 # Conda
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+# OpenSSL issue with cryptography
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1

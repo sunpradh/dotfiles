@@ -30,29 +30,34 @@ map [normal] <A-f> exec "nemo '$FILE'"
 map [normal] <A-x> exec "xournalpp '$FILE'"
 
 # Open with Okular
-map [normal] <A-o> exec "okular '$FILE'"
+map [normal] <F12> exec "evince '$FILE'"
+map [normal] <A-o> feedkeys <F12>q
 
 # Change background
 map <F10> set "default-bg \"#ffffff\""
 map <F9>  set "default-bg \"#161616\""
 map <F8>  set "first-page-column 1:1"
+
 # Reading mode
 map [normal] <A-r> feedkeys <F9><F10><F11><C-n>da
 
+# Mouse back and forward keys
+map <Button9> jumplist forward
+map <Button8> jumplist backward
 
 #
 # Aestetic options
 #
-set font "Input Mono Condensed 10"
+set font "Input Mono Condensed Regular 14px"
 
 # colors inspired by the carbonfox theme
-set default-bg              "#161616"
+set default-bg              "#242424"
 set default-fg              "#f2f4f8"
 
-set statusbar-bg            "#161616"
+set statusbar-bg            "#303030"
 set statusbar-fg            "#f2f4f8"
 
-set inputbar-bg             "#161616"
+set inputbar-bg             "#242424"
 set inputbar-fg             "#f2f4f8"
 #
 set notification-bg         "#f2f4f8"
@@ -68,13 +73,13 @@ set highlight-color         "#08bdda"
 set highlight-active-color  "#25be6a"
 set highlight-transparency  0.8
 
-set completion-bg           "#161616"
+set completion-bg           "#303030"
 set completion-fg           "#f2f4f8"
 
 set completion-highlight-fg "#161616"
 set completion-highlight-bg "#25be6a"
 
-set recolor-lightcolor      "#161616"
+set recolor-lightcolor      "#242424"
 set recolor-darkcolor       "#f2f4f8"
 
 set recolor                 "false"

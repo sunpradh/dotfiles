@@ -1,23 +1,26 @@
 * {
-    bg:        #000000;
-    fg:        #dfdfe0;
-    selectbg:  #282828;
-    selectfg:  #f0f0f0;
+    bg:        #303030;
+    fg:        #a0a0a0;
+    selectbg:  #802020;
+    selectfg:  #d0d0d0;
 
-    background-color:       transparent;
-    text-color:             @fg;
+    background-color: transparent;
+    text-color:       @fg;
 
-    font: "Fira Code 11";
+    font: "Inter 12";
     padding: 2px 0px;
 }
 
 window {
-    /* background-color: @bg; */
-    background-color: rgba(0, 0, 0, 0.9);
-    location: north;
-    y-offset: -1px;
-    width: 100%;
+    location: center;
+    background-color: @bg;
+    /* y-offset: 5px; */
+    width: 50%;
     children: [ mainbox,message ];
+    padding: 10px;
+    border: 1px;
+    border-color: #d02020;
+    border-radius: 0px;
 }
 
 mainbox {
@@ -41,19 +44,23 @@ prompt, entry, element-text {
     vertical-align: 0.5;
 }
 
-#element {
+element {
     vertical-align: 0.5;
     spacing: 4px;
-    padding: 4px 24px;
+    padding: 4px 10px;
     margin: 0px 10px;
+    childer: [ element-text ];
 }
 
 element.selected {
     background-color: @selectbg;
-    border-radius: 3px;
+    border-radius: 0px;
+    border: 1px;
+    border-color: #d02020;
 }
 
 element-text.selected {
     background-color: transparent;
     text-color: @selectfg;
 }
+

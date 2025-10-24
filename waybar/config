@@ -1,27 +1,33 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 30,
+    "position": "bottom",
+    "height": 36,
     "modules-left": [
-        "sway/workspaces"
-    ],
-    "modules-center": [
-        "clock"
+        "sway/workspaces",
     ],
     "modules-right":  [
+        "mpris",
+        "sway/scratchpad",
         "battery#bat0",
         "pulseaudio",
+        "bluetooth",
         "sway/language",
+        "clock#date",
+        "clock#time",
         "tray",
         "idle_inhibitor"
         ],
+    "sway/scratchpad": {
+        "format": "<span color='#A0A0A0'>MIN</span> <b>{count}</b>"
+    },
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": false,
-        "format": " {name} "
+        "format": " <b>{name}</b> "
     },
     "sway/language": {
-        "format":   " {shortDescription}"
+        "format":   "<span color='#A0A0A0'>KBD</span> <span text_transform='uppercase'><b>{shortDescription}</b></span>",
+        "tooltip-format": "Keyboard layout: {long}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -30,21 +36,52 @@
             "deactivated": ""
         }
     },
+    "mpris": {
+        "format": "{player}",
+        "format-playing": "  <span text_transform='uppercase'>{title}</span>",
+        "format-paused":  "  <span text_transform='uppercase'>{title}</span>",
+        "format-stopped": "  <span text_transform='uppercase'>{title}</span>",
+        "tooltip": true,
+        "tooltip-format": "{dynamic}",
+        "dynamic-len": 60,
+        "title-len": 50
+    },
     "tray": {
         "icon-size": 24,
         "spacing": 6
     },
-    "clock": {
-        "interval":       5,
-        "format":         "{:%a %d %b  %H:%M}",
-        "tooltip-format": "<big><b>{:%Y %B}</b></big>\n<span font_desc='Input Mono Condensed, Condensed 10'>{calendar}</span>",
-        "format-alt":     "{:%A %d %B %Y}"
+    "clock#time": {
+        "interval":     1,
+        "format":       "<b>{:%H:%M}</b>",
+        "tooltip":      false,
+        "format-alt":   "<b>{:%H:%M:%S}</b>"
+    },
+    "clock#date": {
+        "interval":       20,
+        "format":         "<span text_transform='uppercase'>{:%a %d %b}</span>",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format-alt":     "<span text_transform='uppercase'>{:%A %d %B %Y}</span>",
+        "calendar": {
+            "mode"          : "month",
+            "on-scroll"     : -1,
+            "on-click-right": "mode",
+            "format": {
+                "months":     "<big>{}</big>",
+                "days":       "{}",
+                "weekdays":   "<b>{}</b>",
+                "today":      "<span color='#d02020'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
     "battery#bat0": {
         "bat":             "BAT0",
         "states":          { "warning": 30, "critical": 15 },
-        "format":          "{icon} {capacity}",
-        "format-charging": "\uf0e7 {capacity}",
+        "format":          "<span color='#A0A0A0'>BAT</span> <b>{capacity}</b>",
+        "format-charging": "<span color='#A0A0A0'>CHR</span> <b>{capacity}</b>",
         "format-plugged":  "",
         "format-alt":      "{icon} {time}",
         "format-full":     "",
@@ -52,10 +89,10 @@
     },
     "pulseaudio": {
         "scroll-step":            1,
-        "format":                 "{icon} {volume}",
-        "format-bluetooth":       "{icon} {volume} ",
-        "format-bluetooth-muted": "{icon}  ",
-        "format-muted":           "",
+        "format":                 "<span color='#A0A0A0'>VOL</span> <b>{volume}</b>",
+        "format-bluetooth":       "<span color='#A0A0A0'>VOL BT</span> <b>{volume}</b>",
+        "format-bluetooth-muted": "<span color='#A0A0A0'>MUTE BT</span>",
+        "format-muted":           "<span color='#A0A0A0'>MUTE</span>",
         "format-source":          "",
         "format-source-muted":    "",
         "format-icons":           {
@@ -64,10 +101,22 @@
             "headset":            "",
             "phone":              "",
             "portable":           "",
-            "car":                "",
             "default":            ["", "", ""]
         },
-        "on-click":               "pavucontrol"
+        "on-click":               "pavucontrol",
+        "on-click-right":         "set-volume toggle"
+    },
+    "bluetooth": {
+        "format-disabled":  "<span color='#A0A0A0'>BT OFF</span>",
+        "format-off":       "<span color='#A0A0A0'>BT</span> <b>OFF</b>",
+        "format-on":        "<span color='#A0A0A0'>BT</span> <b>ON</b>",
+        "format-connected": "<span color='#A0A0A0'>BT</span> <b>CON</b>",
+        "on-click":         "blueberry",
+        "on-click-right":   "toggle-bluetooth",
+        "tooltip":          true,
+        "tooltip-format":   "Bluetooth status: {status}",
+        "tooltip-format-connected":   "Connected devices: {num_connections}\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}"
     }
 }
 // vim: ft=jsonc

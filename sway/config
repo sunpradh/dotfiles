@@ -5,7 +5,7 @@
 include ./input
 include ./output
 include ./workspaces
+include ./theme
 include ./windows
 include ./keys
-include ./theme
 include ./startup

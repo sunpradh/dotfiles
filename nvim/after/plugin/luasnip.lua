@@ -71,43 +71,91 @@ local function tex_full_frac(trig_exp)
     )
 end
 
-
-ls.add_snippets("tex", {
-    -- TeX sectioning
-    tex_section("chapter", "chap"),
-    tex_section("section", "sec"),
-    tex_section("subsection", "sub"),
-    tex_section("subsubsection", "ssub"),
-    -- TeX fraction
+-- TeX fraction
+local fractions = {
     tex_partial_frac("%(([^%)]+)%)/"),
     tex_partial_frac("(%S+)/"),
     tex_full_frac("%(([^%)]+)%)/(%d+)"),
     tex_full_frac("(%d+)/%(([^%)]+)%)"),
     tex_full_frac("(%S+)/(%d+)"),
-}, {key = "tex_snippets"})
+}
+
+-- TeX sectioning
+local sections = {
+    -- TeX sectioning
+    tex_section("chapter", "chap"),
+    tex_section("section", "sec"),
+    tex_section("subsection", "sub"),
+    tex_section("subsubsection", "ssub"),
+}
+
+-- TeX superscripts and subscripts
+local scripts = {
+    s({trig="^^", wordTrig=false}, { t("^{"), i(1), t("}"), i(0) } ),
+    s({trig="__", wordTrig=false}, { t("_{"), i(1), t("}"), i(0) } ),
+    -- common TeX math superscripts
+    tex_auto_superscript("inv",  "-1"),
+    tex_auto_superscript("dag", "\\dagger"),
+    tex_auto_superscript("ast", "\\ast"),
+    tex_auto_superscript("pri", "\\prime"),
+}
+
+-- TeX accents
+local accents = {
+    -- TeX accents
+    tex_auto_surround('vec', 'vec'),
+    tex_auto_surround('til', 'tilde'),
+    tex_auto_surround('bar', 'overline'),
+    tex_auto_surround('hat', 'hat'),
+}
+
+-- TeX math fonts
+local mathfonts = {
+    -- TeX math fonts
+    tex_auto_surround('mcal', 'mathcal'),
+    tex_auto_surround('mbb',  'mathbb'),
+    tex_auto_surround('mrm',  'mathrm'),
+    tex_auto_surround('mbf',  'mathbf'),
+    tex_auto_surround('bm',   'bm'),
+    tex_auto_surround('msf',  'mathsf'),
+    tex_auto_surround('mtt',  'text'),
+}
+
+-- For .tex files
+ls.add_snippets("tex", fractions, {key = "tex_fractions"})
+ls.add_snippets("tex", sections,  {key = "tex_sections"})
+ls.add_snippets("tex", scripts,   {type = "autosnippets", key = "tex_scripts"})
+ls.add_snippets("tex", accents,   {type = "autosnippets", key = "tex_accents"})
+ls.add_snippets("tex", mathfonts, {type = "autosnippets", key = "tex_mathfonts"})
+
+-- For .md files
+ls.add_snippets("markdown", fractions, {key = "md_fractions"})
+ls.add_snippets("markdown", scripts,   {type = "autosnippets", key = "md_scripts"})
+ls.add_snippets("markdown", accents,   {type = "autosnippets", key = "md_accents"})
+ls.add_snippets("markdown", mathfonts, {type = "autosnippets", key = "md_mathfonts"})
 
 
-ls.add_snippets("tex", {
-        s({trig="^^", wordTrig=false}, { t("^{"), i(1), t("}"), i(0) } ),
-        s({trig="__", wordTrig=false}, { t("_{"), i(1), t("}"), i(0) } ),
-        -- common TeX math superscripts
-        tex_auto_superscript("inv",  "-1"),
-        tex_auto_superscript("dag", "\\dagger"),
-        tex_auto_superscript("ast", "\\ast"),
-        tex_auto_superscript("pri", "\\prime"),
-        -- TeX accents
-        tex_auto_surround('vec', 'vec'),
-        tex_auto_surround('til', 'tilde'),
-        tex_auto_surround('bar', 'overline'),
-        tex_auto_surround('hat', 'hat'),
-        -- TeX math fonts
-        tex_auto_surround('mcal', 'mathcal'),
-        tex_auto_surround('mbb',  'mathbb'),
-        tex_auto_surround('mrm',  'mathrm'),
-        tex_auto_surround('mbf',  'mathbf'),
-        tex_auto_surround('bm',   'bm'),
-        tex_auto_surround('msf',  'mathsf'),
-        tex_auto_surround('mtt',  'text'),
-}, {type = "autosnippets", key = "tex_autosnippets"})
+-- ls.add_snippets("tex", {
+--         s({trig="^^", wordTrig=false}, { t("^{"), i(1), t("}"), i(0) } ),
+--         s({trig="__", wordTrig=false}, { t("_{"), i(1), t("}"), i(0) } ),
+--         -- common TeX math superscripts
+--         tex_auto_superscript("inv",  "-1"),
+--         tex_auto_superscript("dag", "\\dagger"),
+--         tex_auto_superscript("ast", "\\ast"),
+--         tex_auto_superscript("pri", "\\prime"),
+--         -- TeX accents
+--         tex_auto_surround('vec', 'vec'),
+--         tex_auto_surround('til', 'tilde'),
+--         tex_auto_surround('bar', 'overline'),
+--         tex_auto_surround('hat', 'hat'),
+--         -- TeX math fonts
+--         tex_auto_surround('mcal', 'mathcal'),
+--         tex_auto_surround('mbb',  'mathbb'),
+--         tex_auto_surround('mrm',  'mathrm'),
+--         tex_auto_surround('mbf',  'mathbf'),
+--         tex_auto_surround('bm',   'bm'),
+--         tex_auto_surround('msf',  'mathsf'),
+--         tex_auto_surround('mtt',  'text'),
+-- }, {type = "autosnippets", key = "tex_autosnippets"})
 
 require('luasnip.loaders.from_vscode').lazy_load({ paths = {'./snippets/'} })

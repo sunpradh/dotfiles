@@ -7,7 +7,7 @@
     text-color: @fg;
     background-color: transparent;
 
-    font: "Fira Code 24";
+    font: "Inter Light 32";
 }
 
 window {

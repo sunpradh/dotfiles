@@ -1,0 +1,67 @@
+* {
+    bg:        #303030;
+    fg:        #d0d0d0;
+    selectbg:  #d02020;
+    selectfg:  #f2f4f6;
+
+    background-color:       transparent;
+    text-color:             @fg;
+
+    font: "Inter 12";
+    padding: 2px 0px;
+}
+
+window {
+    location: north;
+    background-color: @bg;
+    y-offset: 5px;
+    width: 25%;
+    children: [ mainbox,message ];
+    padding: 10px;
+    border: 1px;
+    border-color: #252525;
+    border-radius: 5px;
+}
+
+mainbox {
+    orientation: vertical;
+    children: [ inputbar,listview ];
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 1px 8px;
+    width: 15%;
+    children: [ prompt,entry ];
+}
+
+listview {
+    layout: vertical;
+    spacing: 10px;
+}
+
+prompt, entry, element-text {
+    padding: 4px 4px;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    vertical-align: 0.5;
+    padding: 0px 0px 0px 8px;
+}
+
+element {
+    vertical-align: 0.5;
+    spacing: 4px;
+    padding: 2px;
+}
+
+element.selected {
+    background-color: @selectbg;
+    border-radius: 3px;
+}
+
+element-text.selected {
+    background-color: transparent;
+    text-color: @selectfg;
+}

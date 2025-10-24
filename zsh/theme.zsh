@@ -18,7 +18,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 setopt prompt_subst
 
 # Prompt
-PROMPT="%{$fg[black]$bg[blue]%} %(4~|%-1~/.../%2~|%~)%u %B%(?.%{$bg[blue]%}.%{$bg[red]%}) $ %{$reset_color%}%b "
+PROMPT="%{$fg[black]$bg[green]%} %(4~|%-1~/.../%2~|%~)%u %B%(?.%{$bg[green]%}.%{$bg[red]%}) $ %{$reset_color%}%b "
 
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m' # start bold text

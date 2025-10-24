@@ -1,0 +1,27 @@
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "ee465a5"
+hash = ""
+
+[[plugin.deps]]
+use = "AnirudhG07/nbpreview"
+rev = "2d24602"
+hash = ""
+
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "df97039"
+hash = "bb07fb590b985d309f605c69abe3daea"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "60b24af"
+hash = "ee025be766240cc98e671754ac836da3"
+
+[[plugin.deps]]
+use = "Sonico98/exifaudio"
+rev = "d794614"
+hash = "a8e15d3c21c02a5af41d46ed04778a02"
+
+[flavor]
+deps = []

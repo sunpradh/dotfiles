@@ -40,15 +40,16 @@ vim.g.vimtex_quickfix_ignore_filters = {
     'packages',
     'float',
     'Font Warning',
-    'OpenType feature'
+    'OpenType feature',
+    'nullfont'
 }
 
 -- insert maps (using luasnip instead)
 vim.g.vimtex_imaps_enabled = 0
 
 -- indent and syntax highlighting (using treesitter instead)
-vim.g.vimtex_indent_enabled = 1
-vim.g.vimtex_syntax_enabled = 1
+vim.g.vimtex_indent_enabled = 0
+vim.g.vimtex_syntax_enabled = 0
 
 -- enable completion
-vim.g.vimtex_complete_enabled = 1
+vim.g.vimtex_complete_enabled = 0

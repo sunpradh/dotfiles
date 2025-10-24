@@ -4,41 +4,43 @@
 
 # Default terminal
 set $term footclient
-set $floaterm footclient --app-id=floaterm -W 110x35
 
-# start a terminal
-bindsym $mod+Return exec $term
-
-# start a program launcher
-bindsym $mod+d exec rofi-drun
-
-# search for files
-bindsym $mod+f exec rofi-files
-
-# recent files
-bindsym $mod+r exec rofi-recent
-
-# window switcher
-bindsym $alt+Tab exec rofi-windows
+# Terminal applications
+set $floaterm footclient --app-id=floaterm -o colors.background=2d2d2d -W 90x24
+set $yazi     footclient --app-id=yazi --title=Yazi yazi
+set $btop     footclient --app-id=btop --title=btop -W 120x40 btop
 
 # Applications
 bindsym {
-    $mod+Shift+w exec firefox          # browser
-    $mod+Shift+f exec $term yazi       # TUI file manager
-    $mod+Shift+x exec nemo             # GUI file manager
-    $mod+Shift+e exec thunderbird      # email client
-    $mod+Shift+p exec ferdium-wayland  # messaging
-    $mod+Shift+v exec pavucontrol      # volume control
-    $mod+Shift+b exec blueberry        # bluetooth control
-    $mod+Shift+m exec $floaterm btop   # system monitor
-    $mod+Shift+n exec $floaterm nmtui  # network manager
+    $mod+Return       exec $term             # Terminal
+    $mod+d            exec rofi-drun         # Desktop application launcher
+    $mod+f            exec rofi-files        # Search file
+    $mod+r            exec rofi-recent       # Search recent files
+    $alt+Tab          exec rofi-windows      # Window switcher
+    $mod+Shift+w      exec firefox           # Browser
+    $mod+Shift+f      exec $yazi             # TUI file manager
+    $mod+Shift+x      exec nemo              # GUI file manager
+    $mod+Shift+e      exec thunderbird       # email client
+    $mod+Shift+p      exec ferdium-wayland   # messaging
+    $mod+Shift+v      exec pavucontrol       # volume control
+    $mod+Shift+b      exec blueberry         # bluetooth control
+    $mod+Shift+m      exec $btop             # system monitor
+    $mod+Shift+d      exec deadbeef          # system monitor
+    $mod+Shift+Return exec $floaterm         # network manager
 }
 
 # Lockscreen
 bindsym $mod+Backspace exec swaylock
 
-# Volume control
-bindsym {
+# Volume and playback control
+# Keyboard with rotating dial
+bindsym --input-device=1452:591:HS6209_USB_Dongle --release {
+    XF86AudioRaiseVolume exec set-volume smallup
+    XF86AudioLowerVolume exec set-volume smalldown
+    XF86AudioMute	 exec playerctl play-pause
+}
+# Laptop keyboard
+bindsym --input-device=1:1:AT_Translated_Set_2_keyboard {
     XF86AudioRaiseVolume exec set-volume up
     XF86AudioLowerVolume exec set-volume down
     XF86AudioMute	 exec set-volume toggle
@@ -47,7 +49,7 @@ bindsym {
 # Playback control
 bindsym {
     XF86AudioPlay  exec playerctl play-pause
-    $mod+p         exec playerctl play-pause
+    $mod+period    exec playerctl play-pause
     XF86AudioNext  exec playerctl next
     XF86AudioPrev  exec playerctl previous
 }
@@ -61,6 +63,7 @@ bindsym {
 
 # Screenshot
 bindsym Print exec --no-startup-id sway-screenshot
+bindsym $mod+Shift+g exec --no-startup-id quick-grab
 
 # Shutdown dialog
 bindsym $mod+Shift+Backspace exec rofi-logout
@@ -69,7 +72,8 @@ bindsym $mod+Shift+Backspace exec rofi-logout
 bindsym $mod+Ctrl+r reload
 
 # Toggle gaps
-bindsym $mod+b gaps inner all toggle 10
+bindsym $mod+Ctrl+g gaps inner all toggle 10
 
 # Toggle title bar
-bindsym $mod+Ctrl+t border toggle 5
+bindsym $mod+b border toggle $border_width
+

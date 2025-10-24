@@ -20,11 +20,23 @@ exec "systemctl --user import-environment"
 # overlay for volume/brightness
 exec start-wob
 
+# Polkit agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # Dropbox
 exec dropbox
 
-# bluetooth
-# done bia waybar applet
+# wlsunset
+exec "wlsunset -l 43.15 -L -2.55 -t 4500" # Bilbao
 
 # mako notification daemon
 # activated via systemd
+
+# Firefox
+exec firefox
+
+# Thunderbird
+exec thunderbird
+
+# Joplin
+exec joplin

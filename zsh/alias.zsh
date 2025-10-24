@@ -49,17 +49,13 @@ alias coa='conda activate'
 alias cod='conda deactivate'
 alias quspin='conda activate quspin'
 
-# Remote file systems
-alias tp1="ssh theophys01"
-alias tp2="ssh theophys02"
-alias mount-lnxbo="sshfs lnxbo: ~/remote/lnxbo/"
-alias mount-tp1="sshfs theophys01: ~/remote/theophys01/"
-alias mount-tp2="sshfs theophys02: ~/remote/theophys02/"
-alias unmount-lnxbo="fusermount3 -u ~/remote/lnxbo/"
-alias unmount-tp1="fusermount3 -u ~/remote/theophys01/"
-alias unmount-tp2="fusermount3 -u ~/remote/theophys02/"
-alias lazy-unmount-lnxbo="fusermount -zu ~/remote/lnxbo/"
-alias lazy-unmount-tp1="fusermount -zu ~/remote/theophys01/"
-alias lazy-unmount-tp2="fusermount -zu ~/remote/theophys02/"
+# Backup
+alias backup="rsync -aP --delete * .* --exclude 'video' --exclude '.conda' --exclude '.cache' --exclude '.local/share/Steam' --exclude 'music' --exclude '.local/share/Trash' --exclude 'downloads/torrents/' /run/media/sunny/SunDATA_1/backup/landau/"
 
-alias backup="rsync -aP --delete * .* --exclude '.cache' --exclude '.local/share/Steam' --exclude 'music' --exclude '.local/share/Trash' /run/media/sunny/SunDATA_1/backup/heisenberg/"
+# Cast from android device
+#   require 'scrcpy'
+#   USB debugging necessary
+alias android-cast='scrcpy --video-codec=h265 --max-fps=60 --no-audio -K'
+# alias android-cast='scrcpy --video-codec=h265 -m1920 --max-fps=60 --no-audio -K'
+
+alias albumart="get_cover_art --path . --art-dest-inline --art-dest-filename cover.jpg"

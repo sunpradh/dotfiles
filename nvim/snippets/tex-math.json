@@ -96,11 +96,11 @@
         "body": [ "\\iff" ]
     },
     "Infinity": {
-        "prefix": "8",
+        "prefix": "inf",
         "body": [ "\\infty" ]
     },
     "Partial": {
-        "prefix": "6",
+        "prefix": "part",
         "body": [ "\\partial" ]
     },
     "circ": {

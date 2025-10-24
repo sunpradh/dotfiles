@@ -4,25 +4,25 @@
 # original: https://github.com/yschaeff/sway_screenshots
 
 # Menu command
-MENU="rofi -dmenu -p screenshot -theme $HOME/.config/rofi/oneline.rasi"
+MENU="rofi -dmenu -p screenshot -show-icons -theme ~/.config/rofi/small-dropdown.rasi"
 
 NOTIFY=$(pidof mako || pidof dunst)
 
-fullscreen=" current screen"
-focused=" current window"
-region=" select area"
-window=" select window"
-output=" select screen"
+fullscreen="current screen\x00icon\x1fuser-desktop"
+focused="current window\x00icon\x1fzoom-fit-best"
+region="select area\x00icon\x1fedit-select-all"
+window="select window\x00icon\x1fwindow-new"
+output="select screen\x00icon\x1fvideo-display"
 
-OPTIONS="${fullscreen}\n${focused}\n${region}\n${window}\n${output}"
-CHOICE=$(echo -e $OPTIONS | $MENU)
+options="${fullscreen}\n${focused}\n${region}\n${window}\n${output}"
+choice=$(echo -e $options | $MENU)
 
 
 FOCUSED=$(swaymsg -t get_tree | jq '.. | ((.nodes? + .floating_nodes?) // empty) | .[] | select(.focused and .pid) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 OUTPUTS=$(swaymsg -t get_outputs | jq -r '.[] | select(.active) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 WINDOWS=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 
-echo $CHOICE
+# echo $choice
 
 # Create screenshot directory if not present
 mkdir -p $(xdg-user-dir PICTURES)/screenshots/
@@ -30,29 +30,23 @@ mkdir -p $(xdg-user-dir PICTURES)/screenshots/
 #
 FILENAME="$(xdg-user-dir PICTURES)/screenshots/$(date +'%Y-%m-%d-%H%M%S_screenshot.png')"
 
-if [ "$CHOICE" = "$fullscreen" ]
-then
+if [ "$choice" = "current screen" ]; then
     grim "$FILENAME"
-elif [ "$CHOICE" = "$region" ]
-then
+elif [ "$choice" = "select area" ]; then
     slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = "$output" ]
-then
+elif [ "$choice" = "select screen" ]; then
     echo "$OUTPUTS" | slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = "$window" ]
-then
+elif [ "$choice" = "select window" ]; then
     echo "$WINDOWS" | slurp | grim -g - "$FILENAME"
-elif [ "$CHOICE" = "$focused" ]
-then
+elif [ "$choice" = "current window" ]; then
     grim -g "$(eval echo $FOCUSED)" "$FILENAME"
-elif [ -z "$CHOICE" ]
-then
+elif [ -z "$choice" ]; then
     if [ $NOTIFY ]; then
         notify-send "Screenshot" "Cancelled" -t 1000
     fi
     exit 0
 else
-    grim -g "$(eval echo $CHOICE)" "$FILENAME"
+    grim -g "$(eval echo $choice)" "$FILENAME"
 fi
 
 wl-copy < $FILENAME
