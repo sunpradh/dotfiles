@@ -1,6 +1,7 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+#:schema https://yazi-rs.github.io/schemas/yazi.json
 
 [mgr]
 ratio          = [ 1, 4, 3 ]
@@ -48,14 +49,14 @@ office = [
 
 [open]
 rules = [
-    { name = "*/", use = [ "edit", "open", "reveal" ] },
-    { name = "*.docx", use = [ "office", "open", "reveal" ] },
-    { name = "*.doc",  use = [ "office", "open", "reveal" ] },
-    { name = "*.pptx", use = [ "office", "open", "reveal" ] },
-    { name = "*.ppt",  use = [ "office", "open", "reveal" ] },
-    { name = "*.xlsx", use = [ "office", "open", "reveal" ] },
-    { name = "*.xls",  use = [ "office", "open", "reveal" ] },
-    { name = "*.rtf",  use = [ "office", "open", "reveal" ] },
+    { url = "*/", use = [ "edit", "open", "reveal" ] },
+    { url = "*.docx", use = [ "office", "open", "reveal" ] },
+    { url = "*.doc",  use = [ "office", "open", "reveal" ] },
+    { url = "*.pptx", use = [ "office", "open", "reveal" ] },
+    { url = "*.ppt",  use = [ "office", "open", "reveal" ] },
+    { url = "*.xlsx", use = [ "office", "open", "reveal" ] },
+    { url = "*.xls",  use = [ "office", "open", "reveal" ] },
+    { url = "*.rtf",  use = [ "office", "open", "reveal" ] },
 
     { mime = "text/*",  use = [ "edit", "reveal" ] },
     { mime = "image/*", use = [ "open", "reveal" ] },
@@ -89,9 +90,9 @@ suppress_preload = false
 [plugin]
 fetchers = [
     # Mimetype
-    { id = "mime", url = "*/",         run = "mime.dir", prio = "high" },
-    { id = "mime", url = "local://*",  run = "mime.local", prio = "high" },
-    { id = "mime", url = "remote://*", run = "mime.remote", prio = "high" },
+    { id = "mime", url = "*/",         run = "mime.dir",    prio = "high", group = "mime" },
+    { id = "mime", url = "local://*",  run = "mime.local",  prio = "high", group = "mime" },
+    { id = "mime", url = "remote://*", run = "mime.remote", prio = "high", group = "mime" },
 ]
 # # spotters = [
 # #         { url = "*/", run = "folder" },

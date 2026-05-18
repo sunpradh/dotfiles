@@ -1,32 +1,32 @@
 [[plugin.deps]]
 use = "AnirudhG07/rich-preview"
-rev = "ee465a5"
-hash = ""
+rev = "7d616ad"
+hash = "d64feec9761392cbc250d199ab4b8a3a"
 
 [[plugin.deps]]
 use = "AnirudhG07/nbpreview"
-rev = "2d24602"
-hash = ""
+rev = "b504594"
+hash = "b83919985400521dee78e1c352b5d9db"
 
 [[plugin.deps]]
 use = "dedukun/relative-motions"
-rev = "df97039"
-hash = "bb07fb590b985d309f605c69abe3daea"
+rev = "a603d9e"
+hash = "e02a788e5b8ae0fb47fd0193dda589cc"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "60b24af"
-hash = "ee025be766240cc98e671754ac836da3"
+rev = "e60e122"
+hash = "fbaf0adc8efc59555b748d36aab62d40"
 
 [[plugin.deps]]
 use = "Sonico98/exifaudio"
-rev = "d794614"
-hash = "a8e15d3c21c02a5af41d46ed04778a02"
+rev = "4506f9d"
+hash = "4761fffb60a12d37096c34a356380cdf"
 
 [[plugin.deps]]
 use = "Ape/smart-enter"
-rev = "eff8665"
-hash = "dfe8be84be3a3d5d42c38d0a6d74f206"
+rev = "778839f"
+hash = "7429078f60e02543c8b7b9213c2b22d3"
 
 [flavor]
 deps = []
