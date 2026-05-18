@@ -24,7 +24,7 @@ exec start-wob
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Dropbox
-exec dropbox
+# exec dropbox
 
 # wlsunset
 exec "wlsunset -l 43.15 -L -2.55 -t 4500" # Bilbao

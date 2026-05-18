@@ -49,8 +49,8 @@ client.urgent           $brightred $brightred $bg        $brightred $bg
 ## Use nwg-look
 
 # Wallpaper
-# output "*" bg ~/.wallpaper fill
-output "*" bg #7C98B3 solid_color
+output "*" bg ~/.wallpaper fill
+# output "*" bg #7C98B3 solid_color
 
 # Use waybar instead of swaybar
 bar {

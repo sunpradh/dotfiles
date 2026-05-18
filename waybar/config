@@ -111,7 +111,7 @@
         "format-off":       "<span color='#A0A0A0'>BT</span> <b>OFF</b>",
         "format-on":        "<span color='#A0A0A0'>BT</span> <b>ON</b>",
         "format-connected": "<span color='#A0A0A0'>BT</span> <b>CON</b>",
-        "on-click":         "blueberry",
+        "on-click":         "footclient --app-id=bluetui --title=Bluetooth -W 80x24 bluetui",
         "on-click-right":   "toggle-bluetooth",
         "tooltip":          true,
         "tooltip-format":   "Bluetooth status: {status}",

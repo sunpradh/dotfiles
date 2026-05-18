@@ -36,7 +36,7 @@ NO_AT_BRIDGE=1
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
     # Enable QT applications to use Wayland, allow also X11 as a fallback
     export QT_QPA_PLATFORM="wayland"
-    # Enable Wayland on Firefox
+    # Firefox on Wayland
     export MOZ_ENABLE_WAYLAND=1
     export TERMCMD=foot
     # Force the detection of Wayland (just to be sure)

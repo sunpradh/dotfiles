@@ -102,7 +102,7 @@ lsp("texlab", {
     settings = {
         texlab = {
             diagnostics = {
-                ignoredPatterns = {"[Oo]verfull.*", "[Uu]nderfull.*"}
+                ignoredPatterns = {"[Oo]verfull.*", "[Uu]nderfull.*", ".*Token not allowed in a PDF string.*"}
             }
         }
     }

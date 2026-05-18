@@ -23,5 +23,10 @@ use = "Sonico98/exifaudio"
 rev = "d794614"
 hash = "a8e15d3c21c02a5af41d46ed04778a02"
 
+[[plugin.deps]]
+use = "Ape/smart-enter"
+rev = "eff8665"
+hash = "dfe8be84be3a3d5d42c38d0a6d74f206"
+
 [flavor]
 deps = []

@@ -59,3 +59,6 @@ alias android-cast='scrcpy --video-codec=h265 --max-fps=60 --no-audio -K'
 # alias android-cast='scrcpy --video-codec=h265 -m1920 --max-fps=60 --no-audio -K'
 
 alias albumart="get_cover_art --path . --art-dest-inline --art-dest-filename cover.jpg"
+
+# Python virtual environments
+alias quspin-activate="source ~/.local/python_envs/quspin/bin/activate"

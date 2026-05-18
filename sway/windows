@@ -70,9 +70,9 @@ bindsym $mod+Ctrl+s move scratchpad
 for_window [window_role="pop-up"]           floating enable # floating dialogs
 for_window [window_role="task_dialog"]      floating enable
 for_window [app_id="pavucontrol"]           floating enable
-for_window [app_id="blueberry.py"]          floating enable
 for_window [app_id="floaterm"]              floating enable
 for_window [app_id="btop"]                  floating enable
+for_window [app_id="bluetui"]               floating enable
 for_window [app_id="None"]                  floating enable
 for_window [app_id="zoom"]                  floating enable
 for_window [app_id="sclang"]                floating enable
@@ -80,12 +80,8 @@ for_window [app_id="python3"]               floating enable
 for_window [app_id="zenity"]                floating enable
 for_window [app_id="wdisplays"]             floating enable
 for_window [app_id="scrcpy"]                floating enable
-for_window [class="nm-connection-editor"]   floating enable
+for_window [app_id="nm-connection-editor"]   floating enable
 for_window [title="Extension.*Bitwarden.*"] floating enable
-# for_window [app_id="thunderbird" title="^$"] {
-#     floating enable
-#     move position 73ppt 73ppt
-# }
 
 # Annoying popups
 for_window [title=".*Indicatore condivisione"]     floating enable
@@ -107,10 +103,15 @@ for_window [title="^Picture-in-Picture$"] {
 
 # Specific workspaces
 assign [app_id="firefox"]     $ws1
-assign [app_id="thunderbird"] $ws5
-assign [app_id="ferdium"]     $ws6
+assign [app_id="org.mozilla.Thunderbird"] $ws5
 
-for_window [class="Joplin"] move to scratchpad
+# Joplin
+for_window [app_id="@joplin/app-desktop"] {
+    resize set height 40ppt
+    resize set width  50ppt
+    move to scratchpad
+    title_format "    %title"
+}
 
 # inhibit idle for windows in fullscreen
 for_window [class=".*"] inhibit_idle fullscreen
@@ -118,20 +119,18 @@ for_window [class=".*"] inhibit_idle fullscreen
 # Remove border from evince notes window
 for_window [app_id="org.gnome.Evince" title="Unknown"]  border pixel 1
 
-# Remove titlebar for some window
-for_window [app_id="ferdium"]     border pixel $border_width
-
 # Insert an icon for some specific windows
-for_window [app_id="org.gnome.Evince" title=".*\.pdf.*"]   title_format "   %title"
-for_window [app_id="org.gnome.Evince" title=".*\.djvu.*"]  title_format "   %title"
-for_window [app_id="org.gnome.Evince"]        title_format "   %title"
+for_window [app_id="org.gnome.Evince" title=".*\.pdf.*"]    title_format "   %title"
+for_window [app_id="org.gnome.Evince" title=".*\.djvu.*"]   title_format "   %title"
+for_window [app_id="org.gnome.Evince"]                      title_format "   %title"
 for_window [app_id="zathura"]       title_format "   %title"
 for_window [app_id="firefox"]       title_format "    %title"
 for_window [app_id="footclient"]    title_format "    %title"
 for_window [app_id="floaterm"]      title_format "    %title"
 for_window [app_id="nemo"]          title_format "    %title"
 for_window [app_id="yazi"]          title_format "    %title"
-for_window [app_id="thunderbird"]   title_format "    %title"
+for_window [app_id="org.mozilla.Thunderbird"]   title_format "    %title"
 for_window [app_id="deadbeef"]      title_format "󰝚    %title"
 for_window [app_id="btop"]          title_format "    %title"
+for_window [app_id="bluetui"]       title_format "    %title"
 for_window [app_id="pavucontrol"]   title_format "󰕾    %title"

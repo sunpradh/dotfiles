@@ -38,11 +38,12 @@ extract = [
     { run = 'aunpack "$1"', desc = "Extract here", for = "unix" },
 ]
 play = [
-    { run = 'haruna "$@"', orphan = true, for = "unix" },
+    { run = 'mpv "$@"', orphan = true, for = "unix" },
     { run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info", for = "unix" },
 ]
 office = [
-    { run = 'org.onlyoffice.desktopeditors "$0"', desc = "Open in Onlyoffice", orphan = true, for = "unix"}
+    # { run = 'org.onlyoffice.desktopeditors "$0"', desc = "Open in Onlyoffice", orphan = true, for = "unix"}
+    { run = 'loffice "$0"', desc = "Open in Onlyoffice", orphan = true, for = "unix"}
 ]
 
 [open]
@@ -86,6 +87,30 @@ image_bound      = [ 0, 0 ]
 suppress_preload = false
 
 [plugin]
+fetchers = [
+    # Mimetype
+    { id = "mime", url = "*/",         run = "mime.dir", prio = "high" },
+    { id = "mime", url = "local://*",  run = "mime.local", prio = "high" },
+    { id = "mime", url = "remote://*", run = "mime.remote", prio = "high" },
+]
+# # spotters = [
+# #         { url = "*/", run = "folder" },
+# #         # Code
+# #         { mime = "text/*", run = "code" },
+# #         { mime = "application/{mbox,javascript,wine-extension-ini}", run = "code" },
+# #         # Image
+# #         { mime = "image/{avif,hei?,jxl}", run = "magick" },
+# #         { mime = "image/svg+xml", run = "svg" },
+# #         { mime = "image/*", run = "image" },
+# #         # Video
+# #         { mime = "video/*", run = "video" },
+# #         # Virtual file system
+# #         { mime = "vfs/*", run = "vfs" },
+# #         # Error
+# #         { mime = "null/*", run = "null" },
+# #         # Fallback
+# #         { url = "*", run = "file" },
+# # ]
 prepend_previewers = [
     # { mime = "{image,audio,video}/*", run = "mediainfo"},
     { mime = "audio/*",   run = "exifaudio"},
@@ -94,7 +119,6 @@ prepend_previewers = [
     { mime = "video/*",   run = "mediainfo"},
     { mime = "application/subrip", run = "mediainfo"},
 ]
-
 preloaders = [
     # { name = "*", cond = "!mime", run = "mime", multi = true, prio = "high" },
     # Image
@@ -104,35 +128,35 @@ preloaders = [
     { mime = "video/*", run = "video" },
     # PDF
     { mime = "application/pdf", run = "pdf" },
-    ]
-    previewers = [
-    { name = "*/", run = "folder", sync = true },
-    # Code
-    { mime = "text/*",                 run = "code" },
-    { mime = "*/xml",                  run = "code" },
-    { mime = "*/javascript",           run = "code" },
-    { mime = "*/x-wine-extension-ini", run = "code" },
-    # JSON
-    { mime = "application/json", run = "json" },
-    # Image
-    { mime = "image/vnd.djvu", run = "noop" },
-    { mime = "image/*",        run = "image" },
-    # Video
-    { mime = "video/*", run = "video" },
-    # PDF
-    { mime = "application/pdf", run = "pdf" },
-    # Archive
-    { mime = "application/zip",             run = "archive" },
-    { mime = "application/gzip",            run = "archive" },
-    { mime = "application/x-tar",           run = "archive" },
-    { mime = "application/x-bzip",          run = "archive" },
-    { mime = "application/x-bzip2",         run = "archive" },
-    { mime = "application/x-7z-compressed", run = "archive" },
-    { mime = "application/x-rar",           run = "archive" },
-    { mime = "application/xz",              run = "archive" },
-    # Fallback
-    { name = "*", run = "file" },
 ]
+# previewers = [
+#     { name = "*/", run = "folder"},
+#     # Code
+#     { mime = "text/*",                 run = "code" },
+#     { mime = "*/xml",                  run = "code" },
+#     { mime = "*/javascript",           run = "code" },
+#     { mime = "*/x-wine-extension-ini", run = "code" },
+#     # JSON
+#     { mime = "application/json", run = "json" },
+#     # Image
+#     { mime = "image/vnd.djvu", run = "noop" },
+#     { mime = "image/*",        run = "image" },
+#     # Video
+#     { mime = "video/*", run = "video" },
+#     # PDF
+#     { mime = "application/pdf", run = "pdf" },
+#     # Archive
+#     { mime = "application/zip",             run = "archive" },
+#     { mime = "application/gzip",            run = "archive" },
+#     { mime = "application/x-tar",           run = "archive" },
+#     { mime = "application/x-bzip",          run = "archive" },
+#     { mime = "application/x-bzip2",         run = "archive" },
+#     { mime = "application/x-7z-compressed", run = "archive" },
+#     { mime = "application/x-rar",           run = "archive" },
+#     { mime = "application/xz",              run = "archive" },
+#     # Fallback
+#     { name = "*", run = "file" },
+# ]
 
 
 [input]

@@ -41,7 +41,8 @@ vim.g.vimtex_quickfix_ignore_filters = {
     'float',
     'Font Warning',
     'OpenType feature',
-    'nullfont'
+    'nullfont',
+    'Token not allowed in a PDF string'
 }
 
 -- insert maps (using luasnip instead)

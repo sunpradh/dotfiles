@@ -6,9 +6,10 @@
 set $term footclient
 
 # Terminal applications
-set $floaterm footclient --app-id=floaterm -o colors.background=2d2d2d -W 90x24
+set $floaterm footclient --app-id=floaterm -o colors-dark.background=2d2d2d -W 90x24
 set $yazi     footclient --app-id=yazi --title=Yazi yazi
-set $btop     footclient --app-id=btop --title=btop -W 120x40 btop
+set $btop     footclient --app-id=btop --title="System Monitor (btop)" -W 120x40 btop
+set $bluetui  footclient --app-id=bluetui --title="Bluetooth" -W 80x24 bluetui
 
 # Applications
 bindsym {
@@ -23,7 +24,7 @@ bindsym {
     $mod+Shift+e      exec thunderbird       # email client
     $mod+Shift+p      exec ferdium-wayland   # messaging
     $mod+Shift+v      exec pavucontrol       # volume control
-    $mod+Shift+b      exec blueberry         # bluetooth control
+    $mod+Shift+b      exec $bluetui          # bluetooth control
     $mod+Shift+m      exec $btop             # system monitor
     $mod+Shift+d      exec deadbeef          # system monitor
     $mod+Shift+Return exec $floaterm         # network manager

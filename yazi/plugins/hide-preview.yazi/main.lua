@@ -17,7 +17,7 @@ local function entry(st)
                 :split(self._area)
         end
     end
-    ya.app_emit("resize", {})
+    ya.emit("resize", {})
 end
 
 local function enabled(st) return st.old ~= nil end
