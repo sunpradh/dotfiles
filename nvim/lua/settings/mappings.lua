@@ -53,9 +53,6 @@ vmap('>', '>gv')
 -- Replace the word under cursor globally in the buffer
 nmap('<leader>rw', '<cmd>%s/\\<<C-r><C-w>\\>//g<Left><Left>')
 
--- EasyAlign
-nxmap('ga', '<Plug>(EasyAlign)')
-
 -- Fix jump forward
 nmap('<C-i>', '<C-S-i>')
 

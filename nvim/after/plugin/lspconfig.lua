@@ -9,8 +9,11 @@ local keymap = require('settings.keymap')
 
 local nmap = keymap.nnoremap
 -- move cursor to the next and previous diagnostics
-nmap(']g', vim.diagnostic.goto_next)
-nmap('[g', vim.diagnostic.goto_prev)
+--nmap(']g', vim.diagnostic.jump)
+--nmap('[g', vim.diagnostic.goto_prev)
+-- Use defauls instead:
+--  ]d jump to the next diagnostic
+--  [d jump to the previous diagnostic
 -- float window for diagnostics
 nmap('<space>e', vim.diagnostic.open_float)
 -- locations of all diagnostics

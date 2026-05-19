@@ -5,8 +5,9 @@
 -- Options
 require('settings.options')
 
--- Plugins (packer.nvim)
-require('settings.plugins')
+-- Plugins (lazy.nvim)
+require('settings.lazy')
+-- plugins are automatically configured from the folder lua/plugins/
 
 -- Mappings
 require('settings.mappings')

@@ -22,14 +22,14 @@ vim.cmd('colorscheme kanagawa-dragon')
 
 -- Tweak colorscheme
 local function change_bg(higroups, ctermbg, guibg)
-    for _, group in ipairs(higroups) do
-        vim.cmd("hi " .. group .. " ctermbg=" .. ctermbg .." guibg=" .. guibg)
-    end
+   for _, group in ipairs(higroups) do
+       vim.cmd("hi " .. group .. " ctermbg=" .. ctermbg .." guibg=" .. guibg)
+   end
 end
 
 change_bg({'Normal', 'TelescopeBorder'}, 'none', 'none')
 
 change_bg(
-    {'Cursorline', 'Folded', 'CursorLineNr'},
-    '0', '#333333'
+   {'Cursorline', 'Folded', 'CursorLineNr'},
+   '0', '#333333'
 )
