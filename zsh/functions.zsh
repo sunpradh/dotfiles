@@ -12,8 +12,11 @@ config() {
 
 # Quickly open a file using fzf and ranger's rifle
 quickopen() {
-    f="$(fd -tf $1 | fzf --reverse --height=80%)"
-    [ ! -z $f ] && xdg-open $f
+    FILE="$(fd -tf $1 | fzf --reverse --height=80%)"
+    # [ ! -z $f ] && nohup xdg-open ${FILE} >/dev/null & disown
+    if [ ! -z ${FILE} ]; then
+        xdg-open ${FILE} &> /dev/null & disown
+    fi
     zle reset-prompt
 }
 zle -N quickopen
@@ -67,13 +70,6 @@ flac2opus() {
         echo -e "\n$(tput bold)> Remove .flac files? [N/y]$(tput sgr0)"
         read answer
     fi
-    # if [[ ! -z $1 && $1 = "--remove-after" ]]; then
-    #     answer="y"
-    #     echo
-    # else
-    #     echo -e "\n$(tput bold)> Remove .flac files? [N/y]$(tput sgr0)"
-    #     read answer
-    # fi
 
     if [[ $answer = "Y" || $answer = "y" ]]; then
         echo "Removing .flac files"
