@@ -4,9 +4,9 @@
 }
 
 window#waybar {
-    background-color: #303030;
+    background-color: #181616;
     color:            #d0d0d0;
-    border-top:   1px #1A1A1A solid;
+    border-top:   1px #242424 solid;
 }
 
 #workspaces {

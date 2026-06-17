@@ -3,7 +3,7 @@
 ##
 
 # Font
-font pango:Inter SemiBold 16px
+font pango:Lilex Nerd Font Medium 15px
 
 # Window borders settings
 set $border_width 1
@@ -15,14 +15,13 @@ titlebar_padding 10 6
 # Gaps
 gaps              inner 5
 smart_gaps        on
-# smart_borders     off
 hide_edge_borders smart
 
 # No focus following mouse
 focus_follows_mouse no
 
 # Colors
-set $bg        #242424
+set $bg        #181616
 set $fg        #d0d0d0
 set $red       #d02020
 set $lightred  #C62020

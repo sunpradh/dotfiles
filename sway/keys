@@ -6,10 +6,12 @@
 set $term footclient
 
 # Terminal applications
-set $floaterm footclient --app-id=floaterm -o colors-dark.background=2d2d2d -W 90x24
-set $yazi     footclient --app-id=yazi --title=Yazi yazi
-set $btop     footclient --app-id=btop --title="System Monitor (btop)" -W 120x40 btop
-set $bluetui  footclient --app-id=bluetui --title="Bluetooth" -W 80x24 bluetui
+set $floaterm footclient --app-id=floaterm -o colors-dark.background=222222 -W 90x24
+set $yazi     footclient --app-id=yazi    --title="File Manager [yazi]"                yazi
+set $btop     footclient --app-id=btop    --title="System Monitor [btop]"    -W 120x40 btop
+set $bluetui  footclient --app-id=bluetui --title="Bluetooth [bluetui]"      -W 80x24  bluetui
+set $rmpc     footclient --app-id=rmpc    --title="Music Player [rmpc]"      -W 130x40 rmpc
+set $pamixer  footclient --app-id=pamixer --title="Volume Mixer [ncpamixer]" -W 90x24 ncpamixer
 
 # Applications
 bindsym {
@@ -22,11 +24,10 @@ bindsym {
     $mod+Shift+f      exec $yazi             # TUI file manager
     $mod+Shift+x      exec nemo              # GUI file manager
     $mod+Shift+e      exec thunderbird       # email client
-    $mod+Shift+p      exec ferdium-wayland   # messaging
-    $mod+Shift+v      exec pavucontrol       # volume control
+    $mod+Shift+v      exec $pamixer          # volume control
     $mod+Shift+b      exec $bluetui          # bluetooth control
-    $mod+Shift+m      exec $btop             # system monitor
-    $mod+Shift+d      exec deadbeef          # system monitor
+    $mod+Shift+t      exec $btop             # system monitor
+    $mod+Shift+m      exec $rmpc             # music player
     $mod+Shift+Return exec $floaterm         # network manager
 }
 
