@@ -31,5 +31,5 @@ change_bg({'Normal', 'TelescopeBorder'}, 'none', 'none')
 
 change_bg(
    {'Cursorline', 'Folded', 'CursorLineNr'},
-   '0', '#333333'
+   '0', '#242424'
 )

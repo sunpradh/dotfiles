@@ -20,6 +20,19 @@ return {
     -- UNIX sugar for Vim
     { 'tpope/vim-eunuch' },
 
-    -- Smooth scrolling [x]
+    -- Smooth scrolling
     { 'karb94/neoscroll.nvim', config = true },
+
+    -- Highlights comments
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        ft = {"python", "lua"},
+        config = function ()
+            tc = require("todo-comments")
+            tc.setup({})
+            vim.keymap.set("n", "]t", function() tc.jump_next() end, { desc = "Next todo comment" })
+            vim.keymap.set("n", "[t", function() tc.jump_prev() end, { desc = "Previous todo comment" })
+        end
+    }
 }
