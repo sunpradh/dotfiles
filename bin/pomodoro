@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Length of the interval in seconds
+INTERVAL=2400 # 40m
+# Length of the pause in seconds
+PAUSE=600 # 10m
+# Font
+FONT='Lilex Nerd Font:size=18'
+# App-id
+APPID=pomodoro
+# Size (in characters)
+SIZE=20x4
+# Background color
+BGCOLOR=262626
+# Notify command
+NOTIFYCMD='notify-send Pomodoro "Interval complete (cycle %c)"'
+# not working
+
+COMMAND="isw --intervals ${INTERVAL},${PAUSE} --colours 2,1 --pause --descending --show-cycle"
+
+# Execute
+echo $FONT
+foot --title="${APPID}" --app-id="${APPID}" --font="${FONT}" -o colors-dark.background=${BGCOLOR} -W ${SIZE} ${COMMAND}
