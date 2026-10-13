@@ -34,6 +34,7 @@ keymap = [
 
     { on = [ "h" ], run = "leave",                     desc = "Go back to the parent directory" },
     { on = [ "l" ], run = "plugin smart-enter", desc = "Enter the child directory" },
+    # { on = [ "l" ], run = "enter", desc = "Enter the child directory" },
 
     { on = [ "H" ], run = "back",    desc = "Go back to the previous directory" },
     { on = [ "L" ], run = "forward", desc = "Go forward to the next directory" },
@@ -62,6 +63,7 @@ keymap = [
     { on = [ "o" ],         run = "open",                       desc = "Open the selected files" },
     { on = [ "r" ],         run = "open --interactive",         desc = "Open the selected files interactively" },
     { on = [ "<Enter>" ],   run = "plugin smart-enter",         desc = "Open the selected files" },
+    # { on = [ "<Enter>" ],   run = "open",         desc = "Open the selected files" },
     { on = [ "<C-Enter>" ], run = "open --interactive",         desc = "Open the selected files interactively" },
     { on = [ "O" ],         run = "create --dir",               desc = "Create a file or directory (ends with / for directories)" },
     { on = [ "<C-o>" ],     run = "create",                     desc = "Create a file or directory (ends with / for directories)" },

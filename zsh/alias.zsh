@@ -34,17 +34,34 @@ alias c="config"
 alias mpvsel='mpv "`xsel -b`"'
 alias ssh="TERM=xterm ssh"
 
-# Radio merda malata
+# Music
 alias radiomerdamalata='mpv http://s.streampunk.cc/merdamalata.ogg'
+alias ytm='yt-dlp -x --audio-format opus --audio-quality 0 --embed-thumbnail --embed-metadata'
 
 # Python virtual environments and conda
 alias coa='conda activate'
 alias cod='conda deactivate'
-alias quspin-env="source ~/.local/python_envs/quspin/bin/activate"
-alias scq-env="conda activate scq"
+alias quspin="source ~/.local/python_envs/quspin/bin/activate"
+alias scq="cd ~/docs/uni/code/lgt_scq/ && conda activate scq"
+
+# Remote storage via sshfs
+alias mount-mauro='sshfs mauro: ~/remote/mauro'
+alias mount-marcos='sshfs marcos: ~/remote/marcos'
+alias unmount-mauro='fusermount3 -u ~/remote/mauro'
+alias unmount-marcos='fusermount3 -u ~/remote/marcos'
 
 # Backup (non ideal way)
-alias backup="rsync -aP --delete * .* --exclude 'video' --exclude '.conda' --exclude '.cache' --exclude '.local/share/Steam' --exclude 'music' --exclude '.local/share/Trash' --exclude 'downloads/torrents/' /run/media/sunny/SunDATA_1/backup/landau/"
+# alias backup="rsync -aP --delete * .* --exclude 'video' --exclude '.conda' --exclude '.cache' --exclude '.local/share/Steam' --exclude 'music' --exclude '.local/share/Trash' --exclude 'downloads/torrents/' /run/media/sunny/SunDATA_1/backup/landau/"
+# alias backup="rsync -aP --delete --exclude-from=${HOME}/.config/backup-exclude-list ${HOME}/* ${HOME}/.* /run/media/sunny/SunDATA_1/backup/landau/"
+
+backup() {
+    DEST="/run/media/sunny/SunDATA_1/backup/landau/"
+    EXCLUDE_FILE="${HOME}/.config/backup-exclude-list"
+
+    pushd ~
+    rsync -aP --delete --exclude-from=${EXCLUDE_FILE} * .* ${DEST}
+    popd
+}
 
 # Cast from android device
 #   require 'scrcpy'

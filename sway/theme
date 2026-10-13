@@ -15,6 +15,7 @@ titlebar_padding 10 6
 # Gaps
 gaps              inner 5
 smart_gaps        on
+smart_borders     on
 hide_edge_borders smart
 
 # No focus following mouse
@@ -25,7 +26,7 @@ set $bg        #181616
 set $fg        #d0d0d0
 set $red       #d02020
 set $lightred  #C62020
-set $darkred   #802020
+set $darkred   #601010
 set $brightred #ff0000
 set $gray      #282828
 set $lightgray #a0a0a0
@@ -41,7 +42,7 @@ set $lightgray #a0a0a0
 # #1                    #2         #3         #4         #5         #6
 client.focused          $red       $darkred   $fg        $brightred $red
 client.focused_inactive $bg        $bg        $fg        $lightred  $bg
-client.unfocused        $bg        $bg        $lightgray $lightgray $bg
+client.unfocused        $gray      $bg        $lightgray $lightgray $gray
 client.urgent           $brightred $brightred $bg        $brightred $bg
 
 ## GTK settings

@@ -113,7 +113,7 @@ for_window [app_id="pomodoro"] {
 }
 
 # Specific workspaces
-assign [app_id="firefox"] $ws1
+assign [app_id="firefox-nightly"] $ws1
 assign [app_id="rmpc"] $ws7
 for_window [app_id="rmpc"] focus
 assign [app_id="org.nicotine_plus.Nicotine"] $ws8
@@ -122,7 +122,7 @@ assign [app_id="org.mozilla.Thunderbird"] $ws9
 # Focus immediately
 
 # Joplin
-for_window [app_id="@joplin/app-desktop"] {
+for_window [app_id="appimagekit-joplin"] {
     resize set height 40ppt
     resize set width  50ppt
     move to scratchpad
@@ -141,7 +141,7 @@ for_window [app_id="org.gnome.Evince" title=".*\.djvu.*"] title_format "  %ti
 for_window [app_id="org.gnome.Evince"]                    title_format "  %title"
 for_window [app_id="org.mozilla.Thunderbird"] title_format "  %title"
 for_window [app_id="zathura"]     title_format "  %title"
-for_window [app_id="firefox"]     title_format "  %title"
+for_window [app_id="firefox-nightly"]     title_format "  %title"
 for_window [app_id="footclient"]  title_format "  %title"
 for_window [app_id="floaterm"]    title_format "  %title"
 for_window [app_id="nemo"]        title_format "  %title"

@@ -29,11 +29,14 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # wlsunset
 exec "wlsunset -l 43.15 -L -2.55 -t 4500" # Bilbao
 
+# Easyeffects (audio improvement)
+exec easyeffects -w
+
 # mako notification daemon
 # activated via systemd
 
 # Firefox
-exec firefox
+exec firefox-nightly
 
 # Thunderbird
 exec thunderbird

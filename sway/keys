@@ -20,10 +20,11 @@ bindsym {
     $mod+f            exec rofi-files        # Search file
     $mod+r            exec rofi-recent       # Search recent files
     $alt+Tab          exec rofi-windows      # Window switcher
-    $mod+Shift+w      exec firefox           # Browser
+    $mod+Shift+w      exec firefox-nightly   # Browser
     $mod+Shift+f      exec $yazi             # TUI file manager
     $mod+Shift+x      exec nemo              # GUI file manager
     $mod+Shift+e      exec thunderbird       # email client
+    $mod+Shift+d      exec wdisplays         # display configuration
     $mod+Shift+v      exec $pamixer          # volume control
     $mod+Shift+b      exec $bluetui          # bluetooth control
     $mod+Shift+t      exec $btop             # system monitor
