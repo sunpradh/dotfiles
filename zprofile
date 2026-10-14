@@ -20,15 +20,9 @@ export EDITOR=nvim
 export VISUAL=nvim
 export BROWSER=firefox
 
-# Hardware acceleration
-export VDPAU_DRIVER=va_gl
-
 # Qt theme
 export QT_QPA_PLATFORMTHEME=qt5ct
 # export QT_STYLE_OVERRIDE=kvantum
-
-# Ranger file manager visual fix
-export RANGER_DEVICONS_SEPARATOR='  '
 
 # Disable at-spi (assistance technology)
 NO_AT_BRIDGE=1
