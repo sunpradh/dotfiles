@@ -121,10 +121,8 @@ assign [app_id="org.mozilla.Thunderbird"] $ws9
 
 # Focus immediately
 
-# Joplin
-for_window [app_id="appimagekit-joplin"] {
-    resize set height 40ppt
-    resize set width  50ppt
+# Vimwiki
+for_window [app_id="vimwiki"] {
     move to scratchpad
     title_format "  %title"
 }

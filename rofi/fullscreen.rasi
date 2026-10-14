@@ -7,7 +7,7 @@
     text-color: @fg;
     background-color: transparent;
 
-    font: "Inter Light 32";
+    font: "Iosevka Aile 32";
 }
 
 window {
@@ -25,15 +25,15 @@ mainbox {
 listview {
     scrollbar: false;
     layout: horizontal;
-    margin:  calc(50% - 50px) calc(50% - 500px);
-    width: 800px;
+    margin:  calc(50% - 50px) calc(50% - 650px);
+    width: 1300px;
     spacing: 10px;
     cycle: true;
 }
 
 element {
-    width: 240px;
-    padding: 20px;
+    width: 300px;
+    padding: 10px;
 }
 
 element-text {

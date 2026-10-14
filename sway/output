@@ -8,7 +8,7 @@ output $laptop position 0 0 resolution 1920x1080@60Hz
 
 # Office monitor
 set $officemonitor "LG Electronics 31MU97 0x000011CC"
-output $officemonitor position 1920 0 resolution 3840x2160@60Hz scale 1.5
+output $officemonitor resolution 4096x2160@59.998Hz scale 1.5
 
 set $miktv "Samsung Electric Company SAMSUNG 0x01000E00"
 output $miktv position 1920 0 resolution 1920x1080@60Hz

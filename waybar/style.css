@@ -1,12 +1,19 @@
 * {
-    font-family:   "Inter", "Font Awesome 6 Free", sans-serif;
+    font-family:   "Iosevka Aile", "Font Awesome 6 Free", sans-serif;
     font-size:     15px;
 }
 
 window#waybar {
     background-color: #181616;
     color:            #d0d0d0;
-    border-top:   1px #242424 solid;
+}
+
+window.top-bar#waybar {
+    border-bottom: 1px #242424 solid;
+}
+
+window.bottom-bar#waybar {
+    border-top: 1px #242424 solid;
 }
 
 #workspaces {
@@ -15,7 +22,7 @@ window#waybar {
 
 #workspaces button {
     padding:       0px 6px;
-    margin:        4px 4px;
+    margin:        2px 2px;
     min-width:     24px;
     color:         #a0a0a0;
     border-radius: 0px;
@@ -41,27 +48,28 @@ window#waybar {
     color:      #161616;
 }
 
-#clock.time {
-    padding: 0px 10px;
-    margin:    4px 4px;
-    min-width: 45px;
+#clock.time, #clock.date {
+    padding:   0px 10px;
+    margin:    0px 0px;
 }
 
-#mpris,
-#clock.date {
-    padding: 0px 10px;
-    margin:    4px 4px;
-    min-width: 60px;
+#mpris {
+    padding:   0px 10px;
+    margin:    0px 0px;
+    min-width: 80px;
     color:     #A0A0A0;
 }
 
 #scratchpad,
+#cpu,
+#memory,
+#temperature,
 #battery,
 #pulseaudio,
 #bluetooth,
 #language {
     padding:   0px 10px;
-    margin:    4px 4px;
+    margin:    0px 0px;
     min-width: 60px;
 }
 

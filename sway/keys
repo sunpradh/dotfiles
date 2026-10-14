@@ -7,11 +7,11 @@ set $term footclient
 
 # Terminal applications
 set $floaterm footclient --app-id=floaterm -o colors-dark.background=222222 -W 90x24
-set $yazi     footclient --app-id=yazi    --title="File Manager [yazi]"                yazi
-set $btop     footclient --app-id=btop    --title="System Monitor [btop]"    -W 120x40 btop
-set $bluetui  footclient --app-id=bluetui --title="Bluetooth [bluetui]"      -W 80x24  bluetui
-set $rmpc     footclient --app-id=rmpc    --title="Music Player [rmpc]"      -W 130x40 rmpc
-set $pamixer  footclient --app-id=pamixer --title="Volume Mixer [ncpamixer]" -W 90x24 ncpamixer
+set $yazi     footclient --app-id=yazi    --title="File Manager"             yazi
+set $btop     footclient --app-id=btop    --title="System Monitor" -W 150x40 btop
+set $bluetui  footclient --app-id=bluetui --title="Bluetooth"      -W 80x24  bluetui
+set $rmpc     footclient --app-id=rmpc    --title="Music Player"   -W 130x40 rmpc
+set $pamixer  footclient --app-id=pamixer --title="Volume Mixer"   -W 90x24  ncpamixer
 
 # Applications
 bindsym {

@@ -3,17 +3,17 @@
 ##
 
 # Font
-font pango:Lilex Nerd Font Medium 15px
+font pango:Iosevka Aile 15px
 
 # Window borders settings
-set $border_width 1
-default_border normal $border_width
-titlebar_border_thickness $border_width
+set $border_width 3
+default_border pixel $border_width
+titlebar_border_thickness 1
 title_align left
 titlebar_padding 10 6
 
 # Gaps
-gaps              inner 5
+gaps              inner 3
 smart_gaps        on
 smart_borders     on
 hide_edge_borders smart
